@@ -1,0 +1,3 @@
+[submodule "roising_beauty_ie_frontend_react"]
+	path = roising_beauty_ie_frontend_react
+	url = git@github.com:pawelztef/roising_beauty_ie_frontend_react.git
