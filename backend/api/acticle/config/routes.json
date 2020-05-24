@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/acticles",
+      "handler": "acticle.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/acticles/count",
+      "handler": "acticle.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/acticles/:id",
+      "handler": "acticle.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/acticles",
+      "handler": "acticle.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/acticles/:id",
+      "handler": "acticle.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/acticles/:id",
+      "handler": "acticle.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_slider_slider_entries",
+  "info": {
+    "name": "slider_entry",
+    "icon": "clone"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
