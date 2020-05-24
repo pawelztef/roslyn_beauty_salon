@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "name": "page"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "page.article",
+        "page.card",
+        "page.entry",
+        "page.text-block",
+        "slider.slider"
+      ]
+    },
+    "sections": {
+      "via": "pages",
+      "collection": "section"
+    }
+  }
+}
