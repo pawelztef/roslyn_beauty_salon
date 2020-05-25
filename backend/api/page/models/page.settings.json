@@ -24,7 +24,8 @@
         "page.card",
         "page.entry",
         "page.text-block",
-        "page.slider"
+        "page.slider",
+        "page.card-group"
       ]
     }
   }
