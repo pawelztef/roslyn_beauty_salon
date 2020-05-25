@@ -33,6 +33,9 @@
     },
     "link": {
       "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
     }
   }
 }
