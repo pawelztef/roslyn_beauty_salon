@@ -12,7 +12,7 @@
     "item": {
       "type": "component",
       "repeatable": true,
-      "component": "slider.slider-entry"
+      "component": "page.slider-entry"
     },
     "speed": {
       "type": "integer",

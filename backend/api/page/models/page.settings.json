@@ -24,12 +24,8 @@
         "page.card",
         "page.entry",
         "page.text-block",
-        "slider.slider"
+        "page.slider"
       ]
-    },
-    "sections": {
-      "via": "pages",
-      "collection": "section"
     }
   }
 }
