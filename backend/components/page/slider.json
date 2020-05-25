@@ -6,8 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "item": {
       "type": "component",
