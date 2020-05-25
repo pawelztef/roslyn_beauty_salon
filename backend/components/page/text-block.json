@@ -21,6 +21,11 @@
         "left",
         "topLeft"
       ]
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
