@@ -1,316 +1,348 @@
 export default {
-
-  "id": 1,
+  "id": 2,
   "title": "home",
   "slug": "home",
-  "created_at": "2020-05-24T17:06:46.568Z",
-  "updated_at": "2020-05-24T17:06:46.568Z",
+  "created_at": "2020-05-25T08:10:08.069Z",
+  "updated_at": "2020-05-25T08:10:08.069Z",
   "content": [
     {
       "__component": "page.slider",
-      "id": 1,
-      "title": "headerSlider",
+      "id": 3,
+      "title": null,
       "speed": 3,
+      "name": "headerSlider",
       "item": [
         {
-          "id": 1,
-          "title": "Spa & Massage",
-          "subtitle": "We provide the best types of treatment and services at the most reasonable costs.",
+          "id": 8,
+          "title": "Your Beauty Agent",
+          "subtitle": "We'll create your perfect style",
           "link": "/home",
           "image": {
-            "id": 2,
-            "name": "woman-relaxing-relax-spa-56884",
+            "id": 7,
+            "name": "pic2",
             "alternativeText": "",
             "caption": "",
-            "width": 3888,
-            "height": 2592,
+            "width": 480,
+            "height": 430,
             "formats": {
               "thumbnail": {
-                "hash": "thumbnail_woman-relaxing-relax-spa-56884_f9f4d44365",
+                "hash": "thumbnail_pic2_0e9e54ca64",
                 "ext": ".jpeg",
                 "mime": "image/jpeg",
-                "width": 234,
+                "width": 174,
                 "height": 156,
-                "size": 7.32,
+                "size": 6.71,
                 "path": null,
-                "url": "/uploads/thumbnail_woman-relaxing-relax-spa-56884_f9f4d44365.jpeg"
-              },
-              "large": {
-                "hash": "large_woman-relaxing-relax-spa-56884_f9f4d44365",
-                "ext": ".jpeg",
-                "mime": "image/jpeg",
-                "width": 1000,
-                "height": 667,
-                "size": 70.92,
-                "path": null,
-                "url": "/uploads/large_woman-relaxing-relax-spa-56884_f9f4d44365.jpeg"
-              },
-              "medium": {
-                "hash": "medium_woman-relaxing-relax-spa-56884_f9f4d44365",
-                "ext": ".jpeg",
-                "mime": "image/jpeg",
-                "width": 750,
-                "height": 500,
-                "size": 43.85,
-                "path": null,
-                "url": "/uploads/medium_woman-relaxing-relax-spa-56884_f9f4d44365.jpeg"
-              },
-              "small": {
-                "hash": "small_woman-relaxing-relax-spa-56884_f9f4d44365",
-                "ext": ".jpeg",
-                "mime": "image/jpeg",
-                "width": 500,
-                "height": 333,
-                "size": 23.17,
-                "path": null,
-                "url": "/uploads/small_woman-relaxing-relax-spa-56884_f9f4d44365.jpeg"
+                "url": "/uploads/thumbnail_pic2_0e9e54ca64.jpeg"
               }
             },
-            "hash": "woman-relaxing-relax-spa-56884_f9f4d44365",
+            "hash": "pic2_0e9e54ca64",
             "ext": ".jpeg",
             "mime": "image/jpeg",
-            "size": 995.38,
-            "url": "/uploads/woman-relaxing-relax-spa-56884_f9f4d44365.jpeg",
+            "size": 35.67,
+            "url": "/uploads/pic2_0e9e54ca64.jpeg",
             "previewUrl": null,
             "provider": "local",
             "provider_metadata": null,
-            "created_at": "2020-05-24T16:29:17.130Z",
-            "updated_at": "2020-05-24T16:29:17.130Z"
+            "created_at": "2020-05-24T17:07:04.243Z",
+            "updated_at": "2020-05-24T17:07:04.243Z"
           }
         },
         {
-          "id": 2,
-          "title": "Hair & Beauty",
-          "subtitle": "We provide the best types of treatment and services at the most reasonable costs.",
+          "id": 9,
+          "title": "Your Beauty Agent",
+          "subtitle": "We'll create your perfect style",
           "link": "/home",
           "image": {
-            "id": 3,
-            "name": "woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657",
+            "id": 5,
+            "name": "pic6",
             "alternativeText": "",
             "caption": "",
-            "width": 6000,
-            "height": 4000,
+            "width": 480,
+            "height": 430,
             "formats": {
               "thumbnail": {
-                "hash": "thumbnail_woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657_3cfc026038",
+                "hash": "thumbnail_pic6_8c474a25c6",
                 "ext": ".jpeg",
                 "mime": "image/jpeg",
-                "width": 234,
+                "width": 174,
                 "height": 156,
-                "size": 7.32,
+                "size": 5.01,
                 "path": null,
-                "url": "/uploads/thumbnail_woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657_3cfc026038.jpeg"
+                "url": "/uploads/thumbnail_pic6_8c474a25c6.jpeg"
+              }
+            },
+            "hash": "pic6_8c474a25c6",
+            "ext": ".jpeg",
+            "mime": "image/jpeg",
+            "size": 22.73,
+            "url": "/uploads/pic6_8c474a25c6.jpeg",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "created_at": "2020-05-24T17:07:04.147Z",
+            "updated_at": "2020-05-24T17:07:04.147Z"
+          }
+        }
+      ]
+    },
+    {
+      "__component": "page.card-group",
+      "id": 1,
+      "name": "simpleOffer",
+      "card": [
+        {
+          "id": 15,
+          "title": "Nail Service",
+          "content": null,
+          "image_position": "center",
+          "link": "/services",
+          "subtitle": "from 25€",
+          "image": {
+            "id": 13,
+            "name": "s1-nocopy",
+            "alternativeText": "",
+            "caption": "",
+            "width": 369,
+            "height": 161,
+            "formats": {
+              "thumbnail": {
+                "hash": "thumbnail_s1-nocopy_48e497b306",
+                "ext": ".png",
+                "mime": "image/png",
+                "width": 245,
+                "height": 107,
+                "size": 27.66,
+                "path": null,
+                "url": "/uploads/thumbnail_s1-nocopy_48e497b306.png"
+              }
+            },
+            "hash": "s1-nocopy_48e497b306",
+            "ext": ".png",
+            "mime": "image/png",
+            "size": 33.57,
+            "url": "/uploads/s1-nocopy_48e497b306.png",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "created_at": "2020-05-25T07:57:06.965Z",
+            "updated_at": "2020-05-25T07:57:06.965Z"
+          }
+        },
+        {
+          "id": 16,
+          "title": "Hair Styling",
+          "content": null,
+          "image_position": "center",
+          "link": "/home",
+          "subtitle": "from 25€",
+          "image": {
+            "id": 14,
+            "name": "s2-nocopy",
+            "alternativeText": "",
+            "caption": "",
+            "width": 369,
+            "height": 161,
+            "formats": {
+              "thumbnail": {
+                "hash": "thumbnail_s2-nocopy_e973924f34",
+                "ext": ".png",
+                "mime": "image/png",
+                "width": 245,
+                "height": 107,
+                "size": 31.95,
+                "path": null,
+                "url": "/uploads/thumbnail_s2-nocopy_e973924f34.png"
+              }
+            },
+            "hash": "s2-nocopy_e973924f34",
+            "ext": ".png",
+            "mime": "image/png",
+            "size": 32.58,
+            "url": "/uploads/s2-nocopy_e973924f34.png",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "created_at": "2020-05-25T08:00:48.757Z",
+            "updated_at": "2020-05-25T08:00:48.757Z"
+          }
+        },
+        {
+          "id": 17,
+          "title": "Make - Up",
+          "content": null,
+          "image_position": "center",
+          "link": "/home",
+          "subtitle": "from 25€",
+          "image": {
+            "id": 15,
+            "name": "s3-nocopy",
+            "alternativeText": "",
+            "caption": "",
+            "width": 369,
+            "height": 161,
+            "formats": {
+              "thumbnail": {
+                "hash": "thumbnail_s3-nocopy_6e443f7cfd",
+                "ext": ".png",
+                "mime": "image/png",
+                "width": 245,
+                "height": 107,
+                "size": 30.27,
+                "path": null,
+                "url": "/uploads/thumbnail_s3-nocopy_6e443f7cfd.png"
+              }
+            },
+            "hash": "s3-nocopy_6e443f7cfd",
+            "ext": ".png",
+            "mime": "image/png",
+            "size": 28.71,
+            "url": "/uploads/s3-nocopy_6e443f7cfd.png",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "created_at": "2020-05-25T08:01:41.477Z",
+            "updated_at": "2020-05-25T08:01:41.477Z"
+          }
+        }
+      ]
+    },
+    {
+      "__component": "page.card-group",
+      "id": 2,
+      "name": "greaterOffer",
+      "card": [
+        {
+          "id": 18,
+          "title": "Get an Express Style ",
+          "content": null,
+          "image_position": null,
+          "link": "/services",
+          "subtitle": "from 75€",
+          "image": {
+            "id": 16,
+            "name": "bg-5-copyright",
+            "alternativeText": "",
+            "caption": "",
+            "width": 1168,
+            "height": 478,
+            "formats": {
+              "thumbnail": {
+                "hash": "thumbnail_bg-5-copyright_8b0069105b",
+                "ext": ".webp",
+                "mime": "image/webp",
+                "width": 245,
+                "height": 100,
+                "size": 3.46,
+                "path": null,
+                "url": "/uploads/thumbnail_bg-5-copyright_8b0069105b.webp"
               },
-  "large": {
-    "hash": "large_woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657_3cfc026038",
-    "ext": ".jpeg",
-    "mime": "image/jpeg",
-    "width": 1000,
-    "height": 667,
-    "size": 54.49,
-    "path": null,
-    "url": "/uploads/large_woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657_3cfc026038.jpeg"
-  },
-  "medium": {
-    "hash": "medium_woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657_3cfc026038",
-    "ext": ".jpeg",
-    "mime": "image/jpeg",
-    "width": 750,
-    "height": 500,
-    "size": 36.39,
-    "path": null,
-    "url": "/uploads/medium_woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657_3cfc026038.jpeg"
-  },
-  "small": {
-    "hash": "small_woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657_3cfc026038",
-    "ext": ".jpeg",
-    "mime": "image/jpeg",
-    "width": 500,
-    "height": 333,
-    "size": 20.74,
-    "path": null,
-    "url": "/uploads/small_woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657_3cfc026038.jpeg"
-  }
-},
-  "hash": "woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657_3cfc026038",
-  "ext": ".jpeg",
-  "mime": "image/jpeg",
-  "size": 743.93,
-  "url": "/uploads/woman-in-wrapped-in-white-towel-lying-on-bed-getting-massage-3757657_3cfc026038.jpeg",
-  "previewUrl": null,
-  "provider": "local",
-  "provider_metadata": null,
-  "created_at": "2020-05-24T16:29:17.453Z",
-  "updated_at": "2020-05-24T16:29:17.453Z"
-}
-},
-  {
-    "id": 3,
-    "title": null,
-    "subtitle": null,
-    "link": null,
-    "image": null
-  },
-  {
-    "id": 4,
-    "title": "Gift & Cards",
-    "subtitle": "We provide the best types of treatment and services at the most reasonable costs.",
-    "link": "/home",
-    "image": null
-  }
-]
-},
-  {
-    "__component": "page.card",
-    "id": 1,
-    "title": "Spa & Massage",
-    "content": "We provide the best types of treatment and services at the most reasonable costs.",
-    "image_position": "center",
-    "link": "/home",
-    "image": {
-      "id": 8,
-      "name": "pic1",
-      "alternativeText": "",
-      "caption": "",
-      "width": 480,
-      "height": 430,
-      "formats": {
-        "thumbnail": {
-          "hash": "thumbnail_pic1_0df1e89d17",
-          "ext": ".jpeg",
-          "mime": "image/jpeg",
-          "width": 174,
-          "height": 156,
-          "size": 4.84,
-          "path": null,
-          "url": "/uploads/thumbnail_pic1_0df1e89d17.jpeg"
+              "large": {
+                "hash": "large_bg-5-copyright_8b0069105b",
+                "ext": ".webp",
+                "mime": "image/webp",
+                "width": 1000,
+                "height": 409,
+                "size": 33.93,
+                "path": null,
+                "url": "/uploads/large_bg-5-copyright_8b0069105b.webp"
+              },
+              "medium": {
+                "hash": "medium_bg-5-copyright_8b0069105b",
+                "ext": ".webp",
+                "mime": "image/webp",
+                "width": 750,
+                "height": 307,
+                "size": 21.02,
+                "path": null,
+                "url": "/uploads/medium_bg-5-copyright_8b0069105b.webp"
+              },
+              "small": {
+                "hash": "small_bg-5-copyright_8b0069105b",
+                "ext": ".webp",
+                "mime": "image/webp",
+                "width": 500,
+                "height": 205,
+                "size": 10.45,
+                "path": null,
+                "url": "/uploads/small_bg-5-copyright_8b0069105b.webp"
+              }
+            },
+            "hash": "bg-5-copyright_8b0069105b",
+            "ext": ".webp",
+            "mime": "image/webp",
+            "size": 47.29,
+            "url": "/uploads/bg-5-copyright_8b0069105b.webp",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "created_at": "2020-05-25T08:09:48.705Z",
+            "updated_at": "2020-05-25T08:09:48.705Z"
+          }
         }
-      },
-      "hash": "pic1_0df1e89d17",
-      "ext": ".jpeg",
-      "mime": "image/jpeg",
-      "size": 32.35,
-      "url": "/uploads/pic1_0df1e89d17.jpeg",
-      "previewUrl": null,
-      "provider": "local",
-      "provider_metadata": null,
-      "created_at": "2020-05-24T17:07:04.282Z",
-      "updated_at": "2020-05-24T17:07:04.282Z"
-    }
-  },
-  {
-    "__component": "page.card",
-    "id": 2,
-    "title": "Hair & Beauty",
-    "content": "\nWe provide the best types of treatment and services at the most reasonable costs.",
-    "image_position": "center",
-    "link": "/home",
-    "image": {
-      "id": 7,
-      "name": "pic2",
-      "alternativeText": "",
-      "caption": "",
-      "width": 480,
-      "height": 430,
-      "formats": {
-        "thumbnail": {
-          "hash": "thumbnail_pic2_0e9e54ca64",
-          "ext": ".jpeg",
-          "mime": "image/jpeg",
-          "width": 174,
-          "height": 156,
-          "size": 6.71,
-          "path": null,
-          "url": "/uploads/thumbnail_pic2_0e9e54ca64.jpeg"
-        }
-      },
-      "hash": "pic2_0e9e54ca64",
-      "ext": ".jpeg",
-      "mime": "image/jpeg",
-      "size": 35.67,
-      "url": "/uploads/pic2_0e9e54ca64.jpeg",
-      "previewUrl": null,
-      "provider": "local",
-      "provider_metadata": null,
-      "created_at": "2020-05-24T17:07:04.243Z",
-      "updated_at": "2020-05-24T17:07:04.243Z"
-    }
-  },
-  {
-    "__component": "page.card",
-    "id": 3,
-    "title": "Gift & Cards",
-    "content": "We provide the best types of treatment and services at the most reasonable costs.\n\n",
-    "image_position": null,
-    "link": "/home",
-    "image": {
-      "id": 6,
-      "name": "pic9",
-      "alternativeText": "",
-      "caption": "",
-      "width": 480,
-      "height": 430,
-      "formats": {
-        "thumbnail": {
-          "hash": "thumbnail_pic9_3ab760c7ed",
-          "ext": ".jpeg",
-          "mime": "image/jpeg",
-          "width": 174,
-          "height": 156,
-          "size": 4.95,
-          "path": null,
-          "url": "/uploads/thumbnail_pic9_3ab760c7ed.jpeg"
-        }
-      },
-      "hash": "pic9_3ab760c7ed",
-      "ext": ".jpeg",
-      "mime": "image/jpeg",
-      "size": 25.83,
-      "url": "/uploads/pic9_3ab760c7ed.jpeg",
-      "previewUrl": null,
-      "provider": "local",
-      "provider_metadata": null,
-      "created_at": "2020-05-24T17:07:04.193Z",
-      "updated_at": "2020-05-24T17:07:04.193Z"
-    }
-  },
-  {
-    "__component": "page.card",
-    "id": 4,
-    "title": "Accomadation",
-    "content": "We provide the best types of treatment and services at the most reasonable costs.",
-    "image_position": null,
-    "link": "/home",
-    "image": {
-      "id": 5,
-      "name": "pic6",
-      "alternativeText": "",
-      "caption": "",
-      "width": 480,
-      "height": 430,
-      "formats": {
-        "thumbnail": {
-          "hash": "thumbnail_pic6_8c474a25c6",
-          "ext": ".jpeg",
-          "mime": "image/jpeg",
-          "width": 174,
-          "height": 156,
-          "size": 5.01,
-          "path": null,
-          "url": "/uploads/thumbnail_pic6_8c474a25c6.jpeg"
-        }
-      },
-      "hash": "pic6_8c474a25c6",
-      "ext": ".jpeg",
-      "mime": "image/jpeg",
-      "size": 22.73,
-      "url": "/uploads/pic6_8c474a25c6.jpeg",
-      "previewUrl": null,
-      "provider": "local",
-      "provider_metadata": null,
-      "created_at": "2020-05-24T17:07:04.147Z",
-      "updated_at": "2020-05-24T17:07:04.147Z"
-    }
-  }
+      ]
+    },
+    {
+      "__component": "page.entry",
+      "id": 1,
+      "title": "Welcome to our beauty bar",
+      "subtitle": null,
+      "content": "Glowing, dewy skin is our thing. Our skin care products are designed to instantly optimize your skin’s tone, texture, and hydration levels so that it’s already at its best before you even think about makeup. Browse through our beauty bar and see how many products we have specifically for your skin type. Contact us for a consultation"
+            },
+      {
+        "__component": "page.card-group",
+        "id": 3,
+        "name": "ContactInfo",
+        "card": [
+          {
+            "id": 19,
+            "title": "Contact Info",
+            "content": "PHONE\n(123) 456-78-90\n(123) 456-78-90\n\nADDRESS\n8500, Lorem Street,\nChicago, IL, 55030",
+            "image_position": "right",
+            "link": null,
+            "subtitle": null,
+            "image": {
+              "id": 12,
+              "name": "welcome-home",
+              "alternativeText": "",
+              "caption": "",
+              "width": 670,
+              "height": 450,
+              "formats": {
+                "thumbnail": {
+                  "hash": "thumbnail_welcome-home_8ab575ae7f",
+                  "ext": ".webp",
+                  "mime": "image/webp",
+                  "width": 232,
+                  "height": 156,
+                  "size": 5.1,
+                  "path": null,
+                  "url": "/uploads/thumbnail_welcome-home_8ab575ae7f.webp"
+                },
+                "small": {
+                  "hash": "small_welcome-home_8ab575ae7f",
+                  "ext": ".webp",
+                  "mime": "image/webp",
+                  "width": 500,
+                  "height": 336,
+                  "size": 12.82,
+                  "path": null,
+                  "url": "/uploads/small_welcome-home_8ab575ae7f.webp"
+                }
+              },
+              "hash": "welcome-home_8ab575ae7f",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 20.24,
+              "url": "/uploads/welcome-home_8ab575ae7f.webp",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "created_at": "2020-05-25T07:23:41.981Z",
+              "updated_at": "2020-05-25T07:23:41.981Z"
+            }
+          }
+        ]
+      }
 ]
 }
