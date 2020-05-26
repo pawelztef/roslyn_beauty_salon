@@ -3,6 +3,7 @@ import './assets/sass/main.sass'
 import mockPage from './utils/page'
 
 import CardGroup from './components/CardGroup'
+import Slider from './components/Slider'
 import Layout from './components/Layout'
 
 function App() {
@@ -10,7 +11,10 @@ function App() {
   return (
     <>
       <Layout>
-         <CardGroup ClassName={mockPage.content[1].name} data={mockPage.content[1]} />
+            <Slider data={mockPage.content[0]}/> 
+          <div class="container-wrapper">
+             <CardGroup data={mockPage.content[1]} />
+          </div>
       </Layout>
     </>
   )
