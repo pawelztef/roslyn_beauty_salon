@@ -23,3 +23,23 @@ $pt3: #e9e8f2
   @media (max-width: 1200px)
     @content 
 
+%responsivnes-indicator
+  position: fixed
+  font-size: .8rem
+  z-index: 999
+  top: 1rem
+  left: 1rem
+  &:before
+    @include media-desktop
+      content: "max-width 1200px"
+      color: blue
+    @include media-tablet-landscape
+      content: "max-width 992px"
+      color: green
+    @include media-tablet-portrait
+      content: "max-width 768px"
+      color: yellow
+    @include media-phone
+      content: "max-width 576px"
+      color: red
+
