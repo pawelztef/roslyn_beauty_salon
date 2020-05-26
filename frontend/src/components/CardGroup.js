@@ -7,6 +7,7 @@ export default function CardGroup({data}) {
     let serviceLink = `http://localhost:3000${item.link}`
     let imageLink = `http://localhost:1337${item.image.url}` 
     let [before, after] = item.subtitle.split(' ')
+
     return(
       <div className="card__simple-offer">
         <div className="price-item"

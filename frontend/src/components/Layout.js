@@ -2,12 +2,13 @@ import React from 'react'
 
 export default function Layout(props) {
   return (
-    <div className="bd-wr">
-      <div className="pg-wr">
-        <div className="pg-ct-wr">
-          <div class="ct-wr">
+    <div className="body-wrapper">
+
+      <div className="responsivnes-indicator"></div>
+
+      <div className="page-wrapper">
+        <div className="page-container-wrapper">
             {props.children}
-          </div>
         </div>
       </div>
     </div>
