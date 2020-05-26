@@ -1,0 +1,38 @@
+.pz-animated-banner
+  position: relative
+  width: 100%
+  height: auto
+  display: block
+
+.pz-animated-banner__item
+  overflow: hidden
+  height: 100%
+  width: 100%
+
+.pz-animated-banner__item-top-layer
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 20%
+  width: 30%
+
+.pz-animated-banner__item-title,
+.pz-animated-banner__item-subtitle
+  color: white
+
+.pz-animated-banner__item-title
+  font-family: $font-third
+  text-transform: lowercase
+  line-height: 4rem
+  font-size: 4.0rem
+  &::before
+    content: "♥"
+    margin-right: 11px 
+    font-size: 1.2rem
+    position: relative
+
+.pz-animated-banner__item-subtitle
+  font-weight: 900
+  font-size: 3.9rem
+  line-height: 3.9rem
+  margin-bottom: 60px
