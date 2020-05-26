@@ -1,21 +1,56 @@
 .card__simple-offer 
+  padding: 0px 20px
+  text-align: center
+  color: $bl
+  border-right: 1px solid $bl
+  &:last-of-type
+    border-right: none
 
-.price-item,
-.price-item:hover,
-.price-item:focus,
-.price-item:active,
-.price-item:visited 
+.price-item
+  background-position:top 
+  background-repeat: no-repeat
+  background-size: contain
+
+.price-item-link,
+.price-item-link:hover,
+.price-item-link:focus,
+.price-item-link:active,
+.price-item-link:visited 
   text-decoration: none
   color: inherit
   cursor: pointer
 
+.price-item-link:hover
+  color: $mn
+
+.price-item-link
+  z-index: 3
+
 .price-item-title 
-  background-position: center
-  background-repeat: no-repeat
-  background-size: contain
-  width: 100%
+  width: 95%
   height: 100%
   padding: 1.2rem 0
   font-size: 3rem
   vertical-align: center
+  line-height: 2.75rem
+  margin: 0 auto
 
+.price-item-price
+  cursor: pointer
+  position: relative
+
+.price-item-price-before
+  color: $bl
+
+.price-item-price-after
+  font-size: 1.35rem !important
+  -webkit-border-radius: 50%
+  -ms-border-radius: 50%
+  border-radius: 50%
+  width: 60px
+  height: 60px
+  line-height: 60px
+  display: inline-block
+  background-color: #ffe8e4
+  color: #2a2a2a
+  margin-left: 10px
