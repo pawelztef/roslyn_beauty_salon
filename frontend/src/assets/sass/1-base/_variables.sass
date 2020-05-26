@@ -6,3 +6,20 @@ $wt: #ffffff
 $pt1: #ffe8e4
 $pt2: #fee8d1 
 $pt3: #e9e8f2 
+
+@mixin media-phone
+  @media (max-width: 576px)
+    @content 
+
+@mixin media-tablet-portrait 
+  @media (max-width: 768px)
+    @content 
+
+@mixin media-tablet-landscape 
+  @media (max-width: 992px)
+    @content 
+
+@mixin media-desktop 
+  @media (max-width: 1200px)
+    @content 
+
