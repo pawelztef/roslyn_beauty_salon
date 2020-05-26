@@ -10,19 +10,19 @@ export default function CardGroup({data}) {
     return(
       <div className="card__simple-offer">
         <div className="price-item"
-                style={{ 
-                  backgroundImage: `url("${imageLink}")`
-                }}
-        >
+              style={{ 
+                backgroundImage: `url("${imageLink}")`
+              }}>
           <a className="price-item-link" href={serviceLink}>
-            <h3 className="price-item-title"
-            >
-              {item.title} 
+            <h3 className="price-item-title">
+              <span>
+                {item.title} 
+              </span>
             </h3>
-          <div className="price-item-price">
-            <span className="price-item-price-before">{before}</span>
-            <span className="price-item-price-after">{after}</span>
-          </div>
+            <div className="price-item-price">
+              <span className="price-item-price-before">{before}</span>
+              <span className="price-item-price-after">{after}</span>
+            </div>
           </a>
         </div>
       </div>
