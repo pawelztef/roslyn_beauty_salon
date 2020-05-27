@@ -35,8 +35,11 @@ export default function CardGroup({data}) {
     <div className="pz-row">
       <div className="empty-space"></div>
       <div className="pz-con"> 
-        {cards} 
+        <div className="card__wrapper">
+          {cards} 
+        </div>
       </div>
+      <div className="empty-space"></div>
     </div>
   )
 }

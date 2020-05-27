@@ -121,7 +121,7 @@ export default {
             "ext": ".png",
             "mime": "image/png",
             "size": 33.57,
-            "url": "http://muji.ancorathemes.com/wp-content/uploads/2018/05/slide1.jpg",
+            "url": "/uploads/s2-nocopy_e973924f34.png",
             "previewUrl": null,
             "provider": "local",
             "provider_metadata": null,

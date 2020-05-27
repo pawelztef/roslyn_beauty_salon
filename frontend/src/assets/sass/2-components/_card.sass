@@ -1,3 +1,7 @@
+.card__wrapper
+  display: flex
+  flex-direction: row
+
 .card__simple-offer 
   padding: 0px 10px
   text-align: center
@@ -30,16 +34,16 @@
 .price-item-title 
   font-family: $font-second
   font-weight: 900
-  font-size: 3rem
+  font-size: 3rem !important
   width: 100%
   height: 100%
-  padding: 1.2rem 0
-  font-size: 3rem
+  padding: 0 0 1.2rem 0
+  font-size: 2.9rem
   vertical-align: center
   line-height: 2.75rem
   margin: 0 auto
   span
-    max-width: 270px
+    max-width: 80%
     display: block
     margin: auto
 
@@ -49,12 +53,12 @@
 
 .price-item-price-before
   font-family: $font-third
-  font-size: 2.5rem !important
+  font-size: 2.5rem 
   line-height: normal
   color: $bl
 
 .price-item-price-after
-  font-size: 1.35rem !important
+  font-size: 1.35rem 
   -webkit-border-radius: 50%
   -ms-border-radius: 50%
   border-radius: 50%
@@ -65,4 +69,28 @@
   background-color: #ffe8e4
   color: #2a2a2a
   margin-left: 10px
+
+@include media-tablet-portrait
+  .card__wrapper
+    flex-direction: column
+
+  .card__simple-offer
+    border: none
+    margin-bottom: 50px
+
+  .price-item
+    background-position: top
+    background-size: 40%
+
+  .price-item-title 
+    padding: 2.5rem 0 4rem 0
+
+  .price-item-price-before
+    font-size: 4rem
+  .price-item-price-after
+    font-size: 2rem
+    width: 45px
+    height: 45px
+    line-height: 45px
+    
 
