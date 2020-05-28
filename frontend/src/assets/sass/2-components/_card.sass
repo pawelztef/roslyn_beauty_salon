@@ -70,6 +70,10 @@
   color: #2a2a2a
   margin-left: 10px
 
+@include media-desktop
+
+@include media-tablet-landscape
+
 @include media-tablet-portrait
   .card__wrapper
     flex-direction: column
@@ -92,5 +96,31 @@
     width: 45px
     height: 45px
     line-height: 45px
-    
 
+@include media-phone
+  .price-item
+    background-size: 100%
+  .price-item-title 
+    font-size: 9rem !important
+    line-height: 9rem
+    padding-bottom: 0rem
+    span
+      max-width: 90%
+      display: block
+      margin: auto
+
+  .price-item-price-before
+    font-size: 10.5rem 
+
+  .price-item-price-after
+    font-size: 4.35rem 
+    -webkit-border-radius: 50%
+    -ms-border-radius: 50%
+    border-radius: 50%
+    width: 60px
+    height: 60px
+    line-height: 60px
+    display: inline-block
+    background-color: #ffe8e4
+    color: #2a2a2a
+    margin-left: 20px
