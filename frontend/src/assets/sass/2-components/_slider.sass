@@ -6,8 +6,8 @@
 
 .pz-animated-banner__item
   overflow: hidden
-  height: 100%
-  width: 100%
+  max-width: 100%
+  height: auto
 
 .pz-animated-banner__item-top-layer
   position: absolute
@@ -35,4 +35,38 @@
   font-weight: 900
   font-size: 3.9rem
   line-height: 3.9rem
-  margin-bottom: 60px
+  margin-bottom: 4rem
+
+@include media-desktop
+
+@include media-tablet-landscape
+
+@include media-tablet-portrait
+  .pz-animated-banner__item-top-layer
+    width: 85%
+  .pz-animated-banner__item-title
+    &::before
+      color: white
+      content: "♥"
+
+@include media-phone
+  .pz-animated-banner__item-top-layer
+  .pz-animated-banner__item-subtitle
+  .pz-animated-banner__item
+    position: relative
+    right: 20px
+    overflow: hidden
+    max-width: 150%
+    height: auto
+  .pz-animated-banner__item-title
+    line-height: 5rem
+    font-size: 4.0rem
+    &::before
+      content: "♥"
+      margin-right: 11px 
+      font-size: 1.2rem
+      position: relative
+  .pz-animated-banner__item-subtitle
+      font-size: 9rem
+      line-height: 8rem
+      margin-bottom: 4rem
