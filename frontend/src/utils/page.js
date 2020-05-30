@@ -114,14 +114,14 @@ export default {
                 "height": 107,
                 "size": 27.66,
                 "path": null,
-                "url": "/uploads/thumbnail_s1-nocopy_48e497b306.png"
+                "url": "http://muji.ancorathemes.com/wp-content/themes/muji/images/s1-nocopy.png"
               }
             },
             "hash": "s1-nocopy_48e497b306",
             "ext": ".png",
             "mime": "image/png",
             "size": 33.57,
-            "url": "/uploads/s2-nocopy_e973924f34.png",
+            "url": "http://muji.ancorathemes.com/wp-content/themes/muji/images/s1-nocopy.png",
             "previewUrl": null,
             "provider": "local",
             "provider_metadata": null,
@@ -152,14 +152,14 @@ export default {
                 "height": 107,
                 "size": 31.95,
                 "path": null,
-                "url": "/uploads/thumbnail_s2-nocopy_e973924f34.png"
+                "url": "http://muji.ancorathemes.com/wp-content/themes/muji/images/s2-nocopy.png"
               }
             },
             "hash": "s2-nocopy_e973924f34",
             "ext": ".png",
             "mime": "image/png",
             "size": 32.58,
-            "url": "/uploads/s2-nocopy_e973924f34.png",
+            "url": "http://muji.ancorathemes.com/wp-content/themes/muji/images/s2-nocopy.png",
             "previewUrl": null,
             "provider": "local",
             "provider_metadata": null,
@@ -190,14 +190,14 @@ export default {
                 "height": 107,
                 "size": 30.27,
                 "path": null,
-                "url": "/uploads/thumbnail_s3-nocopy_6e443f7cfd.png"
+                "url": "http://muji.ancorathemes.com/wp-content/themes/muji/images/s3-nocopy.png"
               }
             },
             "hash": "s3-nocopy_6e443f7cfd",
             "ext": ".png",
             "mime": "image/png",
             "size": 28.71,
-            "url": "/uploads/s3-nocopy_6e443f7cfd.png",
+            "url": "http://muji.ancorathemes.com/wp-content/themes/muji/images/s3-nocopy.png",
             "previewUrl": null,
             "provider": "local",
             "provider_metadata": null,
@@ -272,7 +272,7 @@ export default {
             "ext": ".webp",
             "mime": "image/webp",
             "size": 47.29,
-            "url": "/uploads/bg-5-copyright_8b0069105b.webp",
+            "url": "http://muji.ancorathemes.com/wp-content/uploads/2017/12/bg-5-copyright.jpg",
             "previewUrl": null,
             "provider": "local",
             "provider_metadata": null,
