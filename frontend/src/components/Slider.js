@@ -9,14 +9,14 @@ const Slider = (props) =>  {
   console.log("Slider.render image", image)
   return (
    <div className="pz-animated-banner">
-    <img className="pz-animated-banner__item" 
-         src={image.url} 
-         alt={image.alternativeText}/>
-    <div className="pz-animated-banner__item-top-layer">
-      <div className="pz-animated-banner__item-title">{item.title}</div>
-      <div className="pz-animated-banner__item-subtitle">{item.subtitle}</div>
-      <p className="pz-btn">View Our Services</p>
-    </div>
+      <img className="pz-animated-banner__item" 
+           src={image.url} 
+           alt={image.alternativeText}/>
+      <div className="pz-animated-banner__item-top-layer">
+        <div className="pz-animated-banner__item-title">{item.title}</div>
+        <div className="pz-animated-banner__item-subtitle">{item.subtitle}</div>
+        <p className="pz-btn">View Our Services</p>
+      </div>
    </div>
   )
 }
