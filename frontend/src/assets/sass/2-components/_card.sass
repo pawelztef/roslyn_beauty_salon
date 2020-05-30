@@ -80,11 +80,13 @@
 
   .card__simple-offer
     border: none
-    margin-bottom: 50px
+    border-top: 1px solid $bl
+    &:nth-of-type(1)
+      border-top: none
 
   .price-item
     background-position: top
-    background-size: 70%
+    background-size: 50%
 
   .price-item-title 
     font-size: 5rem !important
@@ -100,12 +102,18 @@
     line-height: 50px
 
 @include media-phone
+  .card__simple-offer
+    padding: 6rem 0 
+    border-top: 1px solid $bl
+    &:nth-of-type(1)
+      border-top: none
   .price-item
-    background-size: 100%
+    background-size: 50%
+    background-position: top
   .price-item-title 
     font-size: 8rem !important
-    line-height: 9rem
-    padding: 1rem 0 0rem 0
+    line-height: 12rem
+    padding: 0rem 0 0rem 0
     span
       max-width: 90%
       display: block
@@ -123,6 +131,6 @@
     height: 45px
     line-height: 45px
     display: inline-block
-    background-color: $pt1
+    background-color: $pt4
     color: $bl
     margin-left: 20px
