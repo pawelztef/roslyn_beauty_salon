@@ -73,12 +73,17 @@
 @include media-desktop
 
 @include media-tablet-landscape
+  .price-item-title 
+    font-size: 4rem !important
+    line-height: 3rem
+    padding: 3rem 0 1.2rem 0
 
 @include media-tablet-portrait
   .card__wrapper
     flex-direction: column
 
   .card__simple-offer
+    padding: 6rem 0 
     border: none
     border-top: 1px solid $bl
     &:nth-of-type(1)
@@ -89,7 +94,7 @@
     background-size: 50%
 
   .price-item-title 
-    font-size: 5rem !important
+    font-size: 5.5rem !important
     line-height: 3rem
     padding: 5.5rem 0 4rem 0
 
@@ -103,7 +108,6 @@
 
 @include media-phone
   .card__simple-offer
-    padding: 6rem 0 
     border-top: 1px solid $bl
     &:nth-of-type(1)
       border-top: none

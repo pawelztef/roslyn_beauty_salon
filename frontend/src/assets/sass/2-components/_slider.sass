@@ -35,12 +35,24 @@
 @include media-desktop
 
 @include media-tablet-landscape
+  .pz-animated-banner__item-top-layer
+    width: 55%
+    left: 12%
 
 @include media-tablet-portrait
+  .pz-animated-banner__item
+    max-width: 120%
   .pz-animated-banner__item-top-layer
-    width: 35%
+    width: 55%
     left: 15%
+    padding-bottom: 50px
   .pz-animated-banner__item-title
+    font-size: 6rem
+    line-height: 8rem
+  .pz-animated-banner__item-subtitle
+    font-size: 5.5rem
+    line-height: 6rem
+    margin-bottom: 60px
 
 @include media-phone
   .pz-animated-banner__item-top-layer
