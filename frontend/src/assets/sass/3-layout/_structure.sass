@@ -11,3 +11,10 @@
 .container-wrapper
   width: 60%
   margin: 0 auto
+  @include media-desktop
+  @include media-tablet-landscape
+    width: 80%
+  @include media-tablet-portrait
+    width: 80%
+  @include media-phone
+    width: 90%
