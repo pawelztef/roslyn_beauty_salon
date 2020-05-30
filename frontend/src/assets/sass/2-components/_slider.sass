@@ -22,14 +22,9 @@
 
 .pz-animated-banner__item-title
   font-family: $font-third
-  text-transform: lowercase
-  line-height: 4rem
-  font-size: 4.0rem
-  &::before
-    content: "♥"
-    margin-right: 11px 
-    font-size: 1.2rem
-    position: relative
+  text-transform: capitalize
+  line-height: 6rem
+  font-size: 3.5rem
 
 .pz-animated-banner__item-subtitle
   font-weight: 900
@@ -43,30 +38,25 @@
 
 @include media-tablet-portrait
   .pz-animated-banner__item-top-layer
-    width: 85%
+    width: 35%
+    left: 15%
   .pz-animated-banner__item-title
-    &::before
-      color: white
-      content: "♥"
 
 @include media-phone
   .pz-animated-banner__item-top-layer
-  .pz-animated-banner__item-subtitle
+    width: 65%
+    left: 10%
   .pz-animated-banner__item
     position: relative
-    right: 20px
+    right: 140px 
     overflow: hidden
-    max-width: 150%
+    max-width: 200%
     height: auto
   .pz-animated-banner__item-title
-    line-height: 5rem
-    font-size: 4.0rem
-    &::before
-      content: "♥"
-      margin-right: 11px 
-      font-size: 1.2rem
-      position: relative
+    line-height: 7rem
+    font-size: 7.0rem
+    margin-bottom: 10px
   .pz-animated-banner__item-subtitle
-      font-size: 9rem
+      font-size: 8rem
       line-height: 8rem
-      margin-bottom: 4rem
+      margin-bottom: 30px
