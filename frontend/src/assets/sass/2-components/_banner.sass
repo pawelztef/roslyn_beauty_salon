@@ -20,7 +20,50 @@
   transform: translateY(80%)
   position: relative
 
+.banner__item-top-layer-mask
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 1
+  background-color: rgba(0,0,0,0.6)
+  opacity: 0.6
+  transition: opacity 0.3s ease
+  &:before
+    content: ' '
+    position: absolute
+    z-index: 1
+    top: 0
+    left: -32%
+    width: 120%
+    height: 100%
+    background: rgba(255, 255, 255, 0.2)
+    -webkit-transition: -webkit-transform 0.8s ease
+    -ms-transition: -ms-transform 0.8s ease
+    transition: transform 0.8s ease
+    -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, 100%, 0)
+    -ms-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, 100%, 0)
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, 100%, 0)
+    -webkit-box-sizing: border-box
+    -ms-box-sizing: border-box
+    box-sizing: border-box
+  &:hover
+    opacity: 1
+.banner__item-top-layer-mask:hover:before
+  -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, -130%, 0);
+  -ms-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, -130%, 0);
+  transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, -130%, 0);
+
 .banner__item-title
+.banner__item-subtitle
+  span
+   &:first-of-type
+     font-family: $font-third
+     font-size: 4.5rem
+     font-weight: 400
+     margin-right: 15px
+   &:last-of-type
 
 @include media-desktop
   .banner__item
@@ -31,6 +74,22 @@
     height: 280px
 
 @include media-tablet-portrait
+  .banner__item-top-layer
+    width: 67%
+    height: 50%
+    transform: translateY(80%)
+  .banner__item-title
+    font-size: 5.5rem
+    line-height: 5rem
+  .banner__item-subtitle
+    span
+     &:first-of-type
+       font-family: $font-third
+       font-size: 7rem
+       font-weight: 400
+       margin-right: 15px
+     &:last-of-type
+       font-size: 5rem
 
 @include media-phone
   .banner__item
@@ -39,6 +98,20 @@
     font-size: 6rem 
     color: $wt
   .banner__item-top-layer
-    width: 40%
+    width: 60%
     height: 50%
     transform: translateY(80%)
+  .banner__item-title
+    font-size: 7.5rem
+    line-height: 7rem
+  .banner__item-subtitle
+    margin-bottom: 15px
+    span
+     &:first-of-type
+       font-family: $font-third
+       font-size: 8rem
+       font-weight: 400
+       margin-right: 15px
+     &:last-of-type
+       font-size: 6.5rem
+
