@@ -6,6 +6,7 @@ const Banner = (props) => {
   console.log('Banner.render data', data)
   const item = data.card[0]
   const {title, subtitle, link, image} = item
+  const [subtitleFirstHalf, subtitleSecondHalf] = item.subtitle.split(' ')
   console.log('Banner.render title', title)
   console.log('Banner.render subtitle', subtitle)
   console.log('Banner.render link', link)
@@ -18,10 +19,15 @@ const Banner = (props) => {
                  style={{ 
                    backgroundImage: `url(${image.url})`
                  }}>
-            <div className="banner__item-top-layer">
-              <div className="banner__item-title">{title}</div>
-              <div className="banner__item-subtitle">{subtitle}</div>
-              <a href={link} className="pz-btn banner__item-call-to-action">more details</a>
+            <div className="banner__item-top-layer-mask">
+              <div className="banner__item-top-layer">
+                <div className="banner__item-title">{title}</div>
+                <div className="banner__item-subtitle">
+                  <span>{subtitleFirstHalf}</span>
+                  <span>{subtitleSecondHalf}</span>
+                </div>
+                <a href={link} className="pz-btn banner__item-call-to-action">more details</a>
+              </div>
             </div>
           </div>
         </div>
