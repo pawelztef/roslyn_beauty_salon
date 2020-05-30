@@ -4,6 +4,7 @@ import mockPage from './utils/page'
 
 import CardGroup from './components/CardGroup'
 import Slider from './components/Slider'
+import Banner from './components/Banner'
 import Layout from './components/Layout'
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
   return (
     <>
       <Layout>
-            <Slider data={mockPage.content[0]}/> 
+          <Slider data={mockPage.content[0]}/> 
           <div class="container-wrapper">
              <CardGroup data={mockPage.content[1]} />
+             <Banner data={mockPage.content[2]} />
           </div>
       </Layout>
     </>
