@@ -1,21 +1,44 @@
-.banner__item-top-layer
-  display: flex
-  flex-direction: column
-  justify-content: flex-end
-  align-items: flex-start
-  height: 100%
-
 .banner__item
-  height: 280px
+  height: 480px
   overflow: hidden
   position: relative
   background-position: center
   background-repeat: no-repeat
   background-size: cover
+  color: $wt
+  font-size: 3rem
+  font-weight: 900
+
+.banner__item-top-layer
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: flex-start
+  height: 50%
+  width: 35%
+  left: 10%
+  transform: translateY(80%)
+  position: relative
+
+.banner__item-title
 
 @include media-desktop
+  .banner__item
+    height: 380px
+
 @include media-tablet-landscape
+  .banner__item
+    height: 280px
+
 @include media-tablet-portrait
+
 @include media-phone
   .banner__item
-    height: 378px
+    font-family: $font-second
+    font-weight: 900
+    font-size: 6rem 
+    color: $wt
+  .banner__item-top-layer
+    width: 40%
+    height: 50%
+    transform: translateY(80%)
