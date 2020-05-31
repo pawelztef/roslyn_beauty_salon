@@ -1,5 +1,6 @@
 import React from 'react'
 import EmptySpace from './EmptySpace'
+import ContactInfoCard from './ContactInfoCard'
 
 const Welcome = (props) => {
   console.log('Welcome.render props', props)
@@ -15,10 +16,11 @@ const Welcome = (props) => {
         <EmptySpace />
         <div className="pz-container-wrapper">
           <div className="welcome__section">
-            <h2 className="welcome__title">{firstComponent.title}</h2>
+            <h2 className="welcome__title pz-script-font">{firstComponent.title}</h2>
             <div className="welcome__content">{firstComponent.content}</div>
           </div>
         </div>
+        <ContactInfoCard />
     </div>
   )
 }
