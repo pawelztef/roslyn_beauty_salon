@@ -23,7 +23,7 @@ const Banner = (props) => {
               <div className="banner__item-top-layer">
                 <div className="banner__item-title">{title}</div>
                 <div className="banner__item-subtitle">
-                  <span>{subtitleFirstHalf}</span>
+                  <span className="pz-script-font">{subtitleFirstHalf}</span>
                   <span>{subtitleSecondHalf}</span>
                 </div>
                 <a href={link} className="pz-btn banner__item-call-to-action">more details</a>

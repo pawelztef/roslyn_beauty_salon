@@ -23,7 +23,7 @@ export default function CardGroup({data}) {
               </span>
             </h3>
             <div className="price-item-price">
-              <span className="price-item-price-before">{before}</span>
+              <span className="price-item-price-before pz-script-font">{before}</span>
               <span className="price-item-price-after">{after}</span>
             </div>
           </a>
