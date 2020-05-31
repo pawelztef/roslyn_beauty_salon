@@ -288,7 +288,7 @@ export default {
       "title": "Welcome to our beauty bar",
       "subtitle": null,
       "content": "Glowing, dewy skin is our thing. Our skin care products are designed to instantly optimize your skin’s tone, texture, and hydration levels so that it’s already at its best before you even think about makeup. Browse through our beauty bar and see how many products we have specifically for your skin type. Contact us for a consultation"
-            },
+    },
       {
         "__component": "page.card-group",
         "id": 3,
@@ -334,7 +334,7 @@ export default {
               "ext": ".webp",
               "mime": "image/webp",
               "size": 20.24,
-              "url": "/uploads/welcome-home_8ab575ae7f.webp",
+              "url": "http://muji.ancorathemes.com/wp-content/uploads/2018/05/slide3.jpg",
               "previewUrl": null,
               "provider": "local",
               "provider_metadata": null,
