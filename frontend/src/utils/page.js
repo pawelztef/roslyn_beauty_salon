@@ -289,60 +289,60 @@ export default {
       "subtitle": null,
       "content": "Glowing, dewy skin is our thing. Our skin care products are designed to instantly optimize your skin’s tone, texture, and hydration levels so that it’s already at its best before you even think about makeup. Browse through our beauty bar and see how many products we have specifically for your skin type. Contact us for a consultation"
     },
-      {
-        "__component": "page.card-group",
-        "id": 3,
-        "name": "ContactInfo",
-        "card": [
-          {
-            "id": 19,
-            "title": "Contact Info",
-            "content": "PHONE\n(123) 456-78-90\n(123) 456-78-90\n\nADDRESS\n8500, Lorem Street,\nChicago, IL, 55030",
-            "image_position": "right",
-            "link": null,
-            "subtitle": null,
-            "image": {
-              "id": 12,
-              "name": "welcome-home",
-              "alternativeText": "",
-              "caption": "",
-              "width": 670,
-              "height": 450,
-              "formats": {
-                "thumbnail": {
-                  "hash": "thumbnail_welcome-home_8ab575ae7f",
-                  "ext": ".webp",
-                  "mime": "image/webp",
-                  "width": 232,
-                  "height": 156,
-                  "size": 5.1,
-                  "path": null,
-                  "url": "/uploads/thumbnail_welcome-home_8ab575ae7f.webp"
-                },
-                "small": {
-                  "hash": "small_welcome-home_8ab575ae7f",
-                  "ext": ".webp",
-                  "mime": "image/webp",
-                  "width": 500,
-                  "height": 336,
-                  "size": 12.82,
-                  "path": null,
-                  "url": "/uploads/small_welcome-home_8ab575ae7f.webp"
-                }
-              },
-              "hash": "welcome-home_8ab575ae7f",
-              "ext": ".webp",
-              "mime": "image/webp",
-              "size": 20.24,
-              "url": "http://muji.ancorathemes.com/wp-content/uploads/2018/05/slide3.jpg",
-              "previewUrl": null,
-              "provider": "local",
-              "provider_metadata": null,
-              "created_at": "2020-05-25T07:23:41.981Z",
-              "updated_at": "2020-05-25T07:23:41.981Z"
+  {
+                "__component": "page.card-group",
+                "id": 3,
+                "name": "ContactInfo",
+                "card": [
+                    {
+                        "id": 19,
+                        "title": "Contact Info",
+                        "image_position": "right",
+                        "link": null,
+                        "subtitle": null,
+                        "content": "<div>\n<span>phone</span>\n<span>(123) 456-78-90</span>\n<span>(123) 456-78-90</span>\n</div>\n<div>\n<span>address</span>\n<span>8500, Lorem Street,</span>\n<span>Chicago, IL, 55030</span>\n</div>",
+                        "image": {
+                            "id": 12,
+                            "name": "welcome-home",
+                            "alternativeText": "",
+                            "caption": "",
+                            "width": 670,
+                            "height": 450,
+                            "formats": {
+                                "thumbnail": {
+                                    "hash": "thumbnail_welcome-home_8ab575ae7f",
+                                    "ext": ".webp",
+                                    "mime": "image/webp",
+                                    "width": 232,
+                                    "height": 156,
+                                    "size": 5.1,
+                                    "path": null,
+                                    "url": "/uploads/thumbnail_welcome-home_8ab575ae7f.webp"
+                                },
+                                "small": {
+                                    "hash": "small_welcome-home_8ab575ae7f",
+                                    "ext": ".webp",
+                                    "mime": "image/webp",
+                                    "width": 500,
+                                    "height": 336,
+                                    "size": 12.82,
+                                    "path": null,
+                                    "url": "/uploads/small_welcome-home_8ab575ae7f.webp"
+                                }
+                            },
+                            "hash": "welcome-home_8ab575ae7f",
+                            "ext": ".webp",
+                            "mime": "image/webp",
+                            "size": 20.24,
+                            "url": "/uploads/welcome-home_8ab575ae7f.webp",
+                            "previewUrl": null,
+                            "provider": "local",
+                            "provider_metadata": null,
+                            "created_at": "2020-05-25T07:23:41.981Z",
+                            "updated_at": "2020-05-25T07:23:41.981Z"
+                        }
+                    }
+                ]
             }
-          }
-        ]
-      }
 ]
 }
