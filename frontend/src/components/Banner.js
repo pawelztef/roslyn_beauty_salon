@@ -13,7 +13,7 @@ const Banner = (props) => {
   console.log('Banner.render image', image)
   return(
     <div className="pz-row">
-      <div className="pz-con">
+      <div className="pz-container">
          <div className="banner__wrapper">
             <div className="banner__item"
                  style={{ 
