@@ -1,4 +1,5 @@
 import React from 'react'
+import EmptySpace from './EmptySpace'
 
 export default function Layout(props) {
   return (
@@ -9,6 +10,7 @@ export default function Layout(props) {
             {props.children}
         </div>
       </div>
+        <EmptySpace />
     </div>
   )
 }
