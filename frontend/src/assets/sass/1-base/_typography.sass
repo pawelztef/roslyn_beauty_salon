@@ -6,6 +6,40 @@ $font-second: 'FrankRuhlLibre', serif
 $font-third: 'Mrs Saint Delafield', cursive
 $font-fourth: 'Josefin Sans', sans-serif
 
+%serif-font
+  font-family: $font-second
+  font-weight: bold
+
 %script-font
   font-family: $font-third
   font-weight: 400
+
+%sans-serif-font
+  font-family: $font-fourth
+  font-weight: 400
+
+
+
+h1, h2, h3, h4, h5, h6
+  margin-bottom: .5rem
+
+h1
+  font-size: 4.25rem
+
+h2
+  @extend %serif-font
+  font-size: 3.75rem
+h3
+  @extend %script-font
+  font-size: 3rem
+  text-transform: capitalize
+h4
+  font-size: 2rem
+h5
+  font-size: 2rem
+h6
+  @extend %sans-serif-font
+  font-size: 0.8rem
+  text-transform: uppercase
+
+
