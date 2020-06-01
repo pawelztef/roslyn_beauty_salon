@@ -12,16 +12,18 @@ const Welcome = (props) => {
   console.log('Welcome.render component 2', secondComponent)
 
   return (
-    <div className="pz-row welcome__wrapper">
-        <EmptySpace />
-        <div className="pz-container-wrapper">
-          <div className="welcome__section">
-            <h2 className="welcome__title pz-script-font">{firstComponent.title}</h2>
-            <div className="welcome__content">{firstComponent.content}</div>
-          </div>
-        </div>
-        <ContactInfoCard />
-    </div>
+    <React.Fragment>
+	<div className="pz-row welcome__wrapper">
+	    <EmptySpace />
+	    <div className="pz-container-wrapper">
+	      <div className="welcome__section">
+		<h2 className="welcome__title pz-script-font">{firstComponent.title}</h2>
+		<div className="welcome__content">{firstComponent.content}</div>
+	      </div>
+	    </div>
+	</div>
+	<ContactInfoCard data={secondComponent}/>
+    </React.Fragment>
   )
 }
 

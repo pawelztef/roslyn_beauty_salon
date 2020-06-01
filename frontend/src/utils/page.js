@@ -297,10 +297,10 @@ export default {
                     {
                         "id": 19,
                         "title": "Contact Info",
-                        "image_position": "right",
+                        "image_position": "left",
                         "link": null,
                         "subtitle": null,
-                        "content": "<div>\n<span>phone</span>\n<span>(123) 456-78-90</span>\n<span>(123) 456-78-90</span>\n</div>\n<div>\n<span>address</span>\n<span>8500, Lorem Street,</span>\n<span>Chicago, IL, 55030</span>\n</div>",
+                        "content": "<span>phone</span>\n<span>(123) 456-78-90</span>\n<span>(123) 456-78-90</span>\n<span>address</span>\n<span>8500, Lorem Street,</span>\n<span>Chicago, IL, 55030</span>\n",
                         "image": {
                             "id": 12,
                             "name": "welcome-home",
@@ -334,7 +334,7 @@ export default {
                             "ext": ".webp",
                             "mime": "image/webp",
                             "size": 20.24,
-                            "url": "/uploads/welcome-home_8ab575ae7f.webp",
+                            "url": "http://muji.ancorathemes.com/wp-content/uploads/2018/05/c-home2.png",
                             "previewUrl": null,
                             "provider": "local",
                             "provider_metadata": null,
