@@ -1,6 +1,6 @@
 .welcome__wrapper
   background-color: $pt3a
-  padding-bottom: 230px
+  padding-bottom: 14rem
 .welcome__section,
 .welcome__title
   text-align: center
@@ -8,8 +8,9 @@
   max-width: 75%
   margin: 0 auto
 .welcome__title
-  margin-bottom: 25px
+  margin-bottom: 2.3rem
   font-size: 3.5rem
+  line-height: 3.5rem
 .welcome__content
   font-size: 1.2rem
   line-height: 1.6rem
@@ -17,4 +18,18 @@
 @include media-desktop
 @include media-tablet-landscape
 @include media-tablet-portrait
+  .welcome__wrapper
+    background-color: $wt
+  .welcome__title
+    font-size: 7.5rem
+    line-height: 1.2em
+  .welcome__content
+    font-size: 2.5rem
+    line-height: 1.2em
 @include media-phone
+  .welcome__title
+    font-size: 9.5rem
+    line-height: 1.2em
+  .welcome__content
+    font-size: 4.2rem
+    line-height: 1.2em
