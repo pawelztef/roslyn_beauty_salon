@@ -27,6 +27,12 @@
         "page.slider",
         "page.card-group"
       ]
+    },
+    "pages": {
+      "collection": "page"
+    },
+    "navbar": {
+      "model": "navbar"
     }
   }
 }
