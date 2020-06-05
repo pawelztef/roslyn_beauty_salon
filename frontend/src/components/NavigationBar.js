@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FiPhone, FiMapPin } from "react-icons/fi"
 
   const Header = styled.header`
     background: white;
@@ -34,7 +35,14 @@ export default function NavigationBar() {
     <Header className="pz-nav">
         <TopNav className="pz-nav__top-row">
           <div className="pz-container-wrapper">
-            hello
+            <ContactDetials>
+              <span>
+                <FiMapPin /> hello
+              </span>
+              <span>
+                <FiPhone /> hello
+              </span>
+            </ContactDetials>
           </div>
         </TopNav>
         <BottomNav className="pz-nav__bottom-row">
