@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navbars",
+  "info": {
+    "name": "navbar"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "navigation": {
+      "type": "dynamiczone",
+      "components": [
+        "navigation.menu-entry"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "depth": {
+      "type": "enumeration",
+      "enum": [
+        "zero",
+        "one",
+        "two",
+        "three"
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_navigation_menu_entries",
+  "info": {
+    "name": "menuEntry",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "pages": {
+      "collection": "page"
+    }
+  }
+}
