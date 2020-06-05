@@ -1,29 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FiPhone, FiMapPin } from "react-icons/fi"
+import { RiMapPin2Line, RiPhoneLine } from "react-icons/ri"
+import SocialList from './SocialList'
 
-const nav = styled.nav`
+const Nav = styled.nav`
   font-size: .9rem;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.9em;
+  padding-bottom: 0.9em;
 `
 const ContactDetials = styled.div`
-
+  display: flex;
+  justify-content: space-between; 
+  flex-grow: 2;
 `
 
 export default function TopNav() {
   return (
-    <nav className="pz-nav__top-row">
+    <Nav className="pz-nav__top-row">
       <div className="pz-container-wrapper">
-        <ContactDetials>
+        <ContactDetials className="pz-nav__contact-details">
           <span>
-            <FiMapPin /> hello
+            <RiMapPin2Line /> 8500, Lorem Street, Chicago, IL, 55030
           </span>
           <span>
-            <FiPhone /> hello
+            <RiPhoneLine /> 0 (800) 123-456
           </span>
         </ContactDetials>
+        <SocialList />
       </div>
-    </nav>
+    </Nav>
   )
 }
