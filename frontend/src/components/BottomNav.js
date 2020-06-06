@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Brand from './Brand'
 import AppointmentButton from './AppointmentButton'
 import MainMenu from './MainMenu'
+import BurgerButton from './BurgerButton'
 
 const Nav = styled.nav`
   padding-bottom: 1.8em;
@@ -32,6 +33,7 @@ class BottomNav extends React.Component {
           <Brand />
           <MainMenu />
           <AppointmentButton />
+          <BurgerButton />
         </div>
       </Nav>
     )
