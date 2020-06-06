@@ -1,4 +1,5 @@
 import React from 'react'
+import variables from '../assets/sass/1-base/_variables.sass'
 import styled from 'styled-components'
 import { RiMapPin2Line, RiPhoneLine } from "react-icons/ri"
 import SocialList from './SocialList'
@@ -18,7 +19,7 @@ export default function TopNav() {
   return (
     <Nav className="pz-nav__top-row">
       <div className="pz-container-wrapper">
-        <ContactDetials className="pz-nav__contact-details">
+        <ContactDetials className="pz-nav__contact-details pz-invisible-lg">
           <span>
             <RiMapPin2Line /> 8500, Lorem Street, Chicago, IL, 55030
           </span>
