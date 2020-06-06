@@ -20,7 +20,7 @@
       bottom: 2px
       color: $bl
 
-nav.pz-nav__bottom-row
+.pz-nav__bottom-row
   background-color: $wt
   z-index: 9
   width: 100%
@@ -60,10 +60,27 @@ nav.pz-nav__bottom-row
 .pz-nav__burger-button
   background-color: $pt1
 
+.pz-nav__mobile-nav
+  display: none
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: $mn-drk
+  width: 100%
+  height: 100%
+  z-index: 1000000
+  .pz-navb__brand
+    mix-blend-mode: difference
+
 @include media-desktop
+
 @include media-tablet-landscape
  .pz-menu__item
    font-size: 1.2rem;
    padding: .7rem 1.2rem .6rem 1.2rem;
+
 @include media-tablet-portrait
+   
 @include media-phone

@@ -7,7 +7,7 @@ const BrandImage = styled.img`
   max-height: 46px;
 `
 
-export default function Brand() {
+export default function Brand(props) {
   return(
   <BrandHref className="pz-nav__brand"
     href="https://pawelztef.me"
