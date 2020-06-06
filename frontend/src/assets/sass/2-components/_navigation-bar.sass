@@ -33,11 +33,7 @@ nav.pz-nav__bottom-row
     .pz-nav__appointment-button
       font-size: .6rem
       margin-bottom: 0
-      padding-top: 0.9rem
-
-
-
-    
+      padding: 19px 22px
 
 .pz-nav__contact-details
   span
@@ -53,9 +49,21 @@ nav.pz-nav__bottom-row
     &:hover
       text-decoration: none
   &__item 
+    font-size: 0.75rem;
+    padding: .5rem 1rem .4rem 1rem;
     &:hover
       text-decoration: none
       background: $pt1
   &__item-active
     background: $pt1
 
+.pz-nav__burger-button
+  background-color: $pt1
+
+@include media-desktop
+@include media-tablet-landscape
+ .pz-menu__item
+   font-size: 1.2rem;
+   padding: .7rem 1.2rem .6rem 1.2rem;
+@include media-tablet-portrait
+@include media-phone
