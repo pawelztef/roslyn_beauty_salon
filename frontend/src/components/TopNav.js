@@ -17,9 +17,9 @@ const ContactDetials = styled.div`
 
 export default function TopNav() {
   return (
-    <Nav className="pz-nav__top-row">
+    <Nav className="pz-nav__top-row pz-invisible-md">
       <div className="pz-container-wrapper">
-        <ContactDetials className="pz-nav__contact-details pz-invisible-lg">
+        <ContactDetials className="pz-nav__contact-details">
           <span>
             <RiMapPin2Line /> 8500, Lorem Street, Chicago, IL, 55030
           </span>
