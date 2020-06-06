@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Brand from './Brand'
+import AppointmentButton from './AppointmentButton'
+import MainMenu from './MainMenu'
 
 const Nav = styled.nav`
   padding-bottom: 1.8em;
@@ -28,6 +30,8 @@ class BottomNav extends React.Component {
       <Nav className="pz-nav__bottom-row">
         <div className="pz-container-wrapper">
           <Brand />
+          <MainMenu />
+          <AppointmentButton />
         </div>
       </Nav>
     )
