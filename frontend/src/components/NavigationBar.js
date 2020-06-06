@@ -5,7 +5,6 @@ import TopNav from './TopNav'
 import BottomNav from './BottomNav'
 
 const Header = styled.header`
-  background: white;
 `
 
 export default function NavigationBar() {
