@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import variables from '../assets/sass/1-base/_variables.sass'
 
 const MenuList = styled.ul`
   list-style: none;
@@ -10,6 +11,7 @@ const MenuList = styled.ul`
   align-items: center;
   padding: 0;
   margin: 0 2rem;
+
 `
 
 const MenuItem = styled.li`
@@ -17,14 +19,12 @@ const MenuItem = styled.li`
   text-transform: uppercase;
   font-weight: bold;
   list-style: 0;
-  font-size: 0.75rem;
-  padding: .5rem 1rem .4rem 1rem;
   border-radius: 30px;
 `
 
 export default function MainMenu() {
   return(
-    <MenuList className="pz-menu">
+    <MenuList className="pz-menu pz-invisible-md">
       <MenuItem className="pz-menu__item pz-menu__item-active"> 
         <a href="htts://pawelztef.me">Services</a>
       </MenuItem>
