@@ -26,9 +26,36 @@ nav.pz-nav__bottom-row
   width: 100%
   top: 0
 
+  .pz-container-wrapper
+    display: flex
+    justify-content: space-between
+
+    .pz-nav__appointment-button
+      font-size: .6rem
+      margin-bottom: 0
+      padding-top: 0.9rem
+
+
+
+    
+
 .pz-nav__contact-details
   span
     svg
       margin-right: 10px
 
 .pz-social-list__item
+
+.pz-menu
+  a
+    color: $bl
+    font-family: $font-fourth
+    &:hover
+      text-decoration: none
+  &__item 
+    &:hover
+      text-decoration: none
+      background: $pt1
+  &__item-active
+    background: $pt1
+
