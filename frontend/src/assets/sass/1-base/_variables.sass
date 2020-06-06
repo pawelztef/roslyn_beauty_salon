@@ -9,20 +9,25 @@ $pt3: #e9e8f2
 $pt3a: lighten($pt3, 5%)
 $pt4: lighten(#a66cd9, 30%)
 
+$media-phone: 576px
+$media-tablet-portrait: 768px
+$media-tablet-landscape: 992px
+$media-tablet-desktop: 1200px
+
 @mixin media-phone
-  @media (max-width: 576px)
+  @media (max-width: $media-phone)
     @content 
 
 @mixin media-tablet-portrait 
-  @media (max-width: 768px)
+  @media (max-width: $media-tablet-portrait)
     @content 
 
 @mixin media-tablet-landscape 
-  @media (max-width: 992px)
+  @media (max-width: $media-tablet-landscape)
     @content 
 
 @mixin media-desktop 
-  @media (max-width: 1200px)
+  @media (max-width: $media-tablet-desktop)
     @content 
 
 %responsivnes-indicator
@@ -45,3 +50,17 @@ $pt4: lighten(#a66cd9, 30%)
       content: "max-width 576px"
       color: red
 
+export 
+  media-phone: $media-phone
+  media-tablet-portrait: $media-tablet-portrait
+  media-tablet-landscape: $media-tablet-landscape
+  media-tablet-desktop: $media-tablet-desktop
+  bl: $bl
+  gr: $gr
+  mn: $mn
+  wt: $wt
+  pt1: $pt1
+  pt2: $pt2
+  pt3: $pt3
+  pt3a: $pt3a
+  pt4: $pt4
