@@ -8,12 +8,12 @@ import MobileNav from './MobileNav'
 const Header = styled.header`
 `
 
-export default function NavigationBar() {
+export default function NavigationBar(props) {
+  console.log("NavigationBar props", props)
   return(
     <Header className="pz-nav">
       <TopNav /> 
-      <BottomNav /> 
-      <MobileNav />
+      <BottomNav mobileMenuToggleHandler={props.mobileMenuToggleHandler} /> 
     </Header>
   )
 }

@@ -8,20 +8,34 @@ import Banner from './components/Banner'
 import Welcome from './components/Welcome'
 import EmptySpace from './components/EmptySpace'
 import NavigationBar from './components/NavigationBar'
+import MobileNav from './components/MobileNav'
 
-function App() {
-  console.log('App.render mockPage', mockPage)
-  return (
-    <>
-      <div className="pz-body-wrapper">
-        <div className="responsivnes-indicator"></div>
+class App extends React.Component {
+  state = {
+    mobileMenuOpen: false
+  }
+
+  mobileMenuToggleHandler = () => {
+    this.setState((prevState) => {
+      console.log('App.mobileMenuToggleHandler prevState', prevState)
+      return { mobileMenuOpen: !prevState.mobileMenuOpen }
+    })
+  }
+
+  render() {
+    return (
+      <>
+        <div className="pz-body-wrapper">
+          <div className="responsivnes-indicator"></div>
           <div className="pz-page-wrapper">
 
-            <NavigationBar />
+            <NavigationBar mobileMenuToggleHandler={this.mobileMenuToggleHandler} />
+            <MobileNav show={this.state.mobileMenuOpen}
+                       click={this.mobileMenuToggleHandler} />
 
             <div className="pz-page-container-wrapper">
 
-            <Slider data={mockPage.content[0]}/> 
+              <Slider data={mockPage.content[0]}/> 
 
               <div class="pz-container-wrapper">
 
@@ -31,15 +45,16 @@ function App() {
 
               </div>
 
-            <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
+              <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
 
             </div>
           </div>
 
-        <EmptySpace />
-      </div>
-    </>
-  )
+          <EmptySpace />
+        </div>
+      </>
+    )
+  }
 }
 
 export default App

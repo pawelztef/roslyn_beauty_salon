@@ -18,9 +18,9 @@ const BurrgerWrp = styled.span`
   }
 `
 
-export default function BurgerButton() {
+export default function BurgerButton(props) {
   return(
-    <BurrgerWrp className='pz-nav__burger-button pz-visible-md'>
+    <BurrgerWrp className='pz-nav__burger-button pz-visible-md' onClick={props.click}>
       <RiMenuLine />
     </BurrgerWrp>
   )
