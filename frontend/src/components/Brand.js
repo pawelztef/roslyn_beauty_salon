@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const BrandHref = styled.a`
 `
 const BrandImage = styled.img`
-  max-height: 46px;
+  max-height: 50px;
 `
 
 export default function Brand(props) {
