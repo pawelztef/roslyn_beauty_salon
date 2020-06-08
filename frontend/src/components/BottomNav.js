@@ -10,6 +10,11 @@ const Nav = styled.nav`
   padding-top: 1.8em;
 `
 
+const MenuWrapper = styled.div`
+  display: flex;
+  align-items: inherit;
+`
+
 class BottomNav extends React.Component {
 
   componentDidMount() {
@@ -31,7 +36,9 @@ class BottomNav extends React.Component {
       <Nav className="pz-nav__bottom-row">
         <div className="pz-container-wrapper">
           <Brand />
-          <MainMenu />
+          <MenuWrapper className="pz-invisible-md">
+            <MainMenu />
+          </MenuWrapper>
           <AppointmentButton />
           <BurgerButton click={this.props.mobileMenuToggleHandler} />
         </div>
