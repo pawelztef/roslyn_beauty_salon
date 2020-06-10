@@ -297,7 +297,7 @@ export default {
                     {
                         "id": 19,
                         "title": "Contact Info",
-                        "image_position": "left",
+                        "image_position": "right",
                         "link": null,
                         "subtitle": null,
                         "content": "<span>phone</span>\n<span>(123) 456-78-90</span>\n<span>(123) 456-78-90</span>\n<span>address</span>\n<span>8500, Lorem Street,</span>\n<span>Chicago, IL, 55030</span>\n",
