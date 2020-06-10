@@ -1,22 +1,16 @@
 .contact-info
   position: relative
   bottom: 130px
+  h4
+    margin-bottom: 0.5em
   &__content
     color: $wt
     background-color: $mn
-    padding: 3rem 4rem
-    h4
-      text-transform: capitalize
-      font-weight: bold
-    span
-      &:nth-of-type(1), 
-      &:nth-of-type(4)
-        @extend %sans-serif-font
-        text-transform: uppercase
-        font-size: .8rem
-        font-weight: bold
-        margin-bottom: .5rem
-        margin-top: 1.5rem
+    padding: 0 4rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    flex-grow: 1
 
 img.contact-info__image
   align-self: center
@@ -34,6 +28,8 @@ img.contact-info__image
   img.contact-info__image
     max-width: 100%
   .contact-info
+    h4
+      margin-bottom: 1em
     width: 90%
     margin: 0 auto
     position: relative
@@ -41,29 +37,12 @@ img.contact-info__image
     flex-direction: column !important
     &__content
       font-size: 3rem
+      padding: 5rem 8rem
     &__image
       margin-left: 0 !important
-    h4
-      font-size: 3rem
-    span
-      font-size: 2.5rem
-      &:nth-of-type(1), 
-      &:nth-of-type(4)
-        font-size: 2rem
-        font-weight: bold
-        margin-bottom: 1.5rem
-        margin-top: 2.5rem
 @include media-phone
   .contact-info
-    &__content
-      font-size: 3rem
     h4
-      font-size: 4rem
-    span
-      font-size: 3.5rem
-      &:nth-of-type(1), 
-      &:nth-of-type(4)
-        font-size: 2.5rem
-        font-weight: bold
-        margin-bottom: 1.5rem
-        margin-top: 2.5rem
+      margin-bottom: 1em
+    &__content
+      padding: 5rem 8rem
