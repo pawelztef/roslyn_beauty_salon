@@ -25,21 +25,58 @@ h1, h2, h3, h4, h5, h6
 
 h1
   font-size: 4.25rem
+  @include media-desktop
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+  @include media-phone
 
 h2
   @extend %serif-font
   font-size: 3.75rem
+  @include media-desktop
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+  @include media-phone
+
 h3
   @extend %script-font
   font-size: 3rem
   text-transform: capitalize
+  @include media-desktop
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+  @include media-phone
+
 h4
   font-size: 2rem
+  font-weight: bold
+  @include media-desktop
+  @include media-tablet-landscape
+    font-size: 2.5rem
+  @include media-tablet-portrait
+    font-size: 3.2rem
+  @include media-phone
+    font-size: 4.9rem
+
 h5
   font-size: 2rem
+  @include media-desktop
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+  @include media-phone
+
 h6
   @extend %sans-serif-font
   font-size: 0.8rem
   text-transform: uppercase
+  font-weight: bold
+  letter-spacing: 1.5px
+  @include media-desktop
+  @include media-tablet-landscape
+    font-size: 1rem
+  @include media-tablet-portrait
+    font-size: 1.6rem
+  @include media-phone
+    font-size: 2.5rem
 
 
