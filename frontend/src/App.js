@@ -9,6 +9,7 @@ import Welcome from './components/Welcome'
 import EmptySpace from './components/EmptySpace'
 import NavigationBar from './components/NavigationBar'
 import MobileNav from './components/MobileNav'
+import Footer from './components/Footer'
 
 class App extends React.Component {
   state = {
@@ -31,7 +32,7 @@ class App extends React.Component {
 
             <NavigationBar mobileMenuToggleHandler={this.mobileMenuToggleHandler} />
             <MobileNav show={this.state.mobileMenuOpen}
-                       click={this.mobileMenuToggleHandler} />
+              click={this.mobileMenuToggleHandler} />
 
             <div className="pz-page-container-wrapper">
 
@@ -47,10 +48,14 @@ class App extends React.Component {
 
               <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
 
+              <EmptySpace />
+
+              <div class="pz-container-wrapper">
+                <Footer />
+              </div>
+
             </div>
           </div>
-
-          <EmptySpace />
         </div>
       </>
     )
