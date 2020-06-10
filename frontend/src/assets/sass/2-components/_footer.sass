@@ -28,7 +28,7 @@
         line-height: 42px
         background: $pt1 
         border-radius: 50%
-        font-size: 22px
+        font-size: 20px
         -webkit-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
         -ms-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
         -o-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
@@ -36,7 +36,7 @@
 
         svg
           position: relative
-          left: 2px
+          left: 3px
 
         &:hover
           background: $mn
@@ -56,3 +56,44 @@
     a
       &:hover
         text-decoration: none
+
+
+@include media-desktop
+@include media-tablet-landscape
+@include media-tablet-portrait
+  .pz-footer
+    >*
+      margin-bottom: 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    &__col-1
+      .pz-contact-details
+        >*
+          margin-bottom: 30px
+      text-align: center
+
+    &__col-2
+      order: 1
+      flex-grow: 0
+      >*
+        margin: 35px
+
+      .pz-footer-meta
+        text-align: center
+        order: 3
+        margin-bottom: 30px
+        span
+          font-size: 3rem
+    
+      .pz-social-list
+        margin: 0
+        &__item:first-of-type
+          padding-left: 10px 
+
+    &__col-3
+      >*
+        margin: 15px
+      text-align: center
+      font-size: 3rem
