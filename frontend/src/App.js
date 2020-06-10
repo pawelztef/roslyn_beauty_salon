@@ -10,6 +10,7 @@ import EmptySpace from './components/EmptySpace'
 import NavigationBar from './components/NavigationBar'
 import MobileNav from './components/MobileNav'
 import Footer from './components/Footer'
+import Newsletter from './components/Newsletter'
 
 class App extends React.Component {
   state = {
@@ -48,7 +49,8 @@ class App extends React.Component {
 
               <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
 
-              <EmptySpace />
+              <Newsletter />
+
 
               <div class="pz-container-wrapper">
                 <Footer />
