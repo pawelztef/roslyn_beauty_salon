@@ -48,9 +48,10 @@ class App extends React.Component {
               </div>
 
               <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
+              
+              <EmptySpace />
 
               <Newsletter />
-
 
               <div class="pz-container-wrapper">
                 <Footer />
