@@ -51,6 +51,28 @@ $media-tablet-desktop: 1200px
       content: "max-width 576px"
       color: red
 
+
+// example: @include placeholder-color(#333);
+
+@mixin placeholder-style($property, $value)
+  &.placeholder
+    #{$property}: $value
+
+  &:-moz-placeholder
+    #{$property}: $value
+    
+  &::-webkit-input-placeholder
+    #{$property}: $value
+  
+
+  &:-ms-input-placeholder
+    #{$property}: $value
+  
+
+
+
+
+
 export 
   media-phone: $media-phone
   media-tablet-portrait: $media-tablet-portrait
