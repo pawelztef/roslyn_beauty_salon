@@ -1,0 +1,56 @@
+.pz-newsletter-form
+  display: flex
+  flex-direction: column
+
+  .pz-newsletter-form-row-1
+    display: flex
+    margin-bottom: 35px
+    #pz-newsletter-email-input
+      flex: 1
+      background: $mn
+      border-bottom: 1px solid $wt
+      color: $wt
+      padding-bottom: 20px
+      @extend %sans-serif-font
+      text-transform: uppercase
+      font-size: .8rem
+      letter-spacing: 1px
+      @include placeholder-style(color, $wt)
+      @include placeholder-style(font-family, $font-fourth)
+      @include placeholder-style(text-transform, uppercase)
+      @include placeholder-style(font-size, .8rem)
+      @include placeholder-style(height, .8rem)
+      @include placeholder-style(letter-spacing, 1px)
+      @include placeholder-style(font-weight, bold) 
+
+      -webkit-transition: border-color 0.2s
+      -moz-transition:    border-color 0.2s
+      -ms-transition:     border-color 0.2s
+      -o-transition:      border-color 0.2s
+      transition:         border-color 0.2s
+
+      &:hover
+        border-color: lighten($mn, 10%)
+        
+    
+
+    #pz-newsletter-button
+      margin-left: 10%
+
+  .pz-newsletter-form-row-2
+    [for="pz-newsletter-agrement"]
+      a
+        margin-left: 5px
+        color: $bl
+        &:hover
+          color: $wt
+
+
+@include media-desktop
+@include media-tablet-landscape
+@include media-tablet-portrait
+  .pz-newsletter__container
+    margin-left: 15px
+    margin-right: 15px
+    flex-direction: column
+@include media-phone
