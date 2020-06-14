@@ -1,7 +1,7 @@
 .pz-newsletter__row
   width: 100%
   background: $mn
-  padding: 90px 0
+  padding: 60px 0
   color: $wt
 
 .pz-newsletter__container
@@ -11,3 +11,19 @@
   flex: 0 0 50%
   h4
     font-size: 2.25rem
+@include media-desktop
+@include media-tablet-landscape
+  .pz-newsletter__item
+    h4
+      font-size: 3rem
+      margin-bottom: 4rem
+@include media-tablet-portrait
+  .pz-newsletter__item
+    h4
+      font-size: 4rem
+      margin-bottom: 4rem
+@include media-phone
+  .pz-newsletter__item
+    h4
+      font-size: 5rem
+      margin-bottom: 4rem
