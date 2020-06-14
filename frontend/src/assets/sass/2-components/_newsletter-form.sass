@@ -31,11 +31,35 @@
 
       &:hover
         border-color: lighten($mn, 10%)
-        
-    
+
+    .pz-newsletter-button-wrapper
+      height: 63px
+      padding: 0 1.8rem 
+      margin-left: 10%
+      border-radius: 30px
+      background: linear-gradient(to right,	#bc89e2 50%,#bc89e2 50%) no-repeat scroll right bottom / 210% 100% #bc89e2 !important
+      box-shadow: 0 20px 40px rgba(112, 38, 168, 0.33)
+      display: flex
+      align-items: center
+      -webkit-transition: all 0.3s ease
+      -ms-transition: all 0.3s ease
+      transition: all 0.3s ease
+      svg
+        position: relative
+        bottom: 3px
+        margin-left: 5px
+
+      &:hover
+        box-shadow: 0 20px 40px rgba(112, 38, 168, 0);
 
     #pz-newsletter-button
-      margin-left: 10%
+      @extend %sans-serif-font
+      line-height: 39px
+      text-transform: uppercase
+      background: linear-gradient(to right,	#bc89e2 50%,#bc89e2 50%) no-repeat scroll right bottom / 210% 100% #bc89e2 !important
+      font-size: .75rem
+      color: $wt
+
 
   .pz-newsletter-form-row-2
     [for="pz-newsletter-agrement"]

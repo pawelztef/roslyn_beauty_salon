@@ -1,4 +1,5 @@
 import React from 'react'
+import { RiMailSendLine } from "react-icons/ri"
 
 const newsletterForm = () => (
   <form className="pz-newsletter-form" action="">
@@ -7,7 +8,10 @@ const newsletterForm = () => (
         type="email" 
         placeholder="enter your email"
         autocomplete="off"/>
-      <input id="pz-newsletter-button" type="submit" value="submit" />
+      <div className="pz-newsletter-button-wrapper">
+        <input id="pz-newsletter-button" type="submit" value="submit" /> 
+        <RiMailSendLine />
+      </div>
     </div>
     <div className="pz-newsletter-form-row-2">
       <input id="pz-newsletter-agrement" type="checkbox" name="newsletter-agrement" />
