@@ -4,8 +4,13 @@ const appointmentForm = () => {
   return(
     <div className="pz-appointment__form-wrapper">
       <form className="pz-appointment__form" >
+
+{/* Row 1 Start */}
         <div className="pz-appointment__form-row pz-appointment__row-1">
+
+{/* Section 1 Start */}
           <div className="pz-appointment__form-section">
+
             <div className="pz-appointment__form-row ">
               <div className="pz-appointment__form-input">
                 <input type="text" 
@@ -22,6 +27,7 @@ const appointmentForm = () => {
                 />
               </div>
             </div>
+
             <div className="pz-appointment__form-row">
               <div className="pz-appointment__form-input">
                 <input type="text" 
@@ -31,6 +37,7 @@ const appointmentForm = () => {
                 />
               </div>
             </div>
+
             <div className="pz-appointment__form-row">
               <div className="pz-appointment__form-input">
                 <input type="text" 
@@ -47,21 +54,36 @@ const appointmentForm = () => {
                 />
               </div>
             </div>
+
           </div>
+{/* Section 1 End*/}
+
+{/* Section 2 Start */}
           <div className="pz-appointment__form-section">
-            <div className="pz-appintment__form-input">
-              <textarea id="w3review" name="w3review" rows="10" cols="40">
-                At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies. 
+            <div className="pz-appointment__form-input">
+              <textarea id="appointment-message" 
+                name="appointment-message" 
+                rows="11" 
+                cols="40"
+                placeholder="Your Message"
+              >
               </textarea>
             </div>
           </div>
+{/* Section 2 End */}
+
         </div>
+{/* Row 1 End */}
+
+{/* Row 2 Start */}
         <div className="pz-appointment__form-row">
           <div className="pz-appintment__form-section">
           </div>
           <div className="pz-appintment__form-section">
           </div>
         </div>
+{/* Row 2 End */}
+
       </form>
     </div>
   )
