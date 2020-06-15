@@ -3,7 +3,32 @@
 .pz-appointment__form-row
   margin-bottom: 10px
 
+
 .pz-appointment__form-input
+  margin-bottom: 19px
+  input,
+  textarea
+    width: 100%
+    padding: 1.0rem 2rem
+    border: 2px solid $bl
+    border-radius: 35px
+    @extend %sans-serif-font
+    text-transform: uppercase
+    color: $bl
+    font-size: 18px
+    background: $pt2a 
+    -webkit-transition: border-color 0.2s
+    -moz-transition:    border-color 0.2s
+    -ms-transition:     border-color 0.2s
+    -o-transition:      border-color 0.2s
+    transition:         border-color 0.2s
+    @include placeholder-style(color, $bl)
+    &:hover,
+    &:active,
+    &:focus
+      border-color: $mn
+
+
 .pz-appointment__form-button
 
 .pz-appointment__row-1
@@ -15,7 +40,7 @@
     flex: 0 0 50%
     &:nth-of-type(1)
       .pz-appointment__form-input
-        margin-right: 20px
+        margin-right: 25px
       
 
     .pz-appointment__form-row
@@ -24,10 +49,8 @@
       .pz-appointment__form-input
         flex-grow: 1
 
-textarea
-  width: 100%
-[type="text"]
-  width: 100%
+.pz-appointment__row-2
+
 
 
 
