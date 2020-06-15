@@ -1,0 +1,38 @@
+.pz-appointment__form-wrapper
+.pz-appointment__form
+.pz-appointment__form-row
+  margin-bottom: 10px
+
+.pz-appointment__form-input
+.pz-appointment__form-button
+
+.pz-appointment__row-1
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+  .pz-appointment__form-section
+    flex: 0 0 50%
+    &:nth-of-type(1)
+      .pz-appointment__form-input
+        margin-right: 20px
+      
+
+    .pz-appointment__form-row
+      display: flex
+      flex-direction: row
+      .pz-appointment__form-input
+        flex-grow: 1
+
+textarea
+  width: 100%
+[type="text"]
+  width: 100%
+
+
+
+@include media-desktop
+@include media-tablet-landscape
+@include media-tablet-portrait
+@include media-phone
+
