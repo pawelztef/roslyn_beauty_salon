@@ -58,7 +58,7 @@
       letter-spacing: 1px
       text-transform: uppercase
       background: linear-gradient(to right,	#bc89e2 50%,#bc89e2 50%) no-repeat scroll right bottom / 210% 100% #bc89e2 !important
-      font-size: 18px
+      font-size: 0.8rem
       color: $wt
 
 
@@ -74,6 +74,19 @@
 
 
 @include media-desktop
+  .pz-newsletter-form
+    .pz-newsletter-form-row-1
+      .pz-newsletter-button-wrapper
+        height: 51px
+        padding: 0 2.2rem
+        margin-left: 20px
+        #pz-newsletter-button
+          font-size: 1.1rem
+          font-weight: bold
+        svg
+          font-size: 15px
+          bottom: 2px
+
 @include media-tablet-landscape
   .pz-newsletter-form
     .pz-newsletter-form-row-1
