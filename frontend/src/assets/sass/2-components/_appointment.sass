@@ -5,3 +5,22 @@
   text-align: center
 .pz-appointment-header
   margin-bottom: 30px
+
+@include media-tablet-landscape
+  .pz-appointment-header
+     font-size: 3.5rem
+@include media-tablet-portrait
+  .pz-appointment-header
+     font-size: 7.5rem
+@include media-phone
+  .pz-appointment__wrapper
+    padding: 60px 0
+  .pz-appointment-header
+     font-size: 9.5rem
+  [for="pz-appointment-agrement"]
+    font-size: 14px
+    a
+      margin-left: 3px
+      color: $bl
+      &:hover
+        color: $wt
