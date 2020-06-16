@@ -75,6 +75,19 @@
 
 @include media-desktop
 @include media-tablet-landscape
+  .pz-newsletter-form
+    .pz-newsletter-form-row-1
+      .pz-newsletter-button-wrapper
+        height: 51px
+        padding: 0 2.2rem
+        margin-left: 20px
+        #pz-newsletter-button
+          font-size: 1.2rem
+          font-weight: bold
+        svg
+          font-size: 15px
+          bottom: 2px
+
 @include media-tablet-portrait
   .pz-newsletter__container
     margin-left: 15px
@@ -115,3 +128,31 @@
           color: $bl
           &:hover
             color: $wt
+
+@include media-tablet-portrait
+  .pz-newsletter-form
+    .pz-newsletter-form-row-1
+      .pz-newsletter-button-wrapper
+        height: 53px
+        padding: 0 2.2rem
+        margin-left: 20px
+        #pz-newsletter-button
+          font-size: 1.5rem
+          font-weight: bold
+        svg
+          font-size: 16px
+          bottom: 1px
+
+@include media-phone
+  .pz-newsletter-form
+    .pz-newsletter-form-row-1
+      .pz-newsletter-button-wrapper
+        height: 51px
+        padding: 0 2.7rem
+        margin-left: 20px
+        #pz-newsletter-button
+          font-size: 2.2rem
+          font-weight: bold
+        svg
+          font-size: 16px
+          bottom: 1px
