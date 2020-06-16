@@ -1,0 +1,76 @@
+
+.MuiInput-underline
+  &::before,
+  &::after,
+    border: none !important
+
+.MuiPickersToolbar-toolbar,
+.MuiPickersClockNumber-clockNumberSelected,
+.MuiPickersClock-pin,
+.MuiPickersClockPointer-noPoint,
+.MuiPickersClockPointer-pointer,
+.MuiPickersClockPointer-thumb,
+.MuiPickersDay-daySelected
+  background: $mn !important
+
+.MuiTypography-h4
+  font-size: 26px
+  &:foucs
+    outline-color: $mn !important
+
+.MuiPickersDay-daySelected
+  outline-color: $mn !important
+
+.MuiPickersDay-current
+  color: darken($mn, 20%)
+
+.MuiButton-textPrimary
+  color: $mn !important
+  &:focus
+    outline-color: $mn !important
+
+.MuiPickersClockPointer-thumb
+  border-color: $mn !important
+.MuiTypography-h4
+  font-size: 28px !important
+
+.MuiTypography-body1
+  font-size: 0.8rem !important
+.MuiTypography-h2
+  font-size: 2rem
+
+.MuiTypography-colorPrimary,
+.MuiPickersYear-root:focus
+  color: $mn !important
+
+.MuiPickersToolbarButton-toolbarBtn,
+.MuiPickersCalendarHeader-iconButton
+  &:focus,
+  &:visited,
+  &:active
+    outline-color: $mn !important
+
+.MuiFormControl-root
+  width: 100%
+
+
+@include media-desktop
+@include media-tablet-landscape
+  .MuiButton-label,
+  .MuiTypography-caption,
+  .MuiTypography-body2,
+  .MuiTypography-body1,
+  .MuiIconButton-label,
+  .MuiPickersToolbarText-toolbarTxt,
+  p.MuiTypography-root.MuiTypography-body1.MuiTypography-alignCenter
+    font-size: 1.5rem !important
+@include media-tablet-portrait
+@include media-phone
+  .MuiButton-label,
+  .MuiTypography-caption,
+  .MuiTypography-body2,
+  .MuiTypography-body1,
+  .MuiIconButton-label,
+  .MuiPickersToolbarText-toolbarTxt,
+  p.MuiTypography-root.MuiTypography-body1.MuiTypography-alignCenter
+    font-size: 3.5rem !important
