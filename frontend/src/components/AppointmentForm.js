@@ -1,7 +1,30 @@
 import React from 'react'
-
+import { Button } from '@material-ui/core'
+import { MuiPickersUtilsProvider, DatePicker, TimePicker } from "@material-ui/pickers"
+import DateFnsUtils from '@date-io/date-fns'
 
 class AppointmentForm extends React.Component {
+
+
+  state = {
+    appointmentDate: new Date(),
+    appointmentTime: new Date()
+    
+  }
+
+  handleDateChange = date => {
+    this.setState({
+      appointmentDate: date
+    })
+  }
+  handleTimeChange = time => {
+    this.setState({
+      appointmentTime: time
+    })
+  }
+
+
+
   render() {
     return(
       <div className="pz-appointment__form-wrapper">
@@ -42,18 +65,18 @@ class AppointmentForm extends React.Component {
 
               <div className="pz-appointment__form-row">
                 <div className="pz-appointment__form-input">
-                  <input type="text" 
-                    id="appointment-date" 
-                    name="appointment-date"
-                    placeholder="Date"
-                  />
+                  <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <DatePicker value={this.state.appointmentDate} onChange={this.handleDateChange} />
+                  </MuiPickersUtilsProvider>
                 </div>
                 <div className="pz-appointment__form-input">
-                  <input type="text" 
-                    id="appointment-time" 
-                    name="appointment-time"
-                    placeholder="Time"
-                  />
+                  <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <TimePicker 
+                      value={this.state.appointmentTime} 
+                      onChange={this.handleTimeChange} 
+                      ampm={false}
+                    />
+                  </MuiPickersUtilsProvider>
                 </div>
               </div>
 
