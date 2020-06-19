@@ -327,7 +327,7 @@ iframe, video, embed
   cursor: pointer
   font-size: .7rem
   letter-spacing: 1px
-  border-radius: 30px
+  border-radius: 40px
   padding: 22px 25px
   color: $wt
   text-decoration: none
@@ -339,6 +339,10 @@ iframe, video, embed
    background: $bl
    color: $wt
    text-decoration: none
+  &:hover,
+  &:focus,
+  &:active
+    outline: none
 
   @include media-desktop
     font-size: 1rem
@@ -359,3 +363,34 @@ iframe, video, embed
 .pz-script-font
   @extend %script-font
 
+.pz-section__header
+  @extend %script-font
+  text-align: center
+  line-height: 1.2em
+  margin-bottom: 60px
+
+  @include media-desktop
+
+  @include media-tablet-landscape
+    font-size: 3.5rem
+
+  @include media-tablet-portrait
+    font-size: 7.5rem
+
+  @include media-phone
+    font-size: 9.5rem
+
+.pz-section__content
+  font-size: 1.2rem
+  line-height: 1.6rem
+  text-align: center
+  max-width: 100%
+  margin: 0 auto
+  @include media-desktop
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+    font-size: 2.5rem
+    line-height: 1.2em
+  @include media-phone
+    font-size: 4.2rem
+    line-height: 1.2em

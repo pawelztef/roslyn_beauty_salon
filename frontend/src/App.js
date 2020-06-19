@@ -12,6 +12,7 @@ import MobileNav from './components/MobileNav'
 import Footer from './components/Footer'
 import Newsletter from './components/Newsletter'
 import Appointment from './components/Appointment'
+import Team from './components/Team'
 
 class App extends React.Component {
   state = {
@@ -49,9 +50,11 @@ class App extends React.Component {
               </div>
 
               <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
-              
+
+              <Team />
 
               <Appointment />
+
               <Newsletter />
 
               <div class="pz-container-wrapper">

@@ -16,11 +16,11 @@ const Welcome = (props) => {
 	<div className="pz-row welcome__wrapper">
 	    <EmptySpace />
 	    <div className="pz-container-wrapper">
-	      <div className="welcome__section">
-		<h2 className="welcome__title pz-script-font">{firstComponent.title}</h2>
-		<div className="welcome__content">{firstComponent.content}</div>
-	      </div>
+		<h2 className="pz-section__header">{firstComponent.title}</h2>
+		<div className="pz-section__content">{firstComponent.content}</div>
 	    </div>
+	    <EmptySpace />
+	    <EmptySpace />
 	</div>
 	<ContactInfoCard data={secondComponent}/>
     </React.Fragment>
