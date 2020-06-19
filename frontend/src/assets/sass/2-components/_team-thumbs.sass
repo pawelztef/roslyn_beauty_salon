@@ -4,6 +4,7 @@
   justify-content: space-around
   &__profile
     max-width: 225px
+    padding: 20px
     img
       border-radius: 50%
   &__profile-info
@@ -15,3 +16,32 @@
       font-size: 1rem
 
   
+@include media-desktop
+@include media-tablet-landscape
+  .pz-team
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__profile
+      max-width: 255px
+
+    .pz-profile__header
+      &-title
+        font-weight: bold
+        font-size: 2.3rem
+        margin-bottom: 20px
+
+@include media-tablet-portrait
+  .pz-team
+    &__profile
+      max-width: 215px
+      &:last-of-type
+        padding-bottom: 0
+    .pz-profile__header
+      &-title
+        font-weight: bold
+        font-size: 3.5rem
+        margin-bottom: 10px
+
+@include media-phone

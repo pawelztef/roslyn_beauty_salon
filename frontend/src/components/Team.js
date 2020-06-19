@@ -8,7 +8,7 @@ const team = props => {
       <EmptySpace />
       <h2 className="pz-section__header">Your Beauty Agents</h2>
       <div className="pz-section__content">
-        Adipisicing atque sequi ducimus delectus quam Nemo alias quas totam temporibus odio. Consequatur iusto eos repudiandae totam magnam Adipisci veniam omnis temporibus harum ad maiores eius aspernatur Reiciendis expedita quos.
+        <h2>Meet the best team of professionals</h2>
       </div>
       <EmptySpace small/>
       <TeamThumbs />
