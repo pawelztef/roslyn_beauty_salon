@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 import Newsletter from './components/Newsletter'
 import Appointment from './components/Appointment'
 import Team from './components/Team'
+import Services from './components/Services'
 
 class App extends React.Component {
   state = {
@@ -41,15 +42,14 @@ class App extends React.Component {
 
               <Slider data={mockPage.content[0]}/> 
 
-              <div class="pz-container-wrapper">
 
-                <CardGroup data={mockPage.content[1]} />
+              <CardGroup data={mockPage.content[1]} />
 
-                <Banner data={mockPage.content[2]} />
-
-              </div>
+              <Banner data={mockPage.content[2]} />
 
               <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
+
+              <Services />
 
               <Team />
 
@@ -57,9 +57,7 @@ class App extends React.Component {
 
               <Newsletter />
 
-              <div class="pz-container-wrapper">
-                <Footer />
-              </div>
+              <Footer />
 
             </div>
           </div>
