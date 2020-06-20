@@ -2,11 +2,77 @@
   display: flex
   flex-direction: row
   justify-content: space-around
+
   &__profile
+    padding: 10px
+
+  .pz-profile__image-wrapper
+    position: relative
+    border-radius: 50%
     max-width: 225px
-    padding: 20px
-    img
-      border-radius: 50%
+    overflow: hidden
+    &:hover .pz-profile__mask
+      opacity: .4
+
+    &:hover .pz-profile__social
+      opacity: 1
+
+    .pz-profile__mask
+      color: black
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background-color: $bl
+      overflow: hidden
+      border-radius: 58%
+      z-index: 1
+      opacity: 0 
+      -webkit-transition: all 0.3s
+      -o-transition: all 0.3s
+      transition: all 0.3s
+
+    .pz-profile__social
+      display: flex
+      flex-direction: row
+      justify-content: center
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 2
+      -webkit-transition: all 0.3s
+      -o-transition: all 0.3s
+      transition: all 0.3s
+      opacity: 0
+         
+
+      .pz-social-list
+        padding-left: 0
+        &__item
+          margin: 6px
+          padding: 0
+          text-align: center
+          width: 2.5rem
+          height: 2.5rem
+          line-height: 2.5rem
+          background: $pt1 
+          border-radius: 50%
+          font-size: 1rem
+          -webkit-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
+          -ms-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
+          -o-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
+          transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease 
+
+          svg
+            position: relative
+            text-align: center
+
+          &:hover
+            background: $mn
+            color: $pt1
+
   &__profile-info
     margin-top: 30px
     text-align: center
@@ -25,6 +91,18 @@
 
     &__profile
       max-width: 255px
+      .pz-profile__image-wrapper
+        .pz-profile__social
+          .pz-social-list
+            padding-left: 0
+            &__item
+              margin: 6px
+              padding: 0
+              text-align: center
+              font-size: 1.7rem
+              width: 4.5rem
+              height: 4.5rem
+              line-height: 4.5rem
 
     .pz-profile__header
       &-title
@@ -38,10 +116,28 @@
       max-width: 215px
       &:last-of-type
         padding-bottom: 0
+      .pz-profile__image-wrapper
+        .pz-profile__social
+          .pz-social-list
+            padding-left: 0
+            &__item
+              margin: 6px
+              padding: 0
+              text-align: center
+              font-size: 2.7rem
+              width: 8.5rem
+              height: 8.5rem
+              line-height: 8.5rem
     .pz-profile__header
       &-title
         font-weight: bold
         font-size: 3.5rem
         margin-bottom: 10px
+  .pz-social-list
+    margin: 0
+  .pz-social-list__item
+    &:first-of-type
+      margin: 0
+      padding: 0 10px
 
 @include media-phone
