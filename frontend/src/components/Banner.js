@@ -12,28 +12,30 @@ const Banner = (props) => {
   console.log('Banner.render link', link)
   console.log('Banner.render image', image)
   return(
-    <div className="pz-row">
-      <div> 
-         <div className="banner__wrapper">
+    <div class="pz-container-wrapper">
+      <div className="pz-row">
+        <div> 
+          <div className="banner__wrapper">
             <div className="banner__item"
-                 style={{ 
-                   backgroundImage: `url(${image.url})`
-                 }}>
-            <div className="banner__item-top-layer-mask">
-              <div className="banner__item-top-layer">
-                <div className="banner__item-title">{title}</div>
-                <div className="banner__item-subtitle">
-                  <span className="pz-script-font">{subtitleFirstHalf}</span>
-                  <span>{subtitleSecondHalf}</span>
+              style={{ 
+                backgroundImage: `url(${image.url})`
+              }}>
+                <div className="banner__item-top-layer-mask">
+                  <div className="banner__item-top-layer">
+                    <div className="banner__item-title">{title}</div>
+                    <div className="banner__item-subtitle">
+                      <span className="pz-script-font">{subtitleFirstHalf}</span>
+                      <span>{subtitleSecondHalf}</span>
+                    </div>
+                    <a href={link} className="pz-btn">more details</a>
+                  </div>
                 </div>
-                <a href={link} className="pz-btn">more details</a>
               </div>
             </div>
           </div>
+          <EmptySpace />
         </div>
       </div>
-      <EmptySpace />
-    </div>
   )
 }
 

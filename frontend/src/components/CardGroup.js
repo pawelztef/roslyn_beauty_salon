@@ -13,35 +13,37 @@ export default function CardGroup({data}) {
     return(
       <div className="card__simple-offer">
         <div className="price-item"
-              style={{ 
-                backgroundImage: `url("${imageLink}")`
-              }}>
-          <a className="price-item-link" href={serviceLink}>
-            <h3 className="price-item-title">
-              <span>
-                {item.title} 
-              </span>
-            </h3>
-            <div className="price-item-price">
-              <span className="price-item-price-before pz-script-font">{before}</span>
-              <span className="price-item-price-after">{after}</span>
-            </div>
-          </a>
+          style={{ 
+            backgroundImage: `url("${imageLink}")`
+          }}>
+            <a className="price-item-link" href={serviceLink}>
+              <h3 className="price-item-title">
+                <span>
+                  {item.title} 
+                </span>
+              </h3>
+              <div className="price-item-price">
+                <span className="price-item-price-before pz-script-font">{before}</span>
+                <span className="price-item-price-after">{after}</span>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
     )
   })
   // console.log('CardGroup.render cards', cards )
 
   return(
-    <div className="pz-row">
-      <EmptySpace />
+    <div class="pz-container-wrapper">
+      <div className="pz-row">
+        <EmptySpace />
         <div className="pz-container"> 
           <div className="card__wrapper">
             {cards} 
           </div>
         </div>
-      <EmptySpace />
+        <EmptySpace />
+      </div>
     </div>
   )
 }
