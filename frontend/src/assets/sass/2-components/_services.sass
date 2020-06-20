@@ -1,4 +1,12 @@
 .pz-services__wrapper
   background: $pt2a 
-.pz-appointment__container
+.pz-services__container
   text-align: center
+
+@include media-desktop
+@include media-tablet-landscape
+@include media-tablet-portrait
+  .pz-services__container
+    h2
+      margin-bottom: 0
+@include media-phone

@@ -1,0 +1,58 @@
+.pz-services
+  display: flex
+  flex-direction: row
+  justify-content: center
+
+  .pz-services__list
+    text-align: center
+    padding: 0 25px 40px
+    border-right: 1px $bl solid
+    &:last-of-type
+      border-right: none
+
+    .pz-services-header
+      margin: 10px 0 40px 0
+
+    .pz-services-prices
+      list-style: none
+      margin: 0
+      padding: 0
+
+      li
+        margin-bottom: 20px
+        font-weight: 500
+        a
+          border-bottom: 1px transparent solid
+          -webkit-transition: all 0.3s
+          -o-transition: all 0.3s
+          transition: all 0.3s
+          &:hover
+            color: $bl
+            border-bottom: 1px $bl solid
+        span
+          margin-top: 7px
+          color: $mn
+          font-weight: bold
+
+
+
+@include media-desktop
+@include media-tablet-landscape
+@include media-tablet-portrait
+  .pz-services
+    flex-direction: column
+    padding-right: 15px
+    padding-left: 15px
+    .pz-services__list
+      text-align: center
+      padding: 0 20px 40px
+      border-right: none
+      border-bottom: 1px $bl solid
+      &:last-of-type
+        border-bottom: none
+      .pz-services-header
+        margin: 40px 0 40px 0
+    .pz-services-prices
+      li
+        font-size: 2.8rem
+@include media-phone
