@@ -3,8 +3,9 @@
   .pz-testimony__slider-item
     padding: 0 35px
     border-right: 1px solid $bl
-    min-height: 350px
+    height: 300px
     p
+     padding-top: 20px
      font-weight: bold
      font-size: 1.1rem
      line-height: 1.5rem
@@ -20,9 +21,9 @@
       margin-top: 20px
 
 .slick-track
-  margin-bottom: 100px !important
+  margin-bottom: 70px !important
+
 .slick-dots
-  margin-top: 40px
   li
     width: 30px
     height: 30px
@@ -39,3 +40,37 @@ li.slick-active
     border: 1px solid $bl
     border-radius: 50%
 
+@include media-desktop
+  .pz-testimony__slider
+    .pz-testimony__slider-item
+      height: 350px
+      p
+        font-size: 1.2rem
+        line-height: 1.8rem
+@include media-tablet-landscape
+  .pz-testimony__slider
+    .pz-testimony__slider-item
+      max-height: 150px
+      border: none
+      p
+        font-size: 2.5rem
+        line-height: 3rem
+        padding-bottom: 20px
+      svg
+        font-size: 1.5rem
+      h4
+        font-size: 2.2rem
+@include media-tablet-portrait
+@include media-phone
+  .pz-testimony__slider
+    .pz-testimony__slider-item
+      max-height: 150px
+      border: none
+      p
+        font-size: 4.2rem
+        line-height: 4.5rem
+        padding-bottom: 20px
+      svg
+        font-size: 2.5rem
+      h4
+        font-size: 3.2rem

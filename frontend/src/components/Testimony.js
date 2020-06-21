@@ -11,13 +11,24 @@ class Testimony extends React.Component {
 
 
   render() {
+    console.log(window.innerWidth)
     const settings = {
       className: 'pz-testimony__slider',
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     }
 
     return(
