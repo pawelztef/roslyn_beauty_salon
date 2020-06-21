@@ -14,6 +14,7 @@ import Newsletter from './components/Newsletter'
 import Appointment from './components/Appointment'
 import Team from './components/Team'
 import Services from './components/Services'
+import Testimony from './components/Testimony'
 
 class App extends React.Component {
   state = {
@@ -48,6 +49,8 @@ class App extends React.Component {
               <Banner data={mockPage.content[2]} />
 
               <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
+
+              <Testimony/>
 
               <Services />
 

@@ -1,10 +1,13 @@
 import React from 'react'
+import { TiHeart } from "react-icons/ti";
 
 const servicesList = props => {
   return(
     <div className="pz-services">
       <div className="pz-services__list">
-        <h4 className="pz-services-header">Eyebrows</h4>
+        <h4 className="pz-services-header">Eyebrows 
+          <span><TiHeart /></span>
+        </h4>
         <ul className="pz-services-prices">
           <li><a href="http://pawelztef.me">Brow consultation</a><br/><span>free</span></li>
           <li><a href="http://pawelztef.me">Correction</a><br/><span>$35</span></li>
@@ -15,7 +18,9 @@ const servicesList = props => {
         </ul>
       </div>
       <div className="pz-services__list">
-        <h4 className="pz-services-header">Eyelashesh</h4>
+        <h4 className="pz-services-header">Eyelashes
+          <span><TiHeart /></span>
+        </h4>
         <ul className="pz-services-prices">
           <li><a href="http://pawelztef.me">Brow consultation</a><br/><span>free</span></li>
           <li><a href="http://pawelztef.me">Eyelash staining</a><br/><span>free</span></li>
@@ -24,7 +29,9 @@ const servicesList = props => {
         </ul>
       </div>
       <div className="pz-services__list">
-        <h4 className="pz-services-header">Makeup</h4>
+        <h4 className="pz-services-header">Makeup
+          <span><TiHeart /></span>
+        </h4>
         <ul className="pz-services-prices">
           <li><a href="http://pawelztef.me">Brow consultation</a><br/><span>free</span></li>
           <li><a href="http://pawelztef.me">Correction</a><br/><span>$35</span></li>
@@ -35,7 +42,9 @@ const servicesList = props => {
         </ul>
       </div>
       <div className="pz-services__list">
-        <h4 className="pz-services-header">Hair Style</h4>
+        <h4 className="pz-services-header">Hair style
+          <span><TiHeart /></span>
+        </h4>
         <ul className="pz-services-prices">
           <li><a href="http://pawelztef.me">Eyelash staining</a><br/><span>free</span></li>
           <li><a href="http://pawelztef.me">Lamination + dyeing <br/>of eyelashes</a><br/><span>$35</span></li>
