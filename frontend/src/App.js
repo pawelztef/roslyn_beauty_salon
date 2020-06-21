@@ -15,6 +15,7 @@ import Appointment from './components/Appointment'
 import Team from './components/Team'
 import Services from './components/Services'
 import Testimony from './components/Testimony'
+import Portfolio from './components/Portfolio'
 
 class App extends React.Component {
   state = {
@@ -53,6 +54,8 @@ class App extends React.Component {
               <Testimony/>
 
               <Services />
+
+              <Portfolio />
 
               <Team />
 
