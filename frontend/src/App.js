@@ -1,10 +1,17 @@
 import React from 'react'
 import './assets/sass/main.sass'
 
+import { 
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  link
+} from 'react-router-dom'
+
 import NavigationBar from './components/NavigationBar'
 import MobileNav from './components/MobileNav'
 import Footer from './components/Footer'
-import Home from './components/Home'
+import HomePage from './components/Home'
 
 class App extends React.Component {
   state = {
@@ -20,7 +27,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <Router>
         <div className="pz-body-wrapper">
           <div className="responsivnes-indicator"></div>
           <div className="pz-page-wrapper">
@@ -28,12 +35,34 @@ class App extends React.Component {
             <MobileNav show={this.state.mobileMenuOpen}
               click={this.mobileMenuToggleHandler} />
 
-            <Home />
+
+            <Switch>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/team">
+                <Team />
+              </Route>
+              <Route path="/gallery">
+                <Gallery />
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/services">
+                <Services />
+              </Route>
+              <Route path="/">
+                <HomePage />
+              </Route>
+            </Switch>
+
+
 
             <Footer />
           </div>
         </div>
-      </>
+      </Router>
     )
   }
 }
