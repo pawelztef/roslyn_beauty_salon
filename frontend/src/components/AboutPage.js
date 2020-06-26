@@ -10,16 +10,16 @@ import Newsletter from './Newsletter'
 import Appointment from './Appointment'
 import Team from './Team'
 import Services from './Services'
-import Testimony from './Testimony'
+import OurStory from './OurStory'
 import Portfolio from './Portfolio'
 
 class AboutPage  extends React.Component {
   render() {
     return(
       <div className="pz-page-container-wrapper">
-
-        About Page
-        
+        <OurStory />
+        <Team />
+        <Newsletter /> 
 
       </div>
 
