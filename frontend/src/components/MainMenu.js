@@ -1,23 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom'
 
 export default function MainMenu() {
   return(
     <ul className="pz-menu">
       <li className="pz-menu__item pz-menu__item-active"> 
-        <a href="htts://pawelztef.me">Services</a>
+        <Link to="/">Home</Link>
       </li>
       <li className="pz-menu__item"> 
-        <a href="htts://pawelztef.me">About</a>
-      </li>
-      <li className="pz-menu__item"> <a href="htts://pawelztef.me">Team</a>
+        <Link to="/services">Services</Link>
       </li>
       <li className="pz-menu__item"> 
-        <a href="htts://pawelztef.me">Contact</a>
+        <Link to="/team">Team</Link>
+      </li>
+      <li className="pz-menu__item"> 
+        <Link to="/gallery">Gallery</Link>
       </li>
       <li className="pz-menu__item">
-        <a href="htts://pawelztef.me">Blog</a>
+        <Link to="/about">About</Link>
+      </li>
+      <li className="pz-menu__item">
+        <Link to="/contact">Contact</Link>
       </li>
     </ul>
   )

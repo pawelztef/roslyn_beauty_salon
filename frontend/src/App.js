@@ -11,7 +11,12 @@ import {
 import NavigationBar from './components/NavigationBar'
 import MobileNav from './components/MobileNav'
 import Footer from './components/Footer'
-import HomePage from './components/Home'
+import HomePage from './components/HomePage'
+import ContactPage from './components/ContactPage'
+import TeamPage from './components/TeamPage'
+import GalleryPage from './components/GalleryPage'
+import AboutPage from './components/AboutPage'
+import ServicesPage from './components/ServicesPage'
 
 class App extends React.Component {
   state = {
@@ -38,22 +43,22 @@ class App extends React.Component {
 
             <Switch>
               <Route path="/contact">
-                <Contact />
+                <ContactPage />
               </Route>
               <Route path="/team">
-                <Team />
+                <TeamPage />
               </Route>
               <Route path="/gallery">
-                <Gallery />
+                <GalleryPage />
               </Route>
               <Route path="/about">
-                <About />
+                <AboutPage />
               </Route>
               <Route path="/services">
-                <Services />
+                <ServicesPage />
               </Route>
               <Route path="/">
-                <HomePage />
+                <HomePage/>
               </Route>
             </Switch>
 
