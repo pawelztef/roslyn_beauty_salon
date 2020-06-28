@@ -7,13 +7,12 @@ import Slider from "react-slick"
 
 class OurStory extends React.Component {
 
-
-
   render() {
     console.log(window.innerWidth)
     const settings = {
       className: 'pz-our-story__slider',
       dots: true,
+      arrows: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
@@ -43,7 +42,7 @@ class OurStory extends React.Component {
                   <h4>2015</h4>
                   <p>
                     Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
-                    nesciunt accusantium. Ex molestias dolor esse saepe amet! Consectetur molestiae veritatis
+                    nesciunt accusantium. Exmolestias dolor esse saepe amet! Consectetur molestiae veritatis
                     voluptates aut fuga. Quaerat nam iste reiciendis maxime.
                   </p>
                 </div>
@@ -80,6 +79,7 @@ class OurStory extends React.Component {
             </div>
           </div>
         </div>
+        <EmptySpace />
       </div>
     )
   }

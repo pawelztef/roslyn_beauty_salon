@@ -20,9 +20,7 @@ class AboutPage  extends React.Component {
         <OurStory />
         <Team />
         <Newsletter /> 
-
       </div>
-
     )
   }
 }
