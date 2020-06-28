@@ -1,0 +1,54 @@
+.pz-our-story__wrapper
+  background-image: url(/images/our-story-grad.png)
+  background-repeat: no-repeat
+  background-position-x: -160px
+  .slick-dots
+    position: initial
+  .pz-our-story__container
+    .pz-section__header
+      margin-bottom: 2rem
+    
+.pz-our-story__slider
+  div
+    width: 84%
+    margin: 0 auto
+    h4
+      font-size: .9rem
+      text-align: center
+      margin-bottom: .9rem
+    p
+      font-weight: bold
+      font-size: 1.1rem
+      text-align: center
+
+  
+
+@include media-desktop
+@include media-tablet-landscape
+  .pz-our-story__slider
+    div
+      h4
+        font-size: 1.4rem
+      p
+        font-size: 1.6rem
+@include media-tablet-portrait
+  .pz-our-story__slider
+    div
+      h4
+        font-size: 2.2rem
+        margin-bottom: 1.8rem
+      p
+        font-size: 2.6rem
+  .pz-our-story__wrapper
+    .pz-our-story__container
+      .pz-section__header
+        margin-bottom: 60px
+
+@include media-phone
+  .pz-our-story__slider
+    div
+      h4
+        font-size: 4.0rem
+        margin-bottom: 3.8rem
+      p
+        font-size: 4.2rem
