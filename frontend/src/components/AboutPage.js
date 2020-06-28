@@ -2,7 +2,7 @@ import React from 'react'
 import mockPage from '../utils/page'
 
 import CardGroup from './CardGroup'
-import Slider from './Slider'
+import Header from './Header'
 import Banner from './Banner'
 import Welcome from './Welcome'
 import EmptySpace from './EmptySpace'
@@ -17,6 +17,8 @@ class AboutPage  extends React.Component {
   render() {
     return(
       <div className="pz-page-container-wrapper">
+        <Header />
+        <EmptySpace />
         <OurStory />
         <Team />
         <Newsletter /> 
