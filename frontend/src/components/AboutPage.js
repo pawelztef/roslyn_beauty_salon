@@ -17,7 +17,7 @@ class AboutPage  extends React.Component {
   render() {
     return(
       <div className="pz-page-container-wrapper">
-        <Header />
+        <Header title="About Us"/>
         <EmptySpace />
         <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
         <OurStory />

@@ -12,13 +12,21 @@ import Team from './Team'
 import Services from './Services'
 import Testimony from './Testimony'
 import Portfolio from './Portfolio'
+import Header from './Header'
+import GoogleMap from './GoogleMap'
+import ContactDetails from './ContactDetails'
 
 class ContactPage extends React.Component {
   render() {
     return(
-      <div className="pz-page-container-wrapper">
-
-        Contact Page
+      <div className="pz-contact-page pz-page-container-wrapper">
+        <Header title="Contact Us"/>
+        <EmptySpace />
+        <GoogleMap />
+        <EmptySpace />
+        <div className="pz-contact-details__wrapper">
+          <ContactDetails />
+        </div>
         
 
       </div>

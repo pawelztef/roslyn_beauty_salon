@@ -11,10 +11,16 @@ $pt3: #e9e8f2
 $pt3a: lighten($pt3, 5%)
 $pt4: lighten(#a66cd9, 30%)
 
+$media-phone-s: 321px
 $media-phone: 576px
 $media-tablet-portrait: 768px
 $media-tablet-landscape: 992px
-$media-tablet-desktop: 1200px
+$media-tablet-desktop-s: 1024px
+$media-tablet-desktop: 1400px
+
+@mixin media-phone-s
+  @media (max-width: $media-phone-s)
+    @content 
 
 @mixin media-phone
   @media (max-width: $media-phone)
@@ -26,6 +32,10 @@ $media-tablet-desktop: 1200px
 
 @mixin media-tablet-landscape 
   @media (max-width: $media-tablet-landscape)
+    @content 
+
+@mixin media-desktop-s
+  @media (max-width: $media-tablet-desktop-s)
     @content 
 
 @mixin media-desktop 
