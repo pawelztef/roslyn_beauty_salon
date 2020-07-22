@@ -10,6 +10,26 @@
       padding: 0 15px
     @include media-phone
     @include media-phone-s
+  .pz-section__wrapper
+    .pz-section__row
+      .pz-container
+        justify-content: center
+        width: 60%
+        margin: 0 auto
+        @include media-desktop
+        @include media-desktop-s
+        @include media-tablet-landscape
+        @include media-tablet-portrait
+          width: 90%
+        @include media-phone
+        @include media-phone-s
+        .pz-appointment__row,
+        .pz-appointment__form-wrapper
+          width: 100%
+        
+
+
+
   address.pz-contact-details  
     display: flex
     flex-direction: row

@@ -1,0 +1,24 @@
+.pz-section
+  &__wrapper
+    background: transparent
+    background-size: cover
+    background-repeat: no-repeat
+  &__row
+    .pz-container
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      @include media-desktop
+      @include media-tablet-landscape
+      @include media-tablet-portrait
+      @include media-phone
+
+  &__title
+    text-align: center
+    line-height: 1.2em
+    font-size: 3.75rem
+    font-weight: 400
+    color: $bl
+    font-family: $font-third
+
+
