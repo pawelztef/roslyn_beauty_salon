@@ -12,17 +12,22 @@ import Team from './Team'
 import Services from './Services'
 import Testimony from './Testimony'
 import Portfolio from './Portfolio'
+import bg from '../assets/images/header-grad.png'
+import Header from './Header'
 
 class GalleryPage  extends React.Component {
   render() {
     return(
       <div className="pz-page-container-wrapper">
+        <Header 
+          title="Gallery"
+          backgroundImage={bg}
+        />
 
-        Gallery Page
-        
 
-      </div>
 
+      <Newsletter /> 
+    </div>
     )
   }
 }
