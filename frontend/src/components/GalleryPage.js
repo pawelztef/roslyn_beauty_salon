@@ -82,22 +82,22 @@ const IMAGES =
       thumbnailHeight: 197
     },
     {
+      src: g10,
+      thumbnail: tg10,
+      thumbnailWidth: 271,
+      thumbnailHeight: 355
+    },
+    {
       src: g8,
       thumbnail: tg8,
       thumbnailWidth: 320,
       thumbnailHeight: 196
     },
     {
-      src: g9,
-      thumbnail: tg9,
+      src: g2,
+      thumbnail: tg2,
       thumbnailWidth: 320,
-      thumbnailHeight: 197
-    },
-    {
-      src: g10,
-      thumbnail: tg10,
-      thumbnailWidth: 271,
-      thumbnailHeight: 355
+      thumbnailHeight: 196
     }
   ]
 
@@ -114,6 +114,8 @@ class GalleryPage  extends React.Component {
         <div className="pz-gallery__row">
           <div className="pz-container pz-gallery__container">
             <Gallery 
+              margin={3}
+              rowHeight={196}
               enableImageSelection={false}
               images={IMAGES}/>
           </div>

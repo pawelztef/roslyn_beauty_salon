@@ -3,7 +3,18 @@
 .pz-gallery__container.pz-container
   display: inline-block
   width: 60%
-  margin: 0 auto
+  margin: 15px auto 15px auto
+  @include media-desktop
+  @include media-desktop-s
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+   width: 100%
+   padding: 0 15px
+  @include media-phone
+  @include media-phone-s
 
 div#ReactGridGallery
+.ReactGridGallery_tile-viewport
+  img
+    max-width: initial
 
