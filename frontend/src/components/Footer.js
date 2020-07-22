@@ -5,7 +5,7 @@ import SocialList from './SocialList'
 
 
 const footer = () => (
-  <div class="pz-container-wrapper">
+  <div className="pz-container-wrapper">
     <footer className="pz-footer">
       <div className="pz-footer__col-1">
         <ContactDetails />
