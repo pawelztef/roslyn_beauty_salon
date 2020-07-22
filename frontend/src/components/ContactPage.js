@@ -23,13 +23,19 @@ class ContactPage extends React.Component {
   render() {
     return(
       <div className="pz-contact-page pz-page-container-wrapper">
-        <Header title="Contact Us" background={bg}/>
+        <Header 
+          title="Contact Us"
+          backgroundImage={bg}
+        />
+
         <EmptySpace />
         <GoogleMap />
         <EmptySpace />
+
         <div className="pz-contact-details__wrapper">
           <ContactDetails />
         </div>
+
         <Section 
           title="Send us a message"
           backgroundImage={bg}
