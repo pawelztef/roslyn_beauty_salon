@@ -1,27 +1,64 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function MainMenu() {
   return(
     <ul className="pz-menu">
-      <li className="pz-menu__item pz-menu__item-active"> 
-        <Link to="/">Home</Link>
+      <li> 
+        <NavLink 
+          exact
+          className="pz-menu__item" 
+          activeClassName="pz-menu__item-active" 
+          to="/"
+        >
+          Home
+        </NavLink>
       </li>
-      <li className="pz-menu__item"> 
-        <Link to="/services">Services</Link>
+      <li> 
+        <NavLink 
+          className="pz-menu__item" 
+          activeClassName="pz-menu__item-active" 
+          to="/services"
+        >
+          Services
+        </NavLink>
       </li>
-      <li className="pz-menu__item"> 
-        <Link to="/team">Team</Link>
+      <li> 
+        <NavLink 
+          className="pz-menu__item" 
+          activeClassName="pz-menu__item-active" 
+          to="/team"
+        >
+          Team
+        </NavLink>
       </li>
-      <li className="pz-menu__item"> 
-        <Link to="/gallery">Gallery</Link>
+      <li> 
+        <NavLink 
+          className="pz-menu__item" 
+          activeClassName="pz-menu__item-active" 
+          to="/gallery"
+        >
+          Gallery
+        </NavLink>
       </li>
-      <li className="pz-menu__item">
-        <Link to="/about">About</Link>
+      <li> 
+        <NavLink 
+          className="pz-menu__item"
+          activeClassName="pz-menu__item-active" 
+          to="/about"
+        >
+          About
+        </NavLink>
       </li>
-      <li className="pz-menu__item">
-        <Link to="/contact">Contact</Link>
+      <li> 
+        <NavLink 
+          className="pz-menu__item"
+          activeClassName="pz-menu__item-active" 
+          to="/contact"
+        >
+          Contact
+        </NavLink>
       </li>
     </ul>
   )

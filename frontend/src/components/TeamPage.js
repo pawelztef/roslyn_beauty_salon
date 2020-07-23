@@ -17,14 +17,13 @@ class TeamPage  extends React.Component {
   render() {
     return(
       <div className="pz-page-container-wrapper">
-
-        Team Page
-        
-
+        <Team />
+        <Appointment />
+        <Newsletter />
       </div>
-
     )
   }
 }
 
 export default TeamPage 
+

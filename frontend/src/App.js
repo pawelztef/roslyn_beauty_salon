@@ -42,22 +42,22 @@ class App extends React.Component {
 
 
             <Switch>
-              <Route path="/contact">
+              <Route exact path="/contact">
                 <ContactPage />
               </Route>
-              <Route path="/team">
+              <Route exact path="/team">
                 <TeamPage />
               </Route>
-              <Route path="/gallery">
+              <Route exact path="/gallery">
                 <GalleryPage />
               </Route>
-              <Route path="/about">
+              <Route exact path="/about">
                 <AboutPage />
               </Route>
-              <Route path="/services">
+              <Route exact path="/services">
                 <ServicesPage />
               </Route>
-              <Route path="/">
+              <Route exact path="/">
                 <HomePage/>
               </Route>
             </Switch>
