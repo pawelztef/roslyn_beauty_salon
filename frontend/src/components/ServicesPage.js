@@ -12,17 +12,23 @@ import Team from './Team'
 import Services from './Services'
 import Testimony from './Testimony'
 import Portfolio from './Portfolio'
+import bg from '../assets/images/header-grad.png'
+import Header from './Header'
 
 class ServicesPage extends React.Component {
   render() {
     return(
       <div className="pz-page-container-wrapper">
-
-        Services Page
+        <Header 
+          title="Our Services"
+          backgroundImage={bg}
+        />
         
-
+      <CardGroup data={mockPage.content[1]} />
+      <Banner data={mockPage.content[2]} />
+      <Services />
+      <Newsletter />
       </div>
-
     )
   }
 }
