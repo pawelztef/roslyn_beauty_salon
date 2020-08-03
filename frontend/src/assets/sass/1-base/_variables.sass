@@ -11,6 +11,13 @@ $pt3: #e9e8f2
 $pt3a: lighten($pt3, 5%)
 $pt4: lighten(#a66cd9, 30%)
 
+$golden-factor: 1.618
+$default-pixel-size: 16
+
+@mixin line-height($font-size)
+  line-height: calc(#{$font-size} * 1.618)
+
+
 $media-phone-s: 321px
 $media-phone: 576px
 $media-tablet-portrait: 768px
@@ -80,17 +87,3 @@ $media-tablet-desktop: 1400px
 
 
 
-export 
-  media-phone: $media-phone
-  media-tablet-portrait: $media-tablet-portrait
-  media-tablet-landscape: $media-tablet-landscape
-  media-tablet-desktop: $media-tablet-desktop
-  bl: $bl
-  gr: $gr
-  mn: $mn
-  wt: $wt
-  pt1: $pt1
-  pt2: $pt2
-  pt3: $pt3
-  pt3a: $pt3a
-  pt4: $pt4
