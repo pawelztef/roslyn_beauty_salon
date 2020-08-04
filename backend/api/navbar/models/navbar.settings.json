@@ -21,6 +21,11 @@
       "type": "component",
       "repeatable": false,
       "component": "generic.call-to-action"
+    },
+    "social_media": {
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.social-entry"
     }
   }
 }
