@@ -5,6 +5,6 @@ module.exports = {
    * @return {Promise}
    */
   find(params, populate) {
-    return strapi.query('footer').find(params, ['menu', 'menu.pages' ])
+    return strapi.query('footer').find(params, ['menu.pages' ])
   },
 };
