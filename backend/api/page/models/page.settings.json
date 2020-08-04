@@ -16,6 +16,13 @@
     "slug": {
       "type": "string",
       "unique": true
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "page.simple-banner",
+        "page.slider"
+      ]
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_page_simple_banners",
+  "info": {
+    "name": "simple_banner",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "call_to_action": {
+      "type": "component",
+      "repeatable": false,
+      "component": "generic.call-to-action"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
