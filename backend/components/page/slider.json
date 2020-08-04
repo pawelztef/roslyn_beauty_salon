@@ -6,16 +6,16 @@
   },
   "options": {},
   "attributes": {
-    "item": {
-      "type": "component",
-      "repeatable": true,
-      "component": "page.slider-entry"
-    },
     "speed": {
       "type": "integer",
       "default": 3,
       "max": 20,
       "min": 1
+    },
+    "slider_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.slider-item"
     }
   }
 }

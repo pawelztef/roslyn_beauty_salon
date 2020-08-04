@@ -20,6 +20,9 @@
     },
     "alt": {
       "type": "string"
+    },
+    "caption": {
+      "type": "string"
     }
   }
 }

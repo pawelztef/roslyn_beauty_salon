@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_page_welcomes",
+  "info": {
+    "name": "welcome",
+    "icon": "hand-paper"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "contact_details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.contact-details"
+    }
+  }
+}

@@ -1,27 +1,22 @@
 {
-  "collectionName": "components_slider_slider_entries",
+  "collectionName": "components_generic_slider_items",
   "info": {
-    "name": "slider_entry",
-    "icon": "clone"
+    "name": "slider_item",
+    "icon": "genderless"
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
-    },
-    "subtitle": {
       "type": "string"
     },
-    "link": {
+    "subtitle": {
       "type": "string"
     },
     "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
       "required": false

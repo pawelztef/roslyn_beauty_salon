@@ -30,7 +30,7 @@
     "contact_details": {
       "type": "component",
       "repeatable": false,
-      "component": "generic.contact-details"
+      "component": "general.contact-details"
     }
   }
 }

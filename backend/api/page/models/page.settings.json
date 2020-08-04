@@ -17,11 +17,11 @@
       "type": "string",
       "unique": true
     },
-    "content": {
+    "components": {
       "type": "dynamiczone",
       "components": [
         "page.simple-banner",
-        "page.slider"
+        "page.services-banner"
       ]
     }
   }
