@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_page_services_banners",
+  "info": {
+    "name": "services_banner",
+    "icon": "award"
+  },
+  "options": {},
+  "attributes": {
+    "service": {
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.call-to-action"
+    }
+  }
+}

@@ -11,6 +11,9 @@
     },
     "phrase": {
       "type": "string"
+    },
+    "price": {
+      "type": "string"
     }
   }
 }
