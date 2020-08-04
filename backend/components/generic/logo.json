@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_generic_logos",
+  "info": {
+    "name": "logo",
+    "icon": "fingerprint"
+  },
+  "options": {},
+  "attributes": {
+    "alt": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

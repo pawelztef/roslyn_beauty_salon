@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_generic_call_to_actions",
+  "info": {
+    "name": "text_link",
+    "icon": "anchor"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "phrase": {
+      "type": "string"
+    }
+  }
+}

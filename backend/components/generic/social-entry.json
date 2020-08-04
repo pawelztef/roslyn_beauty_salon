@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_generic_social_entries",
+  "info": {
+    "name": "image_link",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "alt": {
+      "type": "string"
+    }
+  }
+}

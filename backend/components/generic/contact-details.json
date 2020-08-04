@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_generic_contact_details",
+  "info": {
+    "name": "contact_details",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "company_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "mobile_phone": {
+      "type": "string"
+    },
+    "office_phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}

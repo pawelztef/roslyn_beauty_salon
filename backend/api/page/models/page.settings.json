@@ -16,23 +16,6 @@
     "slug": {
       "type": "string",
       "unique": true
-    },
-    "content": {
-      "type": "dynamiczone",
-      "components": [
-        "page.article",
-        "page.card",
-        "page.entry",
-        "page.text-block",
-        "page.slider",
-        "page.card-group"
-      ]
-    },
-    "pages": {
-      "collection": "page"
-    },
-    "navbar": {
-      "model": "navbar"
     }
   }
 }
