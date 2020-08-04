@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_testimonies",
+  "info": {
+    "name": "testimony",
+    "icon": "chalkboard-teacher"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
