@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_page_hero_sliders",
+  "info": {
+    "name": "hero_slider",
+    "icon": "bullhorn"
+  },
+  "options": {},
+  "attributes": {
+    "hero_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.hero-item"
+    }
+  }
+}
