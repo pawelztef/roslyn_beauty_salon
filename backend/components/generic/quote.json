@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_generic_quotes",
+  "info": {
+    "name": "quote",
+    "icon": "feather-alt"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "author": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "treatments_categories",
+  "info": {
+    "name": "treatments_categories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "treatments": {
+      "via": "treatments_categories",
+      "collection": "treatment"
+    }
+  }
+}

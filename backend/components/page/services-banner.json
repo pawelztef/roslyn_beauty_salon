@@ -6,10 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "service": {
+    "service_banner_entry": {
       "type": "component",
       "repeatable": true,
-      "component": "generic.call-to-action"
+      "component": "generic.treatment"
     }
   }
 }

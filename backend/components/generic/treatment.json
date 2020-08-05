@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_generic_treatments",
+  "info": {
+    "name": "treatment",
+    "icon": "leaf"
+  },
+  "options": {},
+  "attributes": {
+    "treatment": {
+      "model": "treatment"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/treatments-categories",
+      "handler": "treatments-categories.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/treatments-categories/count",
+      "handler": "treatments-categories.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/treatments-categories/:id",
+      "handler": "treatments-categories.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/treatments-categories",
+      "handler": "treatments-categories.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/treatments-categories/:id",
+      "handler": "treatments-categories.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/treatments-categories/:id",
+      "handler": "treatments-categories.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

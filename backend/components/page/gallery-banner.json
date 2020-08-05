@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_page_gallery_banners",
+  "info": {
+    "name": "gallery_banner",
+    "icon": "camera"
+  },
+  "options": {},
+  "attributes": {
+    "media_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.media-item"
+    },
+    "call_to_action": {
+      "type": "component",
+      "repeatable": false,
+      "component": "generic.call-to-action"
+    }
+  }
+}
