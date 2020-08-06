@@ -15,8 +15,12 @@ export default class Footer extends React.Component {
     logo: {}
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    const response = await Axios.get('http://localhost:1337/footer')
+    const { menu, social_media, contact_details, logo } = response.data[0]
+    this.setState({menu, social_media, contact_details, logo})
 
+    console.log('state.logo', this.state.logo)
   }
 
 
