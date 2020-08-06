@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_page_galleries",
+  "info": {
+    "name": "gallery",
+    "icon": "camera-retro"
+  },
+  "options": {},
+  "attributes": {
+    "entry": {
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.entry"
+    }
+  }
+}

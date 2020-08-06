@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newsletter_leads",
+  "info": {
+    "name": "newsletter_lead"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    }
+  }
+}

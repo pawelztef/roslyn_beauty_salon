@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_generic_entries",
+  "info": {
+    "name": "entry",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

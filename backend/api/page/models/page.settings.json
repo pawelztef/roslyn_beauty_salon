@@ -21,7 +21,15 @@
       "type": "dynamiczone",
       "components": [
         "page.simple-banner",
-        "page.services-banner"
+        "page.services-banner",
+        "page.testimony",
+        "page.slider",
+        "page.welcome",
+        "page.gallery-banner",
+        "page.gallery",
+        "page.hero-slider",
+        "page.our-story",
+        "page.maps"
       ]
     }
   }

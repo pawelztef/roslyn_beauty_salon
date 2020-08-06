@@ -10,13 +10,13 @@
       "type": "string"
     },
     "image": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "alt": {
       "type": "string"

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/appointment-form-leads",
+      "handler": "appointment-form-lead.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/appointment-form-leads/count",
+      "handler": "appointment-form-lead.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/appointment-form-leads/:id",
+      "handler": "appointment-form-lead.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/appointment-form-leads",
+      "handler": "appointment-form-lead.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/appointment-form-leads/:id",
+      "handler": "appointment-form-lead.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/appointment-form-leads/:id",
+      "handler": "appointment-form-lead.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

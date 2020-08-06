@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_maps",
+  "info": {
+    "name": "maps",
+    "icon": "map-marked-alt"
+  },
+  "options": {},
+  "attributes": {
+    "api_key": {
+      "type": "string"
+    },
+    "lattitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "zoom": {
+      "type": "string"
+    }
+  }
+}

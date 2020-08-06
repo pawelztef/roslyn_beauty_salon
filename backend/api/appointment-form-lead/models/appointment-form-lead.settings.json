@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appointment_form_leads",
+  "info": {
+    "name": "appointment_form_lead"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "fullname": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "time": {
+      "type": "time",
+      "required": true
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}
