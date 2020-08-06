@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "service_banner_entry": {
+    "entry": {
       "type": "component",
       "repeatable": true,
       "component": "generic.treatment"
