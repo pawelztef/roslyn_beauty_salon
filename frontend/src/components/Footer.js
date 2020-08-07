@@ -50,7 +50,7 @@ export default class Footer extends React.Component {
               <div className="pz-footer__col-3">
                 <div className="pz-footer__legal">
                 {menu.pages.map(entry => (
-                  <span className="pz-footer__legal-item">
+                  <span key={entry.id} className="pz-footer__legal-item">
                     <Link to={entry.slug}>{entry.title}</Link>
                   </span>
                 ))}
