@@ -2,11 +2,8 @@ import React from 'react'
 
 const Slider = (props) =>  {
   const {data} = props
-  console.log('Slider.render data', data)
   const item = data.item[0]
   const {image} = item
-  console.log("Slider.render item", item)
-  console.log("Slider.render image", image)
   return (
    <div className="pz-animated-banner">
       <img className="pz-animated-banner__item" 

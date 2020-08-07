@@ -21,7 +21,6 @@ export default class Footer extends React.Component {
     const response = await Axios.get('http://localhost:1337/footer')
     const { menu, social_media, contact_details, logo } = response.data[0]
     this.setState({menu, social_media, contact_details, logo, isLoading: false})
-    console.log("pages", this.state.menu.pages[0].id)
   }
 
 

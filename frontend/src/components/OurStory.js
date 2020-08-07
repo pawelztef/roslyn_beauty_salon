@@ -8,7 +8,6 @@ import Slider from "react-slick"
 class OurStory extends React.Component {
 
   render() {
-    console.log(window.innerWidth)
     const settings = {
       className: 'pz-our-story__slider',
       dots: true,

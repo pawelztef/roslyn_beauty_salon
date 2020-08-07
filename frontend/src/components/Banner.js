@@ -3,14 +3,9 @@ import EmptySpace from './EmptySpace'
 
 const Banner = (props) => {
   const {data} = props
-  console.log('Banner.render data', data)
   const item = data.card[0]
   const {title, subtitle, link, image} = item
   const [subtitleFirstHalf, subtitleSecondHalf] = item.subtitle.split(' ')
-  console.log('Banner.render title', title)
-  console.log('Banner.render subtitle', subtitle)
-  console.log('Banner.render link', link)
-  console.log('Banner.render image', image)
   return(
     <div class="pz-container-wrapper">
       <div className="pz-row">

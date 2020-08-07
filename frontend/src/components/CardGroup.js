@@ -2,16 +2,15 @@ import React from 'react'
 import EmptySpace from './EmptySpace'
 
 export default function CardGroup({data}) {
-  console.log('CardGroup.render data', data)
 
-  const cards = data.card.map((item) => {
+  const cards = data.card.map((item, key) => {
     let serviceLink = `http://localhost:3000${item.link}`
     // let imageLink = `http://localhost:1337${item.image.url}` 
     let imageLink = item.image.url
     let [before, after] = item.subtitle.split(' ')
 
     return(
-      <div className="card__simple-offer">
+      <div key={key} className="card__simple-offer">
         <div className="price-item"
           style={{ 
             backgroundImage: `url("${imageLink}")`
@@ -31,10 +30,9 @@ export default function CardGroup({data}) {
         </div>
     )
   })
-  // console.log('CardGroup.render cards', cards )
 
   return(
-    <div class="pz-container-wrapper">
+    <div className="pz-container-wrapper">
       <div className="pz-row">
         <EmptySpace />
         <div className="pz-container"> 

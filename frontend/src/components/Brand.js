@@ -11,7 +11,6 @@ export default function Brand(props) {
   return(
       <BrandHref className="pz-nav__brand"
         href={process.env.REACT_APP_DOMAIN }>
-        {console.log('brand', props.image)}
         <BrandImage className="pz-nav__brand-img" 
           src={process.env.REACT_APP_DOMAIN }/>
       </BrandHref>

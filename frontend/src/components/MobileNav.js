@@ -9,7 +9,6 @@ export default function MobileNav(props) {
 
   let mobileNavClasses = 'pz-nav__mobile-nav'
 
-  console.log('mobileNav props.show', props.show)
 
   if(props.show) {
     mobileNavClasses = 'pz-nav__mobile-nav open'

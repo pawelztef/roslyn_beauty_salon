@@ -11,7 +11,6 @@ class Testimony extends React.Component {
 
 
   render() {
-    console.log(window.innerWidth)
     const settings = {
       className: 'pz-testimony__slider',
       dots: true,

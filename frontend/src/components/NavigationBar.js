@@ -9,7 +9,6 @@ const Header = styled.header`
 `
 
 export default function NavigationBar(props) {
-  console.log("NavigationBar props", props)
   return(
     <Header className="pz-nav">
       <TopNav /> 
