@@ -1,5 +1,5 @@
 import React from 'react'
-import { RiFacebookCircleLine, RiTwitterLine, RiInstagramLine, RiPinterestLine } from "react-icons/ri"
+import { RiFacebookCircleLine, RiInstagramLine, RiPinterestLine } from "react-icons/ri"
 
 const profileThumb = (props) => {
   return(
