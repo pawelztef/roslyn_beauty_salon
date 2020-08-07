@@ -1,5 +1,4 @@
 import React from 'react'
-import variables from '../assets/sass/1-base/_variables.sass'
 import styled from 'styled-components'
 import { RiMapPin2Line, RiPhoneLine } from "react-icons/ri"
 import SocialList from './SocialList'
