@@ -1,5 +1,4 @@
 import React from 'react'
-import DateFnsUtils from '@date-io/date-fns'
 
 class ContactForm extends React.Component {
 
