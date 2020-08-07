@@ -6,7 +6,7 @@ const services = props => {
   return(
     <div className="pz-services__wrapper">
       <EmptySpace />
-      <div class="pz-container-wrapper">
+      <div className="pz-container-wrapper">
         <div className="pz-services__container">
           <h2 className="pz-section__header">Choose the service you need</h2>
         </div>
