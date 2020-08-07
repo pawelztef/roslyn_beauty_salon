@@ -33,7 +33,7 @@ class Testimony extends React.Component {
     return(
       <div className="pz-testimony__wrapper">
         <EmptySpace />
-        <div class="pz-container-wrapper">
+        <div className="pz-container-wrapper">
           <div className="pz-testimony__container">
             <h2 className="pz-section__header">Happy clients about us</h2>
 
