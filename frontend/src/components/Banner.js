@@ -4,7 +4,7 @@ import EmptySpace from './EmptySpace'
 const Banner = (props) => {
   const {data} = props
   const item = data.card[0]
-  const {title, subtitle, link, image} = item
+  const {title, link, image} = item
   const [subtitleFirstHalf, subtitleSecondHalf] = item.subtitle.split(' ')
   return(
     <div className="pz-container-wrapper">
