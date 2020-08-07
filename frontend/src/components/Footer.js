@@ -18,9 +18,7 @@ export default class Footer extends React.Component {
   async componentDidMount() {
     const response = await Axios.get('http://localhost:1337/footer')
     const { menu, social_media, contact_details, logo } = response.data[0]
-    this.setState({menu, social_media, contact_details, logo})
-
-    console.log('state.logo', this.state.logo)
+    this.setState({menu, social_media, contact_details, logo, isLoaded: true})
   }
 
 
@@ -29,7 +27,7 @@ export default class Footer extends React.Component {
       <div className="pz-container-wrapper">
         <footer className="pz-footer">
           <div className="pz-footer__col-1">
-            <ContactDetails />
+            <ContactDetails {...this.state.contact_details} />
           </div>
           <div className="pz-footer__col-2">
             <Brand />
