@@ -4,8 +4,7 @@ import './assets/sass/main.sass'
 import { 
   BrowserRouter as Router,
   Switch,
-  Route,
-  link
+  Route
 } from 'react-router-dom'
 
 import NavigationBar from './components/NavigationBar'
