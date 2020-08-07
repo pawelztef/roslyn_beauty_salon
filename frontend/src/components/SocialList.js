@@ -1,11 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import { RiFacebookCircleLine, RiTwitterLine, RiInstagramLine, RiPinterestLine } from "react-icons/ri"
 
-const List = styled.ul`
-`
-const ListItem = styled.li`
-`
 
 export default function SocialList() {
   return(
