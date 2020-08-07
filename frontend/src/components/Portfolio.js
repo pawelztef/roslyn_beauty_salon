@@ -20,7 +20,7 @@ const portfolio = props => {
         </div>
       </div>
       <EmptySpace small />
-      <div class="pz-container-wrapper">
+      <div className="pz-container-wrapper">
         <div className="pz-section__content">
           <button className="pz-btn">View all Pictures</button>
         </div>
