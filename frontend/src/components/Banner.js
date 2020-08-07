@@ -7,7 +7,7 @@ const Banner = (props) => {
   const {title, subtitle, link, image} = item
   const [subtitleFirstHalf, subtitleSecondHalf] = item.subtitle.split(' ')
   return(
-    <div class="pz-container-wrapper">
+    <div className="pz-container-wrapper">
       <div className="pz-row">
         <div> 
           <div className="banner__wrapper">
