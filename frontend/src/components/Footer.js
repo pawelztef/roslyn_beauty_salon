@@ -26,7 +26,7 @@ export default class Footer extends React.Component {
 
 
   render() {
-    const { contact_details, menu, isLoading } = this.state
+    const { contact_details, menu, isLoading, logo } = this.state
     return(
       <div className="pz-container-wrapper">
         <footer className="pz-footer">
@@ -37,7 +37,7 @@ export default class Footer extends React.Component {
                 <ContactDetails {...contact_details} />
               </div>
               <div className="pz-footer__col-2">
-                <Brand />
+                <Brand {...logo} />
                 <div className="pz-footer-meta">
                   <span>
                     <a href="https://pawelztef.me">Pawelztef</a>© 2020

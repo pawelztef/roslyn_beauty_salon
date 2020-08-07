@@ -9,10 +9,11 @@ const BrandImage = styled.img`
 
 export default function Brand(props) {
   return(
-  <BrandHref className="pz-nav__brand"
-    href={process.env.REACT_APP_DOMAIN}>
-    <BrandImage className="pz-nav__brand-img" 
-      src="http://muji.ancorathemes.com/wp-content/uploads/2017/12/logo_retina.png"/>
-  </BrandHref>
+      <BrandHref className="pz-nav__brand"
+        href={process.env.REACT_APP_DOMAIN }>
+        {console.log('brand', props.image)}
+        <BrandImage className="pz-nav__brand-img" 
+          src={process.env.REACT_APP_DOMAIN }/>
+      </BrandHref>
   )
 }
