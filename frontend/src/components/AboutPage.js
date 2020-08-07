@@ -1,9 +1,7 @@
 import React from 'react'
 import mockPage from '../utils/page'
 
-import CardGroup from './CardGroup'
 import Header from './Header'
-import Banner from './Banner'
 import Welcome from './Welcome'
 import EmptySpace from './EmptySpace'
 import Newsletter from './Newsletter'
