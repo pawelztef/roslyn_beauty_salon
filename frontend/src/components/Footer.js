@@ -10,33 +10,48 @@ export default class Footer extends React.Component {
 
 
   state = {
-    menu: {},
-    social_media: [],
-    contact_details: {},
+    menuPages: {},
+    contactDetails: {},
     logo: {},
+    socialMedia: {},
     isLoading: true
   }
 
   async componentDidMount() {
     const response = await Axios.get('http://localhost:1337/footer')
-    const { menu, social_media, contact_details, logo } = response.data[0]
-    this.setState({menu, social_media, contact_details, logo, isLoading: false})
+
+    const menuPages = response.data[0].menu.pages
+    const contactDetails = response.data[0].contact_details
+    const logo = {
+      alt: response.data[0].logo.alt,
+      linkUrl: response.data[0].logo.url,
+      logoImageUrl: response.data[0].logo.image.url
+    }
+    const socialMedia = response.data[0].social_media.map((entry) => {
+      return({
+        id: entry.id,
+        url: entry.url,
+        image_url: entry.image.url
+      })
+    })
+    this.setState({menuPages, contactDetails, logo, socialMedia, isLoading: false})
   }
 
 
   render() {
-    const { contact_details, menu, isLoading, logo } = this.state
+    const { menuPages, contactDetails, logo, socialMedia, isLoading } = this.state
     return(
       <div className="pz-container-wrapper">
         <footer className="pz-footer">
 
+
           {!isLoading ? (
             <>
               <div className="pz-footer__col-1">
-                <ContactDetails {...contact_details} />
+                <ContactDetails {...contactDetails} />
               </div>
               <div className="pz-footer__col-2">
-                <Brand {...logo} />
+                <Brand {...logo}/>
                 <div className="pz-footer-meta">
                   <span>
                     <a href="https://pawelztef.me">Pawelztef</a>© 2020
@@ -45,11 +60,11 @@ export default class Footer extends React.Component {
                     All rights reserved
                   </span>
                 </div>
-                <SocialList />
+                <SocialList socialMedia={socialMedia} isLoading={this.state.isLoading} />
               </div>
               <div className="pz-footer__col-3">
                 <div className="pz-footer__legal">
-                {menu.pages.map(entry => (
+                {menuPages.map(entry => (
                   <span key={entry.id} className="pz-footer__legal-item">
                     <Link to={entry.slug}>{entry.title}</Link>
                   </span>

@@ -8,11 +8,12 @@ const BrandImage = styled.img`
 `
 
 export default function Brand(props) {
+  console.log(props.logoImageUrl)
   return(
       <BrandHref className="pz-nav__brand"
-        href={process.env.REACT_APP_DOMAIN }>
+        href={process.env.REACT_APP_DOMAIN + props.url}>
         <BrandImage className="pz-nav__brand-img" 
-          src={process.env.REACT_APP_DOMAIN }/>
+          src={process.env.REACT_APP_DOMAIN + props.logoImageUrl }/>
       </BrandHref>
   )
 }
