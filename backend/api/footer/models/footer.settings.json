@@ -14,11 +14,6 @@
       "repeatable": false,
       "component": "general.contact-details"
     },
-    "social_media": {
-      "type": "component",
-      "repeatable": true,
-      "component": "generic.social-entry"
-    },
     "logo": {
       "type": "component",
       "repeatable": false,
@@ -26,6 +21,11 @@
     },
     "menu": {
       "model": "menu"
+    },
+    "social_media": {
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.social-media"
     }
   }
 }

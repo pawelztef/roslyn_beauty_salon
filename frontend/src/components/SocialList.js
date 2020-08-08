@@ -3,18 +3,35 @@ import { RiFacebookCircleLine, RiTwitterLine, RiInstagramLine, RiPinterestLine }
 
 
 export default class SocialList extends React.Component {
-
   constructor(props) {
     super(props)
+  }
+
+
+  renderIcon(param) {
+    switch(param) {
+      case 'twitter':
+        return <RiTwitterLine />
+      case 'facebook':
+        return <RiFacebookCircleLine />
+      case 'instagram':
+        return <RiInstagramLine />
+      case 'pinterest':
+        return <RiPinterestLine />
+    }
   }
 
   render() {
     return(
       <ul className="pz-social-list">
-        <li className="pz-social-list__item"> <RiFacebookCircleLine /> </li>
-        <li className="pz-social-list__item"> <RiTwitterLine /> </li>
-        <li className="pz-social-list__item"> <RiInstagramLine /> </li>
-        <li className="pz-social-list__item"> <RiPinterestLine /> </li>
+
+        {this.props.socialMedia && this.props.socialMedia[0] &&
+            this.props.socialMedia.map( (item) => {
+              return (
+                <li key={item.id} className="pz-social-list__item"> <a href={item.url}> {this.renderIcon(item.type)} </a> </li>
+              )
+            })
+        }
       </ul>
     )
   }

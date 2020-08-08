@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom'
 
 
 export default class Footer extends React.Component {
-  _isMounted = false
 
   state = {
     menuPages: {},
@@ -17,48 +16,33 @@ export default class Footer extends React.Component {
     isLoading: true
   }
 
-  async componentDidMount() {
-    this._isMounted = true
+  async componentWillMount() {
     const response = await Axios.get('http://localhost:1337/footer')
-
-    if(this._isMounted) {
-      const menuPages = response.data[0].menu.pages
-      const contactDetails = response.data[0].contact_details
-      const logo = {
-        alt: response.data[0].logo.alt,
-        linkUrl: response.data[0].logo.url,
-        logoImageUrl: response.data[0].logo.image.url
-      }
-      const socialMedia = response.data[0].social_media.map((entry) => {
-        return({
-          id: entry.id,
-          url: entry.url,
-          image_url: entry.image.url
-        })
-      })
-      this.setState({menuPages, contactDetails, logo, socialMedia, isLoading: false})
+    const menuPages = response.data[0].menu.pages
+    const contactDetails = response.data[0].contact_details
+    const logo = {
+      alt: response.data[0].logo.alt,
+      linkUrl: response.data[0].logo.url,
+      logoImageUrl: response.data[0].logo.image.url
     }
+    const socialMedia = response.data[0].social_media.map((entry) => {
+      return({
+        id: entry.id,
+        url: entry.url,
+        type: entry.type
+      })
+    })
+    this.setState({menuPages, contactDetails, logo, socialMedia, isLoading: false})
   }
 
-  componentWillUnmount() {
-    this._isMounted = false
-  }
 
 
   render() {
     const { menuPages, contactDetails, logo, socialMedia, isLoading } = this.state
-    let socialList;
-    if(!isLoading) {
-      socialList = <SocialList socialMedia={socialMedia} isLoading={this.state.isLoading} />
-    console.log('hi', socialMedia[0].id)
-    } else {
-      socialList = null
-      console.log('no')
-    }
+    const sM = socialMedia[0]
     return(
       <div className="pz-container-wrapper">
         <footer className="pz-footer">
-
 
           {!isLoading ? (
             <>
@@ -75,7 +59,7 @@ export default class Footer extends React.Component {
                     All rights reserved
                   </span>
                 </div>
-                {socialList}
+                <SocialList socialMedia={socialMedia} isLoading={this.state.isLoading} />
               </div>
               <div className="pz-footer__col-3">
                 <div className="pz-footer__legal">
