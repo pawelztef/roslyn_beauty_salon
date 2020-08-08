@@ -7,7 +7,7 @@ export default class contactDetails extends React.Component {
     return(
       <address className='pz-contact-details'>
         <div className="pz-contact-details__address">
-          <h6>Address</h6>
+          <h6>{this.props.company_name}</h6>
           <span>
             {this.props.address}
           </span>
