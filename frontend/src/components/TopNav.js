@@ -15,7 +15,6 @@ const ContactDetials = styled.div`
 `
 
 export default function TopNav(props) {
-  console.log('top nav ', props)
   return (
     <Nav className="pz-nav__top-row pz-invisible-md">
       <div className="pz-container-wrapper">
@@ -30,7 +29,7 @@ export default function TopNav(props) {
           </ContactDetials>
         }
         {props.socialMedia && props.socialMedia[0] &&
-          <SocialList socialMedia={props.socialMedia} topNav />
+          <SocialList socialMedia={props.socialMedia} />
         }
       </div>
     </Nav>
