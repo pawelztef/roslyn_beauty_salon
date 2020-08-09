@@ -14,19 +14,24 @@ const ContactDetials = styled.div`
   flex-grow: 2;
 `
 
-export default function TopNav() {
+export default function TopNav(props) {
+  console.log('top nav ', props)
   return (
     <Nav className="pz-nav__top-row pz-invisible-md">
       <div className="pz-container-wrapper">
-        <ContactDetials className="pz-nav__contact-details">
-          <span>
-            <RiMapPin2Line /> 8500, Lorem Street, Chicago, IL, 55030
-          </span>
-          <span>
-            <RiPhoneLine /> 0 (800) 123-456
-          </span>
-        </ContactDetials>
-        <SocialList />
+        {props.contactDetails.id &&
+          <ContactDetials className="pz-nav__contact-details">
+            <span>
+              <RiMapPin2Line /> {props.contactDetails.address}
+            </span>
+            <span>
+              <RiPhoneLine /> {props.contactDetails.office_phone}
+            </span>
+          </ContactDetials>
+        }
+        {props.socialMedia && props.socialMedia[0] &&
+          <SocialList socialMedia={props.socialMedia} topNav />
+        }
       </div>
     </Nav>
   )
