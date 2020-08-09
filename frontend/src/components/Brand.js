@@ -9,10 +9,16 @@ const BrandImage = styled.img`
 
 export default function Brand(props) {
   return(
-      <BrandHref className="pz-nav__brand"
-        href={process.env.REACT_APP_DOMAIN + props.url}>
-        <BrandImage className="pz-nav__brand-img" 
-          src={process.env.REACT_APP_DOMAIN + props.logoImageUrl }/>
-      </BrandHref>
+    <>
+      {props.image &&
+        <BrandHref className="pz-nav__brand"
+          href={process.env.REACT_APP_DOMAIN + props.url}>
+          <BrandImage className="pz-nav__brand-img" 
+            src={process.env.REACT_APP_DOMAIN + props.image.url}
+            alt={props.alt} 
+          />
+        </BrandHref>
+      }
+    </>
   )
 }
