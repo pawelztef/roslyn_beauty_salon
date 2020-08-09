@@ -3,13 +3,21 @@ import TopNav from './TopNav'
 import BottomNav from './BottomNav'
 
 
-export default function NavigationBar(props) {
-  return(
-    <header className="pz-nav">
-      <TopNav /> 
-      <BottomNav mobileMenuToggleHandler={props.mobileMenuToggleHandler} /> 
-    </header>
-  )
+
+class NavigationBar extends React.Component {
+
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return(
+      <header className="pz-nav">
+        <TopNav /> 
+        <BottomNav mobileMenuToggleHandler={this.props.mobileMenuToggleHandler} /> 
+      </header>
+    )
+  }
 }
 
-
+export default NavigationBar
