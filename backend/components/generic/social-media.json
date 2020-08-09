@@ -2,7 +2,7 @@
   "collectionName": "components_generic_social_medias",
   "info": {
     "name": "social_media",
-    "icon": "link"
+    "icon": "users"
   },
   "options": {},
   "attributes": {
@@ -17,8 +17,7 @@
         "instagram",
         "pinterest"
       ],
-      "required": true,
-      "unique": true
+      "required": true
     }
   }
 }

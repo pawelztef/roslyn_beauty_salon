@@ -22,15 +22,15 @@
       "repeatable": false,
       "component": "generic.call-to-action"
     },
-    "social_media": {
-      "type": "component",
-      "repeatable": true,
-      "component": "generic.social-entry"
-    },
     "contact_details": {
       "type": "component",
       "repeatable": false,
       "component": "general.contact-details"
+    },
+    "social_media": {
+      "type": "component",
+      "repeatable": true,
+      "component": "generic.social-media"
     }
   }
 }

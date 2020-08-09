@@ -17,7 +17,7 @@ export default class Footer extends React.Component {
   }
 
   async componentWillMount() {
-    const response = await Axios.get('http://localhost:1337/footer')
+    const response = await Axios.get(process.env.REACT_APP_DOMAIN+'/footer')
     const menuPages = response.data[0].menu.pages
     const contactDetails = response.data[0].contact_details
     const logo = {
