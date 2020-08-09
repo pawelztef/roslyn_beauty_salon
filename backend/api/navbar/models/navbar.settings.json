@@ -12,11 +12,6 @@
     "menu": {
       "model": "menu"
     },
-    "brand": {
-      "type": "component",
-      "repeatable": false,
-      "component": "generic.social-entry"
-    },
     "call_to_action": {
       "type": "component",
       "repeatable": false,
@@ -31,6 +26,11 @@
       "type": "component",
       "repeatable": true,
       "component": "generic.social-media"
+    },
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "generic.logo"
     }
   }
 }
