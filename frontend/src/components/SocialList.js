@@ -22,7 +22,6 @@ export default class SocialList extends React.Component {
   }
 
   render() {
-    console.log(" social list ", this.props)
     return(
       <ul className="pz-social-list">
 
