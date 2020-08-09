@@ -20,11 +20,7 @@ export default class Footer extends React.Component {
     const response = await Axios.get(process.env.REACT_APP_DOMAIN+'/footer')
     const menuPages = response.data[0].menu.pages
     const contactDetails = response.data[0].contact_details
-    const logo = {
-      alt: response.data[0].logo.alt,
-      linkUrl: response.data[0].logo.url,
-      logoImageUrl: response.data[0].logo.image.url
-    }
+    const logo = response.data[0].logo
     const socialMedia = response.data[0].social_media.map((entry) => {
       return({
         id: entry.id,
