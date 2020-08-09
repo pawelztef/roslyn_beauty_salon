@@ -13,6 +13,7 @@ class NavigationBar extends React.Component {
       brand: {},
       callToAction: {},
       contactDetails: {},
+      socialMedia: {},
       isLoading: true
     }
   }
@@ -20,12 +21,13 @@ class NavigationBar extends React.Component {
   async componentDidMount() {
     const response = await Axios.get(process.env.REACT_APP_DOMAIN + '/navbar')
     const data = response.data[0]
-    const { brand, call_to_action, contact_details, menu } = data
+    const { brand, call_to_action, contact_details, menu, social_media } = data
     this.setState({
       menu,
       brand,
       callToAction: call_to_action,
       contactDetails: contact_details,
+      socialMedia: social_media,
       isLoading: false
     })
   }
@@ -38,7 +40,9 @@ class NavigationBar extends React.Component {
       <header className="pz-nav">
         {!isLoading && 
           <>
-            <TopNav /> 
+            <TopNav contactDetails={this.state.contactDetails}
+                    socialMedia={this.state.socialMedia}
+            /> 
             <BottomNav mobileMenuToggleHandler={this.props.mobileMenuToggleHandler} /> 
           </>
         }
