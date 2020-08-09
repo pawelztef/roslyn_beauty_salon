@@ -17,6 +17,10 @@ const MenuWrapper = styled.div`
 
 class BottomNav extends React.Component {
 
+  constructor(props) {
+    super(props)
+  }
+
   componentDidMount() {
     const nav = document.querySelector('.pz-nav__bottom-row')
     const topOfBottomNav = nav.offsetTop
@@ -31,15 +35,19 @@ class BottomNav extends React.Component {
     })
   }
 
-  render(props){
+  render(){
     return(
       <Nav className="pz-nav__bottom-row">
         <div className="pz-container-wrapper">
-          <Brand />
+          {this.props.logo && this.props.logo.image &&
+            <Brand  {...this.props.logo}/>
+          }
           <MenuWrapper className="pz-invisible-md">
             <MainMenu />
           </MenuWrapper>
-          <AppointmentButton />
+          {this.props.callToAction &&
+            <AppointmentButton {...this.props.callToAction}/>
+          }
           <BurgerButton click={this.props.mobileMenuToggleHandler} />
         </div>
       </Nav>
