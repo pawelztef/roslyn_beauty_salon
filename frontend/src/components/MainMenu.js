@@ -1,64 +1,28 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export default function MainMenu() {
+export default function MainMenu(props) {
   return(
     <ul className="pz-menu">
-      <li> 
-        <NavLink 
-          exact
-          className="pz-menu__item" 
-          activeClassName="pz-menu__item-active" 
-          to="/"
-        >
-          Home
-        </NavLink>
-      </li>
-      <li> 
-        <NavLink 
-          className="pz-menu__item" 
-          activeClassName="pz-menu__item-active" 
-          to="/services"
-        >
-          Services
-        </NavLink>
-      </li>
-      <li> 
-        <NavLink 
-          className="pz-menu__item" 
-          activeClassName="pz-menu__item-active" 
-          to="/team"
-        >
-          Team
-        </NavLink>
-      </li>
-      <li> 
-        <NavLink 
-          className="pz-menu__item" 
-          activeClassName="pz-menu__item-active" 
-          to="/gallery"
-        >
-          Gallery
-        </NavLink>
-      </li>
-      <li> 
-        <NavLink 
-          className="pz-menu__item"
-          activeClassName="pz-menu__item-active" 
-          to="/about"
-        >
-          About
-        </NavLink>
-      </li>
-      <li> 
-        <NavLink 
-          className="pz-menu__item"
-          activeClassName="pz-menu__item-active" 
-          to="/contact"
-        >
-          Contact
-        </NavLink>
-      </li>
+      {props.pages && props.pages[0] &&
+        <>
+          {
+            props.pages.map(page => (
+                <li key={page.id}> 
+                  <NavLink 
+                    exact
+                    className="pz-menu__item" 
+                    activeClassName="pz-menu__item-active" 
+                    to={page.slug}
+                  >
+                  {page.title} 
+                  </NavLink>
+                </li>
+              )
+            )
+          } 
+        </>
+      }
     </ul>
   )
 }

@@ -6,13 +6,22 @@ import MainMenu from './MainMenu'
 import BurgerButton from './BurgerButton'
 
 const Nav = styled.nav`
-  padding-bottom: 1.8em;
-  padding-top: 1.8em;
+  padding-bottom: .8em;
+  padding-top: .8em;
+  @media (max-width: 1024px) {
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 1.2em;
+    padding-top: 1.2em;
+  }
 `
 
 const MenuWrapper = styled.div`
   display: flex;
   align-items: inherit;
+  flex-grow: 1;
 `
 
 class BottomNav extends React.Component {
@@ -43,7 +52,9 @@ class BottomNav extends React.Component {
             <Brand  {...this.props.logo}/>
           }
           <MenuWrapper className="pz-invisible-md">
-            <MainMenu />
+          {this.props.menu &&
+            <MainMenu {...this.props.menu}/>
+          }
           </MenuWrapper>
           {this.props.callToAction &&
             <AppointmentButton {...this.props.callToAction}/>

@@ -2,11 +2,12 @@ import React from 'react'
 
 class ContactForm extends React.Component {
 
-
-  state = {
-    appointmentDate: new Date(),
-    appointmentTime: new Date()
-    
+  constructor(props) {
+    super(props)
+    this.state = {
+      appointmentDate: new Date(),
+      appointmentTime: new Date()
+    }
   }
 
   handleDateChange = date => {
@@ -60,7 +61,7 @@ class ContactForm extends React.Component {
                 </div>
               </div>
 
-              
+
 
             </div>
             {/* Section 1 End*/}
@@ -83,11 +84,11 @@ class ContactForm extends React.Component {
           {/* Row 2 Start */}
           <div className="pz-appointment__form-row pz-appointment__row-2">
             <div className="pz-appointment__form-section">
-              <label for="pz-appointment-agrement">
+              <label htmlFor="pz-appointment-agrement">
                 <input id="pz-appointment-agrement" type="checkbox" name="appointment-agrement" />
                 I have read and agree to the temrs & conditions.
               </label>
-              <label for="pz-appointment-agrement">See our <a href="https://pawelztef.me">Privacy Policy</a>.</label>
+              <label htmlFor="pz-appointment-agrement">See our <a href="https://pawelztef.me">Privacy Policy</a>.</label>
             </div>
             <div className="pz-appointment__form-section">
               <button className="pz-btn">Submit</button>

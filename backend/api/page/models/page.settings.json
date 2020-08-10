@@ -15,7 +15,8 @@
     },
     "slug": {
       "type": "string",
-      "unique": true
+      "unique": true,
+      "required": true
     },
     "components": {
       "type": "dynamiczone",

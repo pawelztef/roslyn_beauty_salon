@@ -10,8 +10,8 @@ const BurrgerWrp = styled.span`
   border-radius: 50%;
   height: 40px;
   width: 40px;
-  top: 4px;
   text-align: center;
+  align-self: center;
   line-height: 40px;
   svg {
     font-size: 18px;

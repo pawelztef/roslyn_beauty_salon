@@ -13,6 +13,8 @@ import Testimony from './Testimony'
 import Portfolio from './Portfolio'
 
 class HomePage extends React.Component {
+
+
   render() {
     return(
       <div className="pz-page-container-wrapper">

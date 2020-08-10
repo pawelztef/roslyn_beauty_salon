@@ -4,7 +4,8 @@ import './assets/sass/main.sass'
 import { 
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  useLocation
 } from 'react-router-dom'
 
 import NavigationBar from './components/NavigationBar'
@@ -17,9 +18,11 @@ import GalleryPage from './components/GalleryPage'
 import AboutPage from './components/AboutPage'
 import ServicesPage from './components/ServicesPage'
 
+
+
 class App extends React.Component {
   state = {
-    mobileMenuOpen: false
+    mobileMenuOpen: false,
   }
 
   mobileMenuToggleHandler = () => {
@@ -28,12 +31,12 @@ class App extends React.Component {
       return { mobileMenuOpen: !prevState.mobileMenuOpen }
     })
   }
+  
 
   render() {
     return (
       <Router>
         <div className="pz-body-wrapper">
-          <div className="responsivnes-indicator"></div>
           <div className="pz-page-wrapper">
             <NavigationBar mobileMenuToggleHandler={this.mobileMenuToggleHandler} />
             <MobileNav show={this.state.mobileMenuOpen}

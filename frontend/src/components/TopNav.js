@@ -10,7 +10,7 @@ const Nav = styled.nav`
 `
 const ContactDetials = styled.div`
   display: flex;
-  justify-content: space-between; 
+  justify-content: flex-end; 
   flex-grow: 2;
 `
 
