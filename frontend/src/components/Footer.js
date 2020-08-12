@@ -9,21 +9,48 @@ import {Link} from 'react-router-dom'
 export default class Footer extends React.Component {
 
 
+  state = {
+      menuPages: [],
+      contactDetails: {},
+      logo: {},
+      socialMedia: {},
+      isLoading: true
+  }
+
+  async componentDidMount() {
+    const footerRes = await Axios.get(process.env.REACT_APP_DOMAIN+'/footer')
+
+    const data = footerRes.data[0]
+    console.log('data footer', data)
+    const { menu, contact_details, logo, social_media } = data
+
+    this.setState({ 
+      menuPages: menu.pages,
+      contactDetails: contact_details,
+      logo,
+      socialMedia: social_media,
+      isLoading: false
+    })
+
+  }
 
   render() {
-    const { menuPages, contactDetails, logo, socialMedia, isLoading } = this.props.footer
 
     return(
       <div className="pz-container-wrapper">
         <footer className="pz-footer">
 
-          {!isLoading ? (
+          {!this.state.isLoading ? (
             <>
               <div className="pz-footer__col-1">
-                <ContactDetails {...contactDetails} />
+                {this.state.contactDetails &&
+                  <ContactDetails {...this.state.contactDetails} />
+                }
               </div>
               <div className="pz-footer__col-2">
-                <Brand {...logo}/>
+                {this.state.logo &&
+                  <Brand {...this.state.logo}/>
+                }
                 <div className="pz-footer-meta">
                   <span>
                     <a href="https://pawelztef.me">Pawelztef</a>© 2020
@@ -32,15 +59,19 @@ export default class Footer extends React.Component {
                     All rights reserved
                   </span>
                 </div>
-                <SocialList socialMedia={socialMedia} />
+                {this.state.socialMedia &&
+                  <SocialList socialMedia={this.state.socialMedia} />
+                }
               </div>
               <div className="pz-footer__col-3">
                 <div className="pz-footer__legal">
-                  {menuPages.map(entry => (
-                    <span key={entry.id} className="pz-footer__legal-item">
-                      <Link to={entry.slug}>{entry.title}</Link>
-                    </span>
-                  ))}
+                  {this.state.menuPages &&
+                    this.state.menuPages.map(entry => (
+                      <span key={entry.id} className="pz-footer__legal-item">
+                        <Link to={entry.slug}>{entry.title}</Link>
+                      </span>
+                    ))
+                  }
                 </div>
               </div>
             </>
