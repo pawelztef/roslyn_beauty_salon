@@ -8,18 +8,24 @@ import { RiCloseLine } from "react-icons/ri";
 export default function MobileNav(props) {
 
   let mobileNavClasses = 'pz-nav__mobile-nav'
-
-
   if(props.show) {
     mobileNavClasses = 'pz-nav__mobile-nav open'
   }
 
+
+
   return(
-   <div className={mobileNavClasses}>
-     <span className="pz-nav__mobile-nav-close" onClick={props.click}><RiCloseLine /></span>
-     <Brand />
-     <MainMenu />
-     <SocialList />
-   </div>
+    <div className={mobileNavClasses}>
+      <span className="pz-nav__mobile-nav-close" onClick={props.click}><RiCloseLine /></span>
+      {props.navbar.logo && props.navbar.logo.image &&
+      <Brand  {...props.navbar.logo}/>
+      }
+      {props.navbar.menu &&
+      <MainMenu {...props.navbar.menu}/>
+      }
+      {props.navbar.socialMedia && props.navbar.socialMedia[0] &&
+        <SocialList socialMedia={props.navbar.socialMedia} />
+      }
+    </div>
   )
 }
