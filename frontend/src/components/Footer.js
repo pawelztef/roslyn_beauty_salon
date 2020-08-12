@@ -8,34 +8,11 @@ import {Link} from 'react-router-dom'
 
 export default class Footer extends React.Component {
 
-  state = {
-    menuPages: {},
-    contactDetails: {},
-    logo: {},
-    socialMedia: {},
-    isLoading: true
-  }
-
-  async componentWillMount() {
-    const response = await Axios.get(process.env.REACT_APP_DOMAIN+'/footer')
-    const menuPages = response.data[0].menu.pages
-    const contactDetails = response.data[0].contact_details
-    const logo = response.data[0].logo
-    const socialMedia = response.data[0].social_media.map((entry) => {
-      return({
-        id: entry.id,
-        url: entry.url,
-        type: entry.type
-      })
-    })
-    this.setState({menuPages, contactDetails, logo, socialMedia, isLoading: false})
-  }
-
 
 
   render() {
-    const { menuPages, contactDetails, logo, socialMedia, isLoading } = this.state
-    const sM = socialMedia[0]
+    const { menuPages, contactDetails, logo, socialMedia, isLoading } = this.props.footer
+
     return(
       <div className="pz-container-wrapper">
         <footer className="pz-footer">
@@ -55,7 +32,7 @@ export default class Footer extends React.Component {
                     All rights reserved
                   </span>
                 </div>
-                <SocialList socialMedia={socialMedia} isLoading={this.state.isLoading} />
+                <SocialList socialMedia={socialMedia} />
               </div>
               <div className="pz-footer__col-3">
                 <div className="pz-footer__legal">
