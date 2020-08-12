@@ -8,8 +8,13 @@ import {
   useLocation
 } from 'react-router-dom'
 
-import Page from './components/Page'
 import Footer from './components/Footer'
+import HomePage from './components/HomePage'
+import ContactPage from './components/ContactPage'
+import TeamPage from './components/TeamPage'
+import GalleryPage from './components/GalleryPage'
+import AboutPage from './components/AboutPage'
+import ServicesPage from './components/ServicesPage'
 import Navigation from './components/Navigation'
 
 
@@ -25,7 +30,26 @@ class App extends React.Component {
 
             <Navigation />
 
-            <Page />
+            <Switch>
+              <Route exact path="/contact">
+                <ContactPage />
+              </Route>
+              <Route exact path="/team">
+                <TeamPage />
+              </Route>
+              <Route exact path="/gallery">
+                <GalleryPage />
+              </Route>
+              <Route exact path="/about">
+                <AboutPage />
+              </Route>
+              <Route exact path="/services">
+                <ServicesPage />
+              </Route>
+              <Route exact path="/">
+                <HomePage/>
+              </Route>
+            </Switch>
 
             <Footer />
 

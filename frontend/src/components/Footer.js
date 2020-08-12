@@ -21,7 +21,6 @@ export default class Footer extends React.Component {
     const footerRes = await Axios.get(process.env.REACT_APP_DOMAIN+'/footer')
 
     const data = footerRes.data[0]
-    console.log('data footer', data)
     const { menu, contact_details, logo, social_media } = data
 
     this.setState({ 
