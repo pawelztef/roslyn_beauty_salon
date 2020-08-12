@@ -1,7 +1,7 @@
 import React from 'react'
 import Axios from 'axios'
-import NavigationBar from './components/NavigationBar'
-import MobileNav from './components/MobileNav'
+import NavigationBar from './NavigationBar'
+import MobileNav from './MobileNav'
 
 class Navigation extends React.Component {
 
