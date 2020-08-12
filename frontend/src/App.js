@@ -15,7 +15,7 @@ import TeamPage from './components/TeamPage'
 import GalleryPage from './components/GalleryPage'
 import AboutPage from './components/AboutPage'
 import ServicesPage from './components/ServicesPage'
-import Navigation from './Navigation'
+import Navigation from './components/Navigation'
 
 
 class App extends React.Component {
