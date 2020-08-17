@@ -1,35 +1,34 @@
 import React from 'react'
 import EmptySpace from './EmptySpace'
 
-export default function CardGroup({data}) {
+export default function CardGroup(props) {
 
-  const cards = data.card.map((item, key) => {
-    let serviceLink = `http://localhost:3000${item.link}`
-    // let imageLink = `http://localhost:1337${item.image.url}` 
-    let imageLink = item.image.url
-    let [before, after] = item.subtitle.split(' ')
+  const bannerEntries = props.entry
 
+  
+  const cards = bannerEntries.map((entry) => {
+    const {treatment: {id, name, price}} = entry
     return(
-      <div key={key} className="card__simple-offer">
-        <div className="price-item"
-          style={{ 
-            backgroundImage: `url("${imageLink}")`
-          }}>
-            <a className="price-item-link" href={serviceLink}>
+      <>
+      <div key={id} className="card__simple-offer">
+        <div className="price-item">
+            <a className="price-item-link">
               <h3 className="price-item-title">
                 <span>
-                  {item.title} 
+                  {name} 
                 </span>
               </h3>
               <div className="price-item-price">
-                <span className="price-item-price-before pz-script-font">{before}</span>
-                <span className="price-item-price-after">{after}</span>
+                <span className="price-item-price-before pz-script-font"></span>
+                <span className="price-item-price-after">{price}€</span>
               </div>
             </a>
           </div>
         </div>
+    </>
     )
   })
+
 
   return(
     <div className="pz-container-wrapper">
@@ -37,7 +36,7 @@ export default function CardGroup({data}) {
         <EmptySpace />
         <div className="pz-container"> 
           <div className="card__wrapper">
-            {cards} 
+            {cards}
           </div>
         </div>
         <EmptySpace />

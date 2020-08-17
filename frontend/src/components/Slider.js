@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Slider = (props) =>  {
-  const hero_items = props.hero_item
+  const heroEntries = props.hero_item
   return (
     <> 
-      {hero_items &&
-        hero_items.map((entry) => {
+      {heroEntries &&
+        heroEntries.map((entry) => {
           const {id, title, subtitle, call_to_action, image } = entry
           return(
             <div key={id} className="pz-animated-banner">
