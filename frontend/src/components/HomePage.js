@@ -16,10 +16,12 @@ class HomePage extends React.Component {
 
 
   render() {
+    const components  = this.props.components
+    const sliderData = components.find( cp => cp.__component === 'page.hero-slider' )
     return(
       <div className="pz-page-container-wrapper">
 
-        <Slider data={mockPage.content[0]}/> 
+        <Slider {...sliderData} /> 
 
 
         <CardGroup data={mockPage.content[1]} />
