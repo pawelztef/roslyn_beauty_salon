@@ -16,11 +16,10 @@ class ServicesPage extends React.Component {
           title="Our Services"
           backgroundImage={bg}
         />
-        
-      <CardGroup data={mockPage.content[1]} />
-      <Banner data={mockPage.content[2]} />
-      <Services />
-      <Newsletter />
+        <CardGroup data={mockPage.content[1]} />
+        <Banner data={mockPage.content[2]} />
+        <Services />
+        <Newsletter />
       </div>
     )
   }

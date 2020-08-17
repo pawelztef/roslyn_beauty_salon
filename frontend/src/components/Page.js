@@ -17,6 +17,8 @@ import GalleryPage from './GalleryPage'
 import AboutPage from './AboutPage'
 import ServicesPage from './ServicesPage'
 import NotFound from './NotFound'
+import renderPage from '../pagesMapping'
+import TestPage from './TestPage'
 
 class Page extends React.Component {
 
@@ -26,31 +28,23 @@ class Page extends React.Component {
   }
 
   async componentDidMount() {
-    const resp = await Axios.get(process.env.REACT_APP_DOMAIN + '/pages' )
-    const pages = resp.data
-    this.setState({
-      pages,
-      isLoading: false
-    }) 
+    const response = await Axios.get(process.env.REACT_APP_DOMAIN+'/pages') 
+    const data = response.data
+    this.setState({ pages: data, isLoading: false })
   }
 
-  renderComponents = (page, mapper) => {
-
-  }
 
   render() {
-    let pg = false
+    let page = false
     if(!this.state.isLoading) {
       const pages = this.state.pages
-      pg = pages.find( entry => entry.slug.replace(/^\//, '') === this.props.match.params.slug ) || false
+      page = pages.find( entry => entry.slug.replace(/^\//, '') === this.props.match.params.slug ) || {slug: 'not_found'}
     }
     return(
       <>
-        {pg ? (
-          <h3>{pg.title}</h3>
-        ):(
-          <NotFound />
-        )}
+        {page &&
+          renderPage(page)
+        }
       </>
     )
   }

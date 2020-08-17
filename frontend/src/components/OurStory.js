@@ -31,7 +31,7 @@ class OurStory extends React.Component {
     return(
       <div className="pz-our-story__wrapper">
         <EmptySpace />
-        <div class="pz-container-wrapper">
+        <div className="pz-container-wrapper">
           <div className="pz-our-story__container">
             <h2 className="pz-section__header">Our Story</h2>
 
