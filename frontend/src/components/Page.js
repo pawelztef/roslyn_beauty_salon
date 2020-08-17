@@ -5,7 +5,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useLocation
+  useLocation,
+  matchPath
 } from 'react-router-dom'
 
 import Axios from 'axios'
@@ -33,17 +34,25 @@ class Page extends React.Component {
     this.setState({ pages: data, isLoading: false })
   }
 
+  findPage() {
+    if(!this.state.isLoading) {
+      const pages = this.state.pages
+      const notFound = { title: 'not_found', slug: 'not_found' }
+      if(matchPath(this.props.match.url, { path: "/", exact: true })) {
+        return pages.find( entry => entry.slug === "/" ) || notFound
+      } else {
+        return  pages.find( entry => entry.slug.replace(/^\//, '') === this.props.match.params.slug ) || notFound
+      }
+    }
+  }
 
   render() {
     let page = false
-    if(!this.state.isLoading) {
-      const pages = this.state.pages
-      page = pages.find( entry => entry.slug.replace(/^\//, '') === this.props.match.params.slug ) || {slug: 'not_found'}
-    }
+    page = this.findPage()
     return(
       <>
         {page &&
-          renderPage(page)
+            renderPage(page)
         }
       </>
     )

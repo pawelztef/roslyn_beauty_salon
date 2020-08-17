@@ -28,13 +28,9 @@ class App extends React.Component {
             <Navigation />
 
             <Switch>
-              <Route exact path="/">
-                <HomePage/>
-              </Route>
+              <Route exact path="/" component={Page} />
               <Route path='/:slug' component={Page} />
-              <Route>
-                <NotFound />
-              </Route>
+              <Route component={NotFound} />
             </Switch>
 
             <Footer />

@@ -9,7 +9,7 @@ import NotFound from './components/NotFound'
 import TestPage from './components/TestPage'
 
 const pagesMapping = {
-  HOME: 'home',
+  HOME: '/',
   SERVICES: 'services',
   TEAM: 'team',
   GALLERY: 'gallery',
