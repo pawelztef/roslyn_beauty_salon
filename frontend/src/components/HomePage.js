@@ -19,7 +19,8 @@ class HomePage extends React.Component {
     const components  = this.props.components
     const sliderData = components.find( cp => cp.__component === 'page.hero-slider' )
     const servicesBannerData = components.find( cp => cp.__component === 'page.services-banner' )
-    console.log('servicesBannerData ', servicesBannerData)
+    const simpleBannerData = components.find( cp => cp.__component === 'page.simple-banner' )
+    console.log('simpleBannerData', simpleBannerData)
     return(
       <div className="pz-page-container-wrapper">
 
@@ -27,7 +28,7 @@ class HomePage extends React.Component {
 
         <CardGroup {...servicesBannerData} />
 
-        <Banner data={mockPage.content[2]} />
+        <Banner {...simpleBannerData} />
 
         <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
 
