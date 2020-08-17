@@ -9,22 +9,28 @@
     "timestamps": true
   },
   "attributes": {
-    "fullname": {
-      "type": "string"
-    },
-    "phone": {
-      "type": "string"
-    },
-    "date": {
-      "type": "date",
+    "first_name": {
+      "type": "string",
       "required": true
     },
-    "time": {
-      "type": "time",
+    "second_name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
       "required": true
     },
     "message": {
       "type": "text"
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "time": {
+      "type": "string",
+      "required": true
     }
   }
 }

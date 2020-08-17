@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_page_services_lists",
+  "info": {
+    "name": "services_list",
+    "icon": "atlas"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "treatments_categories": {
+      "collection": "treatments-categories"
+    },
+    "call_to_action": {
+      "type": "component",
+      "repeatable": false,
+      "component": "generic.call-to-action"
+    }
+  }
+}

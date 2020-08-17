@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_generic_form_entries",
+  "info": {
+    "name": "form_entry",
+    "icon": "pen"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
