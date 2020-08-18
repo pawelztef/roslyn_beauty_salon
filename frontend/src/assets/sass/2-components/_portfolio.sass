@@ -1,4 +1,4 @@
-.pz-portfolio__container
+.pz-portfolio__container > div
   display: grid
   grid-template-columns: repeat(4, 1fr)
   column-gap: 20px
@@ -9,13 +9,13 @@
 @include media-desktop
 @include media-tablet-landscape
 @include media-tablet-portrait
-  .pz-portfolio__container
+  .pz-portfolio__container > div
     display: grid
     grid-template-columns: repeat(2, 1fr)
     row-gap: 15px
     margin: 0 15px
 @include media-phone
-  .pz-portfolio__container
+  .pz-portfolio__container > div
     display: grid
     grid-template-columns: repeat(1, 1fr)
     row-gap: 15px

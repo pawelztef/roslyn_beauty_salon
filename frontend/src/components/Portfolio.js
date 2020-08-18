@@ -1,23 +1,28 @@
 import React from 'react'
 import EmptySpace from './EmptySpace'
+import SimpleReactLightBox, { SRLWrapper } from 'simple-react-lightbox'
 
 const portfolio = props => {
   return(
     <div className="pz-portfolio__wrapper">
       <EmptySpace />
       <div className="pz-portfolio__container">
-        <div className="pz-portfolio__container-item">
-          <img src="http://muji.ancorathemes.com/wp-content/uploads/2017/12/gallery-14-copyright.jpg" alt="" />
-        </div>
-        <div className="pz-portfolio__container-item pz-invisible-sm">
-          <img src="http://muji.ancorathemes.com/wp-content/uploads/2017/12/gallery-17-copyright.jpg" alt="" />
-        </div>
-        <div className="pz-portfolio__container-item pz-invisible-sm">
-          <img src="http://muji.ancorathemes.com/wp-content/uploads/2017/12/gallery-16-copyright.jpg" alt="" />
-        </div>
-        <div className="pz-portfolio__container-item pz-invisible-sm">
-          <img src="http://muji.ancorathemes.com/wp-content/uploads/2017/12/gallery-15-copyright.jpg" alt="" />
-        </div>
+        <SimpleReactLightBox>
+          <SRLWrapper>
+            <div className="pz-portfolio__container-item">
+              <img src="http://muji.ancorathemes.com/wp-content/uploads/2017/12/gallery-14-copyright.jpg" alt="" />
+            </div>
+            <div className="pz-portfolio__container-item pz-invisible-sm">
+              <img src="http://muji.ancorathemes.com/wp-content/uploads/2017/12/gallery-17-copyright.jpg" alt="" />
+            </div>
+            <div className="pz-portfolio__container-item pz-invisible-sm">
+              <img src="http://muji.ancorathemes.com/wp-content/uploads/2017/12/gallery-16-copyright.jpg" alt="" />
+            </div>
+            <div className="pz-portfolio__container-item pz-invisible-sm">
+              <img src="http://muji.ancorathemes.com/wp-content/uploads/2017/12/gallery-15-copyright.jpg" alt="" />
+            </div>
+          </SRLWrapper>
+        </SimpleReactLightBox>
       </div>
       <EmptySpace small />
       <div className="pz-container-wrapper">

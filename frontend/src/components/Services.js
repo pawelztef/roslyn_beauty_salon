@@ -13,9 +13,7 @@ class Services extends React.Component {
     const response = await Axios.get(process.env.REACT_APP_DOMAIN+'/treatments-categories') 
     const fetchedCategories = response.data
     const passedCategories = this.props.treatments_categories
-    console.log('passedCategories ', passedCategories)
     const newData = fetchedCategories.filter( category => passedCategories.some( (item) => item.name === category.name ) )
-    console.log('new data ', newData)
     this.setState({treatments_categories: newData, isLoading: false})
   }
 
@@ -38,7 +36,7 @@ class Services extends React.Component {
             {!this.state.isLoading &&
               treatments_categories.map( (category) => {
                 return(
-                  <div className="pz-services__list">
+                  <div key={category.id} className="pz-services__list">
                     <h4 className="pz-services-header">{category.name}
                       <span><TiHeart /></span>
                     </h4>
@@ -46,7 +44,7 @@ class Services extends React.Component {
                       {
                         category.treatments.map((treatment) => {
                           return(
-                            <li><a href="/services">{treatment.name}</a><br/><span>{treatment.price}€</span></li>
+                            <li key={treatment.id}><a href="/services">{treatment.name}</a><br/><span>{treatment.price}€</span></li>
                           )
                         })
                       }
