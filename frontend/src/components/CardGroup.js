@@ -9,7 +9,6 @@ export default function CardGroup(props) {
   const cards = bannerEntries.map((entry) => {
     const {treatment: {id, name, price}} = entry
     return(
-      <>
       <div key={id} className="card__simple-offer">
         <div className="price-item">
             <a className="price-item-link">
@@ -25,7 +24,6 @@ export default function CardGroup(props) {
             </a>
           </div>
         </div>
-    </>
     )
   })
 

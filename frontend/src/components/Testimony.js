@@ -9,7 +9,6 @@ import { TiHeart } from "react-icons/ti";
 class Testimony extends React.Component {
 
 
-
   render() {
     const settings = {
       className: 'pz-testimony__slider',
@@ -29,54 +28,31 @@ class Testimony extends React.Component {
         }
       ]
     }
-
+    const { title, quote } = this.props
+    console.log('testimony body, author', this.props) 
+    console.log('quotes ', quote)
     return(
       <div className="pz-testimony__wrapper">
         <EmptySpace />
         <div className="pz-container-wrapper">
           <div className="pz-testimony__container">
-            <h2 className="pz-section__header">Happy clients about us</h2>
-
+            <h2 className="pz-section__header">{ title }</h2>
             <div className="pz-testimony__content">
               <Slider {...settings}>
-                <div className="pz-testimony__slider-item">
-                  <p>“Muji Salon provides such great services to maintain my nails. I love the products
-                    they used on my nails, nothing but the best. I love coming here and I will never
-                    go anywhere else to get my nails done!”</p>
-                  <span><TiHeart /></span>
-                  <h4>Amanda Wellsh</h4>
-                </div>
-                <div className="pz-testimony__slider-item">
-                  <p>“This is not just another beauty salon! These ladies are super talented! My nails
-                    have never looked/felt more amazing!! The environment here is so happy and cheery! 
-                    Keep up the great work!”</p>
-                  <span><TiHeart /></span>
-                  <h4>Nelly Simpson</h4>
-                </div>
-                <div className="pz-testimony__slider-item">
-                  <p>“Muji Salon provides such great services to maintain my nails. I love the products
-                    they used on my nails, nothing but the best. I love coming here and I will never
-                    go anywhere else to get my nails done!”</p>
-                  <span><TiHeart /></span>
-                  <h4>Kim Parker</h4>
-                </div>
-                <div className="pz-testimony__slider-item">
-                  <p>“Muji team is the best when it comes about a makeup. They genuinely care about your
-                    comfort and work hard to take care of any problem areas.”</p>
-                  <span><TiHeart /></span>
-                  <h4>Sara Devise</h4>
-                </div>
-                <div className="pz-testimony__slider-item">
-                  <p>“Muji Salon provides such great services to maintain my nails. I love the products
-                    they used on my nails, nothing but the best. I love coming here and I will never
-                    go anywhere else to get my nails done!”</p>
-                  <span><TiHeart /></span>
-                  <h4>Kim Parker</h4>
-                </div>
+                {
+                  quote.map((item) => {
+                    return (
+                      <div className="pz-testimony__slider-item">
+                        <p>“{item.body}“</p>
+                        <span><TiHeart /></span>
+                        <h4>{item.author}</h4>
+                      </div>
+
+                    )
+                  })
+                }
               </Slider>
             </div>
-
-
           </div>
         </div>
         <EmptySpace />
