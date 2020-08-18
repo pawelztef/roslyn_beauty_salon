@@ -29,8 +29,6 @@ class Testimony extends React.Component {
       ]
     }
     const { title, quote } = this.props
-    console.log('testimony body, author', this.props) 
-    console.log('quotes ', quote)
     return(
       <div className="pz-testimony__wrapper">
         <EmptySpace />

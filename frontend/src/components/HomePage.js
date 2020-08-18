@@ -14,6 +14,7 @@ import Portfolio from './Portfolio'
 
 class HomePage extends React.Component {
 
+  
 
   render() {
     const components  = this.props.components
@@ -22,7 +23,8 @@ class HomePage extends React.Component {
     const simpleBannerData = components.find( cp => cp.__component === 'page.simple-banner' )
     const welcomeSectionData = components.find( cp => cp.__component === 'page.welcome' )
     const testimonySectionData = components.find( cp => cp.__component === 'page.testimony' )
-    console.log('testimonySectionData', testimonySectionData)
+    const servicesListData = components.find( cp => cp.__component === 'page.services-list' )
+    console.log('servicesListData', servicesListData)
     return(
       <div className="pz-page-container-wrapper">
 
@@ -36,7 +38,7 @@ class HomePage extends React.Component {
 
         <Testimony {...testimonySectionData}/>
 
-        <Services />
+        <Services {...servicesListData}/>
 
         <Portfolio />
 

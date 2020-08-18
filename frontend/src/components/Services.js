@@ -3,6 +3,7 @@ import EmptySpace from './EmptySpace'
 import ServicesList from './ServicesList'
 
 const services = props => {
+  console.log('services props ', props)
   return(
     <div className="pz-services__wrapper">
       <EmptySpace />
