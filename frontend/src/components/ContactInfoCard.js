@@ -4,19 +4,18 @@ import parse from 'html-react-parser'
 import ContactDetails from './ContactDetails'
 
 const ContactInfoCard = (props) => {
-  const card = props.data.card[0]
-  const {title, content, image, image_position} = card
+  const {contact_details, image} = props.data
 
   const ContactInfo = styled.div`
     display: flex;
-    flex-direction: ${(image_position) => ( card.image_position === "right")  ? "row" : "row-reverse" }
+    flex-direction: "row";
   `
 
   const Image = styled.img`
     @media (max-width: 768px) {
-      margin: 0
+      margin: 0;
     }
-    margin-${(image_position) => ( card.image_position === "right")  ? "left" : "right" }: 30px
+    margin-left: 30px;
   `
 
   return(
@@ -24,9 +23,9 @@ const ContactInfoCard = (props) => {
       <ContactInfo className="contact-info">
         <div className='contact-info__content'>
           <h4>Contact Info</h4>
-          <ContactDetails />
+          <ContactDetails {...contact_details}/>
         </div>
-        <Image src={image.url}
+        <Image src={process.env.REACT_APP_DOMAIN + image.url}
           className='contact-info__image'/>
       </ContactInfo>
     </div>  

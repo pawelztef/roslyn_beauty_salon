@@ -20,7 +20,8 @@ class HomePage extends React.Component {
     const sliderData = components.find( cp => cp.__component === 'page.hero-slider' )
     const servicesBannerData = components.find( cp => cp.__component === 'page.services-banner' )
     const simpleBannerData = components.find( cp => cp.__component === 'page.simple-banner' )
-    console.log('simpleBannerData', simpleBannerData)
+    const welcomeSectionData = components.find( cp => cp.__component === 'page.welcome' )
+    console.log('welcomeSectionData', welcomeSectionData)
     return(
       <div className="pz-page-container-wrapper">
 
@@ -30,7 +31,7 @@ class HomePage extends React.Component {
 
         <Banner {...simpleBannerData} />
 
-        <Welcome data={[mockPage.content[3], mockPage.content[4]]} />
+        <Welcome {...welcomeSectionData} />
 
         <Testimony/>
 
