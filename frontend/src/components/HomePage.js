@@ -25,7 +25,8 @@ class HomePage extends React.Component {
     const testimonySectionData = components.find( cp => cp.__component === 'page.testimony' )
     const servicesListData = components.find( cp => cp.__component === 'page.services-list' )
     const galleryBannerData = components.find( cp => cp.__component === 'page.gallery-banner' )
-    console.log('galleryBannerData', galleryBannerData)
+    const appointmentFormData = components.find( cp => cp.__component === 'page.appointment-form' )
+    console.log('appointmentFormData', appointmentFormData)
     return(
       <div className="pz-page-container-wrapper">
 
@@ -43,9 +44,7 @@ class HomePage extends React.Component {
 
         <Portfolio {...galleryBannerData}/>
 
-        <Team />
-
-        <Appointment />
+        <Appointment {...appointmentFormData} />
 
         <Newsletter />
 

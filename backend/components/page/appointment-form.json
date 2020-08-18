@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_page_appointment_forms",
+  "info": {
+    "name": "appointment_form",
+    "icon": "receipt"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "button_text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

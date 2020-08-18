@@ -31,7 +31,8 @@
         "page.hero-slider",
         "page.our-story",
         "page.maps",
-        "page.services-list"
+        "page.services-list",
+        "page.appointment-form"
       ]
     }
   }

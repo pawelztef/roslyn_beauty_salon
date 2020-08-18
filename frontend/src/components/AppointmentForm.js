@@ -1,14 +1,21 @@
 import React from 'react'
+import Axios from 'axios'
 import { MuiPickersUtilsProvider, DatePicker, TimePicker } from "@material-ui/pickers"
 import DateFnsUtils from '@date-io/date-fns'
 
 class AppointmentForm extends React.Component {
 
-
-  state = {
-    appointmentDate: new Date(),
-    appointmentTime: new Date()
-    
+  constructor(props) {
+    super(props)
+    this.state = {
+      firstName: "",
+      secondName: "",
+      phone: "",
+      appointmentDate: "",
+      appointmentTime: "",
+      message: "",
+      agree: false
+    }
   }
 
   handleDateChange = date => {
@@ -20,14 +27,37 @@ class AppointmentForm extends React.Component {
     this.setState({
       appointmentTime: time
     })
+    console.log(this.state)
+  }
+  handleAgrement = event => {
+    this.setState({
+      agree: event.target.checked
+    })
+  }
+  handleChange = (event) => {
+    let nam = event.target.name
+    let val = event.target.value
+    this.setState({[nam]: val})
+    console.log(this.state)
   }
 
+  handleSubmit = async (event) => {
+    event.preventDefault()
+    await Axios.post(process.env.REACT_APP_DOMAIN+"/appointment-form-leads", {
+      first_name: this.state.firstName,
+      second_name: this.state.secondName,
+      phone: this.state.phone,
+      message: this.state.message,
+      date: this.state.appointmentDate.toJSON().substr(0, 10),
+      time: this.state.appointmentTime.toJSON().substr(11, 12)
+    })
+  }
 
 
   render() {
     return(
       <div className="pz-appointment__form-wrapper">
-        <form className="pz-appointment__form" >
+        <form className="pz-appointment__form" onSubmit={this.handleSubmit} >
 
           {/* Row 1 Start */}
           <div className="pz-appointment__form-row pz-appointment__row-1">
@@ -38,16 +68,18 @@ class AppointmentForm extends React.Component {
               <div className="pz-appointment__form-row ">
                 <div className="pz-appointment__form-input">
                   <input type="text" 
-                    id="appointment-frist-name" 
-                    name="appointment-frist-name" 
+                    id="firstName" 
+                    name="firstName" 
                     placeholder="First Name"
+                    onChange={this.handleChange}
                   />
                 </div>
                 <div className="pz-appointment__form-input">
                   <input type="text" 
-                    id="appointment-second-name" 
-                    name="appointment-second-name"
+                    id="secondName" 
+                    name="secondName"
                     placeholder="Second Name"
+                    onChange={this.handleChange}
                   />
                 </div>
               </div>
@@ -55,9 +87,10 @@ class AppointmentForm extends React.Component {
               <div className="pz-appointment__form-row">
                 <div className="pz-appointment__form-input">
                   <input type="text" 
-                    id="appointment-phone" 
-                    name="appointment-phone"
+                    id="phone" 
+                    name="phone"
                     placeholder="Your Phone"
+                    onChange={this.handleChange}
                   />
                 </div>
               </div>
@@ -65,12 +98,19 @@ class AppointmentForm extends React.Component {
               <div className="pz-appointment__form-row">
                 <div className="pz-appointment__form-input">
                   <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                    <DatePicker value={this.state.appointmentDate} onChange={this.handleDateChange} />
+                    <DatePicker 
+                      id="date"
+                      name="date"
+                      value={this.state.appointmentDate} 
+                      onChange={this.handleDateChange} 
+                    />
                   </MuiPickersUtilsProvider>
                 </div>
                 <div className="pz-appointment__form-input">
                   <MuiPickersUtilsProvider utils={DateFnsUtils}>
                     <TimePicker 
+                      id="time"
+                      name="time"
                       value={this.state.appointmentTime} 
                       onChange={this.handleTimeChange} 
                       ampm={false}
@@ -86,8 +126,10 @@ class AppointmentForm extends React.Component {
             <div className="pz-appointment__form-section">
               <div className="pz-appointment__form-input">
                 <textarea id="appointment-message" 
-                  name="appointment-message" 
+                  id="message" 
+                  name="message" 
                   placeholder="Your Message"
+                  onChange={this.handleChange} 
                 >
                 </textarea>
               </div>
@@ -101,13 +143,19 @@ class AppointmentForm extends React.Component {
           <div className="pz-appointment__form-row pz-appointment__row-2">
             <div className="pz-appointment__form-section">
               <label htmlFor="pz-appointment-agrement">
-                <input id="pz-appointment-agrement" type="checkbox" name="appointment-agrement" />
+                <input 
+                  id="agree" 
+                  type="checkbox" 
+                  name="agree"
+                  checked={this.state.agree}
+                  onChange={this.handleAgrement}
+                />
                 I have read and agree to the temrs & conditions.
               </label>
               <label htmlFor="pz-appointment-agrement">See our <a href="https://pawelztef.me">Privacy Policy</a>.</label>
             </div>
             <div className="pz-appointment__form-section">
-              <button className="pz-btn">Submit</button>
+              <button className="pz-btn">{this.props.button_text}</button>
             </div>
           </div>
           {/* Row 2 End */}

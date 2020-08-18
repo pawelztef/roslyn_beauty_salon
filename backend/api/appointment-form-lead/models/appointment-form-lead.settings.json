@@ -25,11 +25,11 @@
       "type": "text"
     },
     "date": {
-      "type": "string",
+      "type": "date",
       "required": true
     },
     "time": {
-      "type": "string",
+      "type": "time",
       "required": true
     }
   }
