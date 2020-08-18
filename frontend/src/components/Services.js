@@ -13,7 +13,9 @@ class Services extends React.Component {
     const response = await Axios.get(process.env.REACT_APP_DOMAIN+'/treatments-categories') 
     const fetchedCategories = response.data
     const passedCategories = this.props.treatments_categories
-    const newData = fetchedCategories.filter( category => passedCategories.filter( passedCategory => passedCategory.name === category.name ) )
+    console.log('passedCategories ', passedCategories)
+    const newData = fetchedCategories.filter( category => passedCategories.some( (item) => item.name === category.name ) )
+    console.log('new data ', newData)
     this.setState({treatments_categories: newData, isLoading: false})
   }
 
