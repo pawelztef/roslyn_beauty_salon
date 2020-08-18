@@ -28,7 +28,7 @@ class Testimony extends React.Component {
         }
       ]
     }
-    const { title, quote } = this.props
+    const {id, title, quote } = this.props
     return(
       <div className="pz-testimony__wrapper">
         <EmptySpace />
@@ -40,7 +40,7 @@ class Testimony extends React.Component {
                 {
                   quote.map((item) => {
                     return (
-                      <div className="pz-testimony__slider-item">
+                      <div key={id} className="pz-testimony__slider-item">
                         <p>“{item.body}“</p>
                         <span><TiHeart /></span>
                         <h4>{item.author}</h4>
