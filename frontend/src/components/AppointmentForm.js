@@ -2,19 +2,27 @@ import React from 'react'
 import Axios from 'axios'
 import { MuiPickersUtilsProvider, DatePicker, TimePicker } from "@material-ui/pickers"
 import DateFnsUtils from '@date-io/date-fns'
+import SimpleReactValidator from 'simple-react-validator'
+import Snackbar from '@material-ui/core/Snackbar'
+import MuiAlert from '@material-ui/lab/Alert'
+
+
 
 class AppointmentForm extends React.Component {
 
   constructor(props) {
     super(props)
+    this.validator = new SimpleReactValidator()
     this.state = {
       firstName: "",
       secondName: "",
       phone: "",
-      appointmentDate: "",
-      appointmentTime: "",
+      appointmentDate: new Date(),
+      appointmentTime: new Date(), 
       message: "",
-      agree: false
+      agree: false,
+      open: false,
+      feedbackMessage: ""
     }
   }
 
@@ -40,24 +48,60 @@ class AppointmentForm extends React.Component {
     this.setState({[nam]: val})
     console.log(this.state)
   }
+  handleOpenFeedbackMessage = (feedbackMessage) => {
+    this.setState({open: true, feedbackMessage})
 
+  }
+  handleCloseFeedbackMessage = () => {
+    this.setState({open: false})
+  }
   handleSubmit = async (event) => {
     event.preventDefault()
-    await Axios.post(process.env.REACT_APP_DOMAIN+"/appointment-form-leads", {
-      first_name: this.state.firstName,
-      second_name: this.state.secondName,
-      phone: this.state.phone,
-      message: this.state.message,
-      date: this.state.appointmentDate.toJSON().substr(0, 10),
-      time: this.state.appointmentTime.toJSON().substr(11, 12)
-    })
+    if(this.validator.allValid()) {
+      try {
+        await Axios.post(process.env.REACT_APP_DOMAIN+"/appointment-form-leads", {
+          first_name: this.state.firstName,
+          second_name: this.state.secondName,
+          phone: this.state.phone,
+          message: this.state.message,
+          date: this.state.appointmentDate.toJSON().substr(0, 10),
+          time: this.state.appointmentTime.toJSON().substr(11, 12)
+        })
+        document.getElementById('appointmentForm').reset()
+        this.handleOpenFeedbackMessage("Your message has been sent. We will contact to you promptly.")
+      } catch (error) {
+        if (error.response) {
+          /*
+           * The request was made and the server responded with a
+           * status code that falls out of the range of 2xx
+           */
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          /*
+           * The request was made but no response was received, `error.request`
+           * is an instance of XMLHttpRequest in the browser and an instance
+           * of http.ClientRequest in Node.js
+           */
+          console.log(error.request);
+        } else {
+          // Something happened in setting up the request and triggered an Error
+          console.log('Error', error.message);
+        }
+        console.log(error);
+      }
+    } else {
+      this.validator.showMessages()
+      this.forceUpdate()
+    }
   }
 
 
   render() {
     return(
       <div className="pz-appointment__form-wrapper">
-        <form className="pz-appointment__form" onSubmit={this.handleSubmit} >
+        <form id="appointmentForm" className="pz-appointment__form" onSubmit={this.handleSubmit} >
 
           {/* Row 1 Start */}
           <div className="pz-appointment__form-row pz-appointment__row-1">
@@ -73,6 +117,7 @@ class AppointmentForm extends React.Component {
                     placeholder="First Name"
                     onChange={this.handleChange}
                   />
+                  {this.validator.message('firstName', this.state.firstName, 'required|alpha')}
                 </div>
                 <div className="pz-appointment__form-input">
                   <input type="text" 
@@ -81,6 +126,7 @@ class AppointmentForm extends React.Component {
                     placeholder="Second Name"
                     onChange={this.handleChange}
                   />
+                  {this.validator.message('secondName', this.state.secondName, 'required|alpha')}
                 </div>
               </div>
 
@@ -92,6 +138,7 @@ class AppointmentForm extends React.Component {
                     placeholder="Your Phone"
                     onChange={this.handleChange}
                   />
+                  {this.validator.message('phone', this.state.phone, 'required|phone')}
                 </div>
               </div>
 
@@ -132,6 +179,7 @@ class AppointmentForm extends React.Component {
                   onChange={this.handleChange} 
                 >
                 </textarea>
+                {this.validator.message('message', this.state.message, 'required|min:20|max:920')}
               </div>
             </div>
             {/* Section 2 End */}
@@ -153,6 +201,7 @@ class AppointmentForm extends React.Component {
                 I have read and agree to the temrs & conditions.
               </label>
               <label htmlFor="pz-appointment-agrement">See our <a href="https://pawelztef.me">Privacy Policy</a>.</label>
+              {this.validator.message('agree', this.state.agree, 'accepted')}
             </div>
             <div className="pz-appointment__form-section">
               <button className="pz-btn">{this.props.button_text}</button>
@@ -161,6 +210,17 @@ class AppointmentForm extends React.Component {
           {/* Row 2 End */}
 
         </form>
+
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={this.state.open}
+        autoHideDuration={5000}
+        onClose={this.handleCloseFeedbackMessage}
+      >
+        <MuiAlert elevation={10} variant="standard" onClose={this.handleCloseFeedbackMessage} severity="success">
+          {this.state.feedbackMessage}
+        </MuiAlert>
+      </Snackbar>
       </div>
     )
   }
