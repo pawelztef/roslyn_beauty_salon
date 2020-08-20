@@ -5,7 +5,7 @@ import DateFnsUtils from '@date-io/date-fns'
 import SimpleReactValidator from 'simple-react-validator'
 import Snackbar from '@material-ui/core/Snackbar'
 import MuiAlert from '@material-ui/lab/Alert'
-
+import FeedbackMessage from './FeedbackMessage'
 
 
 class AppointmentForm extends React.Component {
@@ -31,30 +31,27 @@ class AppointmentForm extends React.Component {
       appointmentDate: date
     })
   }
+
   handleTimeChange = time => {
     this.setState({
       appointmentTime: time
     })
     console.log(this.state)
   }
+
   handleAgrement = event => {
     this.setState({
       agree: event.target.checked
     })
   }
+
   handleChange = (event) => {
     let nam = event.target.name
     let val = event.target.value
     this.setState({[nam]: val})
     console.log(this.state)
   }
-  handleOpenFeedbackMessage = (feedbackMessage) => {
-    this.setState({open: true, feedbackMessage})
 
-  }
-  handleCloseFeedbackMessage = () => {
-    this.setState({open: false})
-  }
   handleSubmit = async (event) => {
     event.preventDefault()
     if(this.validator.allValid()) {
@@ -68,27 +65,8 @@ class AppointmentForm extends React.Component {
           time: this.state.appointmentTime.toJSON().substr(11, 12)
         })
         document.getElementById('appointmentForm').reset()
-        this.handleOpenFeedbackMessage("Your message has been sent. We will contact to you promptly.")
+        this.setState({open: true, message: "Your message has been sent. We will contact to you promptly."})
       } catch (error) {
-        if (error.response) {
-          /*
-           * The request was made and the server responded with a
-           * status code that falls out of the range of 2xx
-           */
-          console.log(error.response.data);
-          console.log(error.response.status);
-          console.log(error.response.headers);
-        } else if (error.request) {
-          /*
-           * The request was made but no response was received, `error.request`
-           * is an instance of XMLHttpRequest in the browser and an instance
-           * of http.ClientRequest in Node.js
-           */
-          console.log(error.request);
-        } else {
-          // Something happened in setting up the request and triggered an Error
-          console.log('Error', error.message);
-        }
         console.log(error);
       }
     } else {
@@ -96,7 +74,13 @@ class AppointmentForm extends React.Component {
       this.forceUpdate()
     }
   }
-
+ 
+  closeHandler = () => {
+    this.setState({
+      open: false,
+      message: ""
+    })
+  }
 
   render() {
     return(
@@ -211,16 +195,8 @@ class AppointmentForm extends React.Component {
 
         </form>
 
-      <Snackbar
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        open={this.state.open}
-        autoHideDuration={5000}
-        onClose={this.handleCloseFeedbackMessage}
-      >
-        <MuiAlert elevation={10} variant="standard" onClose={this.handleCloseFeedbackMessage} severity="success">
-          {this.state.feedbackMessage}
-        </MuiAlert>
-      </Snackbar>
+        <FeedbackMessage open={this.state.open} message={this.state.message} closeHandler={this.closeHandler} />
+
       </div>
     )
   }
