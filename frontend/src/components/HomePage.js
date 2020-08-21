@@ -26,7 +26,8 @@ class HomePage extends React.Component {
     const servicesListData = components.find( cp => cp.__component === 'page.services-list' )
     const galleryBannerData = components.find( cp => cp.__component === 'page.gallery-banner' )
     const appointmentFormData = components.find( cp => cp.__component === 'page.appointment-form' )
-    console.log('appointmentFormData', appointmentFormData)
+    const newsletterFormData = components.find( cp => cp.__component === 'page.newsletter-form' )
+    console.log('newsletterFormData', newsletterFormData)
     return(
       <div className="pz-page-container-wrapper">
 
@@ -46,7 +47,7 @@ class HomePage extends React.Component {
 
         <Appointment {...appointmentFormData} />
 
-        <Newsletter />
+        <Newsletter {...newsletterFormData}/>
 
 
       </div>
