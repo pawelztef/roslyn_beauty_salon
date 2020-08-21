@@ -32,7 +32,8 @@
         "page.our-story",
         "page.maps",
         "page.services-list",
-        "page.appointment-form"
+        "page.appointment-form",
+        "page.newsletter-form"
       ]
     }
   }

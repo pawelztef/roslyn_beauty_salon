@@ -182,9 +182,8 @@ class AppointmentForm extends React.Component {
                   checked={this.state.agree}
                   onChange={this.handleAgrement}
                 />
-                I have read and agree to the temrs & conditions.
-              </label>
-              <label htmlFor="pz-appointment-agrement">See our <a href="https://pawelztef.me">Privacy Policy</a>.</label>
+               {this.props.agreement_phrase}
+              <a href={this.props.policy_link.url}> {this.props.policy_link.phrase}</a>.</label>
               {this.validator.message('agree', this.state.agree, 'accepted')}
             </div>
             <div className="pz-appointment__form-section">

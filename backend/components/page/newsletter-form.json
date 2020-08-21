@@ -1,14 +1,13 @@
 {
-  "collectionName": "components_page_appointment_forms",
+  "collectionName": "components_page_newsletter_forms",
   "info": {
-    "name": "appointment_form",
-    "icon": "receipt"
+    "name": "newsletter_form",
+    "icon": "envelope-square"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string",
-      "unique": false,
       "required": true
     },
     "button_text": {
@@ -22,7 +21,8 @@
     "policy_link": {
       "type": "component",
       "repeatable": false,
-      "component": "generic.call-to-action"
+      "component": "generic.call-to-action",
+      "required": true
     }
   }
 }
