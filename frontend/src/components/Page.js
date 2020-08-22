@@ -20,6 +20,7 @@ import ServicesPage from './ServicesPage'
 import NotFound from './NotFound'
 import renderPage from '../pagesMapping'
 import TestPage from './TestPage'
+import renderComponents from '../componentsMapping'
 
 class Page extends React.Component {
 
@@ -49,11 +50,13 @@ class Page extends React.Component {
   render() {
     let page = false
     page = this.findPage()
+    console.log('page ', page)
     return(
       <>
-        {page &&
-            renderPage(page)
+        {page && page.components &&
+            renderComponents(page.components)
         }
+
       </>
     )
   }
