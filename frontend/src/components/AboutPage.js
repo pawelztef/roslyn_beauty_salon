@@ -1,7 +1,7 @@
 import React from 'react'
 import mockPage from '../utils/page'
 
-import Header from './Header'
+import Hero from './Hero'
 import Welcome from './Welcome'
 import EmptySpace from './EmptySpace'
 import Newsletter from './Newsletter'
@@ -13,7 +13,7 @@ class AboutPage  extends React.Component {
   render() {
     return(
       <div className="pz-page-container-wrapper">
-        <Header 
+        <Hero 
           title="About Us"
           backgroundImage={bg}
         />

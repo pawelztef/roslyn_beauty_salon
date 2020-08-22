@@ -14,8 +14,6 @@ import Portfolio from './Portfolio'
 
 class HomePage extends React.Component {
 
-  
-
   render() {
     const components  = this.props.components
     const sliderData = components.find( cp => cp.__component === 'page.hero-slider' )
@@ -27,7 +25,6 @@ class HomePage extends React.Component {
     const galleryBannerData = components.find( cp => cp.__component === 'page.gallery-banner' )
     const appointmentFormData = components.find( cp => cp.__component === 'page.appointment-form' )
     const newsletterFormData = components.find( cp => cp.__component === 'page.newsletter-form' )
-    console.log('newsletterFormData', newsletterFormData)
     return(
       <div className="pz-page-container-wrapper">
 

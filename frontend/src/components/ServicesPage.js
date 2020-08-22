@@ -6,20 +6,20 @@ import Banner from './Banner'
 import Newsletter from './Newsletter'
 import Services from './Services'
 import bg from '../assets/images/header-grad.png'
-import Header from './Header'
+import Hero from './Hero'
 
 class ServicesPage extends React.Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
+    const components  = this.props.components
+    console.log('services components', components)
+    const heroData = components.find( cp => cp.__component === 'page.hero' )
+    console.log('services hero', heroData)
     return(
       <div className="pz-page-container-wrapper">
-        <Header 
-          title="Our Services"
-          backgroundImage={bg}
-        />
-        <CardGroup data={mockPage.content[1]} />
-        <Banner data={mockPage.content[2]} />
-        <Services />
-        <Newsletter />
+        <Hero {...heroData} />
       </div>
     )
   }

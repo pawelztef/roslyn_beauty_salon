@@ -2,7 +2,7 @@ import React from 'react'
 import EmptySpace from './EmptySpace'
 import Newsletter from './Newsletter'
 import bg from '../assets/images/header-grad.png'
-import Header from './Header'
+import Hero from './Hero'
 import Gallery from 'react-grid-gallery'
 
 import g1 from '../assets/images/gallery/g1.jpg'
@@ -93,7 +93,7 @@ class GalleryPage  extends React.Component {
   render() {
     return(
       <div className="pz-page-container-wrapper">
-        <Header 
+        <Hero 
           title="Gallery"
           backgroundImage={bg}
         />

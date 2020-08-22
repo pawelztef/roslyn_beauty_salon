@@ -33,7 +33,8 @@
         "page.maps",
         "page.services-list",
         "page.appointment-form",
-        "page.newsletter-form"
+        "page.newsletter-form",
+        "page.hero"
       ]
     }
   }
