@@ -49,7 +49,6 @@ class AppointmentForm extends React.Component {
     let nam = event.target.name
     let val = event.target.value
     this.setState({[nam]: val})
-    console.log(this.state)
   }
 
   handleSubmit = async (event) => {
@@ -76,10 +75,7 @@ class AppointmentForm extends React.Component {
   }
  
   closeHandler = () => {
-    this.setState({
-      open: false,
-      message: ""
-    })
+    this.setState({open: false, message: ""})
   }
 
   render() {
