@@ -16,6 +16,7 @@ import ContactInfoWithMap from './components/ContactInfoWithMap'
 import GoogleMap from './components/GoogleMap'
 import PlainContactDetails from './components/PlainContactDetails'
 import ContactForm from './components/ContactForm'
+import Gallery from './components/Gallery'
 
 const componentsMapping = {
   SLIDER: 'page.hero-slider',
@@ -31,6 +32,7 @@ const componentsMapping = {
   HERO: 'page.hero',
   CONTACT_INFO: 'page.contact-info',
   OUR_STORY: 'page.our-story',
+  GALLERY: 'page.gallery',
   MAP: 'general.maps',
   CONTACT_DETAILS: 'general.contact-details'
 }
@@ -66,6 +68,8 @@ const renderComponents = (components) => {
         return <ContactInfoWithMap {...component} />
       case componentsMapping.OUR_STORY:
         return <OurStory {...component} />
+      case componentsMapping.GALLERY:
+        return <Gallery {...component} />
       case componentsMapping.MAP:
         return <GoogleMap {...component} />
       case componentsMapping.CONTACT_DETAILS:
