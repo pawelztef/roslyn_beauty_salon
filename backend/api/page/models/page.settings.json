@@ -35,7 +35,9 @@
         "page.appointment-form",
         "page.newsletter-form",
         "page.hero",
-        "page.contact-info"
+        "page.contact-info",
+        "general.contact-details",
+        "page.contact-form"
       ]
     }
   }

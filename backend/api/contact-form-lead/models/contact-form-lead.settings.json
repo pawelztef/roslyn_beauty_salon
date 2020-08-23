@@ -9,17 +9,20 @@
     "timestamps": true
   },
   "attributes": {
-    "fullname": {
-      "type": "string"
+    "first_name": {
+      "type": "string",
+      "required": true
     },
     "email": {
-      "type": "email"
-    },
-    "phone": {
-      "type": "string"
+      "type": "email",
+      "required": true
     },
     "message": {
       "type": "text"
+    },
+    "second_name": {
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_page_contact_forms",
+  "info": {
+    "name": "contact_form",
+    "icon": "envelope-open-text"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "button_text": {
+      "type": "string",
+      "required": true
+    },
+    "agreement_phrase": {
+      "type": "string",
+      "required": true
+    },
+    "policy_link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "generic.call-to-action"
+    }
+  }
+}

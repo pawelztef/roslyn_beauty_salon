@@ -3,8 +3,6 @@ import Axios from 'axios'
 import { MuiPickersUtilsProvider, DatePicker, TimePicker } from "@material-ui/pickers"
 import DateFnsUtils from '@date-io/date-fns'
 import SimpleReactValidator from 'simple-react-validator'
-import Snackbar from '@material-ui/core/Snackbar'
-import MuiAlert from '@material-ui/lab/Alert'
 import FeedbackMessage from './FeedbackMessage'
 
 
@@ -64,7 +62,7 @@ class AppointmentForm extends React.Component {
           time: this.state.appointmentTime.toJSON().substr(11, 12)
         })
         document.getElementById('appointmentForm').reset()
-        this.setState({open: true, message: "Your message has been sent. We will contact to you promptly."})
+        this.setState({open: true, message: "Your message has been sent. We will contact with you promptly."})
       } catch (error) {
         console.log(error);
       }

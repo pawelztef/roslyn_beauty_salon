@@ -13,6 +13,9 @@ import Portfolio from './components/Portfolio'
 import Hero from './components/Hero'
 import OurStory from './components/OurStory'
 import ContactInfoWithMap from './components/ContactInfoWithMap'
+import GoogleMap from './components/GoogleMap'
+import PlainContactDetails from './components/PlainContactDetails'
+import ContactForm from './components/ContactForm'
 
 const componentsMapping = {
   SLIDER: 'page.hero-slider',
@@ -24,9 +27,12 @@ const componentsMapping = {
   PORTFOLIO: 'page.gellery-banner',
   APPOINTMENT_FORM: 'page.appointment-form',
   NEWSLETTER_FORM: 'page.newsletter-form',
+  CONTACT_FORM: 'page.contact-form',
   HERO: 'page.hero',
   CONTACT_INFO: 'page.contact-info',
-  OUR_STORY: 'page.our-story'
+  OUR_STORY: 'page.our-story',
+  MAP: 'general.maps',
+  CONTACT_DETAILS: 'general.contact-details'
 }
 
 
@@ -52,12 +58,18 @@ const renderComponents = (components) => {
         return <Appointment {...component} />
       case componentsMapping.NEWSLETTER_FORM:
         return <Newsletter {...component} />
+      case componentsMapping.CONTACT_FORM:
+        return <ContactForm {...component} />
       case componentsMapping.HERO:
         return <Hero {...component} />
       case componentsMapping.CONTACT_INFO:
         return <ContactInfoWithMap {...component} />
       case componentsMapping.OUR_STORY:
         return <OurStory {...component} />
+      case componentsMapping.MAP:
+        return <GoogleMap {...component} />
+      case componentsMapping.CONTACT_DETAILS:
+        return <PlainContactDetails {...component} />
     }
   })
   console.log('list ', list)
