@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_page_contact_infos",
+  "info": {
+    "name": "contact_info",
+    "icon": "edit"
+  },
+  "options": {},
+  "attributes": {
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "horizontal",
+        "vertical"
+      ],
+      "required": false,
+      "default": "horizontal"
+    },
+    "contact_details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.contact-details"
+    },
+    "map_service": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.maps"
+    }
+  }
+}

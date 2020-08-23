@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "google_map_services",
+  "info": {
+    "name": "mapService"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "google_map_api_key": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "Latitude": {
+      "type": "float",
+      "required": true
+    },
+    "Longitutde": {
+      "type": "float",
+      "required": true
+    },
+    "zoom": {
+      "type": "integer",
+      "default": 14,
+      "max": 20,
+      "min": 1
+    }
+  }
+}

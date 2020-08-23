@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_page_maps",
+  "info": {
+    "name": "google_maps",
+    "icon": "map-marked-alt"
+  },
+  "options": {},
+  "attributes": {
+    "api_key": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "float",
+      "required": true
+    },
+    "longitude": {
+      "type": "float",
+      "required": true
+    },
+    "zoom": {
+      "type": "integer",
+      "required": false,
+      "default": 14,
+      "max": 20,
+      "min": 1
+    }
+  }
+}

@@ -12,6 +12,26 @@
     justify-content: center
     flex-grow: 1
 
+.contact-info__map
+  position: initial
+  display: flex
+  div
+    flex-grow: 1
+  .contact-info__content
+    flex-grow: 0
+    margin-right: 20px
+  @include media-desktop
+  @include media-desktop-s
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+    flex-direction: column
+    .contact-info__content
+      flex-grow: 0
+      margin-right: 0px
+      margin-bottom: 20px
+  @include media-phone
+  @include media-phone-s
+
 img.contact-info__image
   align-self: center
   max-width: 55%

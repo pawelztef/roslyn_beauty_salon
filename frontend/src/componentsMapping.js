@@ -11,6 +11,7 @@ import Services from './components/Services'
 import Testimony from './components/Testimony'
 import Portfolio from './components/Portfolio'
 import Hero from './components/Hero'
+import ContactInfoWithMap from './components/ContactInfoWithMap'
 
 const componentsMapping = {
   SLIDER: 'page.hero-slider',
@@ -23,6 +24,7 @@ const componentsMapping = {
   APPOINTMENT_FORM: 'page.appointment-form',
   NEWSLETTER_FORM: 'page.newsletter-form',
   HERO: 'page.hero',
+  CONTACT_INFO: 'page.contact-info'
 }
 
 
@@ -50,6 +52,8 @@ const renderComponents = (components) => {
         return <Newsletter {...component} />
       case componentsMapping.HERO:
         return <Hero {...component} />
+      case componentsMapping.CONTACT_INFO:
+        return <ContactInfoWithMap {...component} />
     }
   })
   console.log('list ', list)

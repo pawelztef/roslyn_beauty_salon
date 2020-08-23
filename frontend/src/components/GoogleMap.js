@@ -2,10 +2,6 @@ import React, {Component} from 'react'
 import { Map, GoogleApiWrapper } from 'google-maps-react'
 
 
-const mapStyles = {
-  width: '100%',
-  height: '500px',
-}
 
 class SimpleMap extends Component {
   render() {
@@ -13,12 +9,11 @@ class SimpleMap extends Component {
       <div className="pz-map__wrapper">
         <Map
           google={this.props.google}
-          zoom={14}
-          style={mapStyles}
-          containerStyle={{ position: 'relative', width: '100%', height: '500px' }}
+          zoom={this.props.zoom}
+          containerStyle={{ position: 'relative', width: '100%', height: '420px' }}
           initialCenter={{
-            lat: -1.2884,
-            lng: 36.8233
+            lat: this.props.latitude,
+            lng: this.props.longitude
           }}
         />
       </div>
@@ -26,7 +21,9 @@ class SimpleMap extends Component {
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY
-})(SimpleMap)
+export default GoogleApiWrapper(
+  (props) => ({
+    apiKey: props.api_key
+  })
+)(SimpleMap)
 

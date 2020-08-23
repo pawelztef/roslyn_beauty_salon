@@ -30,11 +30,12 @@
         "page.gallery",
         "page.hero-slider",
         "page.our-story",
-        "page.maps",
+        "general.maps",
         "page.services-list",
         "page.appointment-form",
         "page.newsletter-form",
-        "page.hero"
+        "page.hero",
+        "page.contact-info"
       ]
     }
   }
