@@ -1,3 +1,6 @@
 [submodule "roising_beauty_ie_frontend_react"]
 	path = roising_beauty_ie_frontend_react
 	url = git@github.com:pawelztef/roising_beauty_ie_frontend_react.git
+[submodule "roising_beauty_ie_backend_strapi"]
+	path = roising_beauty_ie_backend_strapi
+	url = git@github.com:pawelztef/roising_beauty_ie_backend_strapi.git
