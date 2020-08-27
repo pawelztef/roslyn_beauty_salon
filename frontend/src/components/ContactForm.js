@@ -38,7 +38,6 @@ class ContactForm extends React.Component {
 
   handleSubmit = async (event) => {
     event.preventDefault()
-    console.log('contact form ', this.state)
     if(this.validator.allValid()) {
       try {
         await Axios.post(process.env.REACT_APP_DOMAIN+"/contact-form-leads", {

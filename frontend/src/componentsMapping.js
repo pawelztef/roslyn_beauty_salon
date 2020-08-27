@@ -39,7 +39,6 @@ const componentsMapping = {
 
 
 const renderComponents = (components) => {
-  console.log("components ", components)
   const list = components.map((component) => {
     switch(component.__component) {
       case componentsMapping.SLIDER:
@@ -76,7 +75,6 @@ const renderComponents = (components) => {
         return <PlainContactDetails {...component} />
     }
   })
-  console.log('list ', list)
   return list
 }
 

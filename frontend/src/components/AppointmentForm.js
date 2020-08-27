@@ -34,7 +34,6 @@ class AppointmentForm extends React.Component {
     this.setState({
       appointmentTime: time
     })
-    console.log(this.state)
   }
 
   handleAgrement = event => {
