@@ -5,7 +5,6 @@ import React from 'react'
 export default class contactDetails extends React.Component {
   render() {
     const { company_name, address, mobile_phone, office_phone, email } = this.props
-    console.log('simple contact ', this.props)
     return(
       <div className="">
         <address className='pz-contact-details'>

@@ -14,10 +14,8 @@ class ServicesPage extends React.Component {
   }
   render() {
     const components  = this.props.components
-    console.log('services components', components)
     const heroData = components.find( cp => cp.__component === 'page.hero' )
     const servicesBannerData = components.find( cp => cp.__component === 'page.services-banner' )
-    console.log('services hero', heroData)
     return(
       <div className="pz-page-container-wrapper">
         <Hero {...heroData} />

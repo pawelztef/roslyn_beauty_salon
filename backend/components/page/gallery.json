@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "entry": {
+    "images": {
       "type": "component",
       "repeatable": true,
       "component": "generic.entry"

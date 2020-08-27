@@ -56,7 +56,6 @@ class NewsletterForm extends React.Component {
   render() {
     return(
       <form id="newsletterForm" className="pz-newsletter-form" onSubmit={this.handleSubmit}>
-        {console.log('form ', this.props)}
         <div className="pz-newsletter-form-row-1">
           <input id="pz-newsletter-email-input" 
             name="email"

@@ -50,7 +50,6 @@ class Page extends React.Component {
   render() {
     let page = false
     page = this.findPage()
-    console.log('page ', page)
     return(
       <>
         {page && page.components &&

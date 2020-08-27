@@ -1,9 +1,6 @@
 import React from 'react'
-import EmptySpace from './EmptySpace'
-import Newsletter from './Newsletter'
-import bg from '../assets/images/header-grad.png'
-import Hero from './Hero'
-import GridGallery from 'react-grid-gallery'
+import RespGallery from './RespGallery'
+
 
 import g1 from '../assets/images/gallery/g1.jpg'
 import tg1 from '../assets/images/gallery/thumb-g1-320-421.jpg'
@@ -29,60 +26,70 @@ const IMAGES =
     {
       src: g1,
       thumbnail: tg1,
+        caption: 'Lorem 1',
       thumbnailWidth: 320,
       thumbnailHeight: 421
     },
     {
       src: g2,
       thumbnail: tg2,
+        caption: 'Lorem 1',
       thumbnailWidth: 320,
       thumbnailHeight: 196
     },
     {
       src: g3,
       thumbnail: tg3,
+        caption: 'Lorem 1',
       thumbnailWidth: 271,
       thumbnailHeight: 357
     },
     {
       src: g4,
       thumbnail: tg4,
+        caption: 'Lorem 1',
       thumbnailWidth: 320,
       thumbnailHeight: 196
     },
     {
       src: g5,
       thumbnail: tg5,
+        caption: 'Lorem 1',
       thumbnailWidth: 320,
       thumbnailHeight: 196
     },
     {
       src: g6,
       thumbnail: tg6,
+        caption: 'Lorem 1',
       thumbnailWidth: 271,
       thumbnailHeight: 357
     },
     {
       src: g7,
       thumbnail: tg7,
+        caption: 'Lorem 1',
       thumbnailWidth: 320,
       thumbnailHeight: 197
     },
     {
       src: g10,
       thumbnail: tg10,
+        caption: 'Lorem 1',
       thumbnailWidth: 271,
       thumbnailHeight: 355
     },
     {
       src: g8,
       thumbnail: tg8,
+        caption: 'Lorem 1',
       thumbnailWidth: 320,
       thumbnailHeight: 196
     },
     {
       src: g2,
       thumbnail: tg2,
+        caption: 'Lorem 1',
       thumbnailWidth: 320,
       thumbnailHeight: 196
     }
@@ -90,21 +97,17 @@ const IMAGES =
 
 
 class Gallery extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    return(
-      <div className="pz-page-container-wrapper">
-        <EmptySpace />
-        <div className="pz-gallery__row">
-          <div className="pz-container pz-gallery__container">
-            <GridGallery 
-              margin={3}
-              rowHeight={196}
-              enableImageSelection={false}
-              images={IMAGES}/>
-          </div>
-        </div>
-        <EmptySpace />
-      </div>
+    return (
+      <RespGallery images={IMAGES.map(({ src, thumbnail, caption }) => ({
+        src,
+        thumbnail,
+        caption,
+      }))} />
     )
   }
 }

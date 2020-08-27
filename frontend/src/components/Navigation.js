@@ -35,7 +35,6 @@ class Navigation extends React.Component {
 
   mobileMenuToggleHandler = () => {
     this.setState((prevState) => {
-      console.log('App.mobileMenuToggleHandler prevState', prevState)
       return { mobileMenuOpen: !prevState.mobileMenuOpen }
     })
   }
