@@ -5,7 +5,7 @@ const Banner = (props) => {
   const {title, subtitle, call_to_action, image} = props
   const subtitleParts = subtitle.split(" ")
   return(
-    <div className="pz-container-wrapper">
+    <div  className="pz-container-wrapper">
       <div className="pz-row">
         <div> 
           <div className="banner__wrapper">

@@ -42,37 +42,37 @@ const renderComponents = (components) => {
   const list = components.map((component) => {
     switch(component.__component) {
       case componentsMapping.SLIDER:
-        return <Slider {...component} />
+        return <Slider key={1} {...component} />
       case componentsMapping.CARD_GROUP:
-        return <CardGroup {...component} />
+        return <CardGroup key={2} {...component} />
       case componentsMapping.BANNER:
-        return <Banner {...component} />
+        return <Banner key={3} {...component} />
       case componentsMapping.WELCOME:
-        return <Welcome {...component} />
+        return <Welcome key={4} {...component} />
       case componentsMapping.TESTIMONY:
-        return <Testimony {...component} />
+        return <Testimony key={5} {...component} />
       case componentsMapping.SERVICES:
-        return <Services {...component} />
+        return <Services key={6} {...component} />
       case componentsMapping.PORTFOLIO:
-        return <Portfolio {...component} />
+        return <Portfolio key={7} {...component} />
       case componentsMapping.APPOINTMENT_FORM:
-        return <Appointment {...component} />
+        return <Appointment key={8} {...component} />
       case componentsMapping.NEWSLETTER_FORM:
-        return <Newsletter {...component} />
+        return <Newsletter key={9} {...component} />
       case componentsMapping.CONTACT_FORM:
-        return <ContactForm {...component} />
+        return <ContactForm key={10} {...component} />
       case componentsMapping.HERO:
-        return <Hero {...component} />
+        return <Hero key={11} {...component} />
       case componentsMapping.CONTACT_INFO:
-        return <ContactInfoWithMap {...component} />
+        return <ContactInfoWithMap key={12} {...component} />
       case componentsMapping.OUR_STORY:
-        return <OurStory {...component} />
+        return <OurStory key={13} {...component} />
       case componentsMapping.GALLERY:
-        return <Gallery {...component} />
+        return <Gallery key={14} {...component} />
       case componentsMapping.MAP:
-        return <GoogleMap {...component} />
+        return <GoogleMap key={15} {...component} />
       case componentsMapping.CONTACT_DETAILS:
-        return <PlainContactDetails {...component} />
+        return <PlainContactDetails key={16} {...component} />
     }
   })
   return list

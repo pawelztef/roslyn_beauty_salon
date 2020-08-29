@@ -119,9 +119,11 @@ class Gallery extends React.Component {
   render() {
     let images = this.mapImages()
     return (
-      <SimpleReactLightbox>
-        <RespGallery images={images} />
-      </SimpleReactLightbox>
+      <div>
+        <SimpleReactLightbox>
+          <RespGallery images={images} />
+        </SimpleReactLightbox>
+      </div>
     )
   }
 

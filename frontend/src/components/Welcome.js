@@ -6,7 +6,7 @@ const Welcome = (props) => {
   const {title, description, contact_details, image} = props
 
   return (
-    <>
+    <div>
 	<div className="pz-row welcome__wrapper">
 	    <EmptySpace />
 	    <div className="pz-container-wrapper">
@@ -17,7 +17,7 @@ const Welcome = (props) => {
 	    <EmptySpace />
 	</div>
 	<ContactInfoCard data={{contact_details, image}}/>
-    </>
+    </div>
   )
 }
 

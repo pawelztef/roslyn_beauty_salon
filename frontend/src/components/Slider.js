@@ -1,9 +1,10 @@
 import React from 'react'
+import EmptySpace from './EmptySpace'
 
 const Slider = (props) =>  {
   const heroEntries = props.hero_item
   return (
-    <> 
+    <div> 
       {heroEntries &&
         heroEntries.map((entry) => {
           const {id, title, subtitle, call_to_action, image } = entry
@@ -21,7 +22,8 @@ const Slider = (props) =>  {
           )
         })
       }
-    </>
+      <EmptySpace />
+    </div>
   )
 }
 
