@@ -37,7 +37,8 @@
         "page.hero",
         "page.contact-info",
         "general.contact-details",
-        "page.contact-form"
+        "page.contact-form",
+        "generic.text"
       ]
     }
   }

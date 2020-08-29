@@ -10,11 +10,11 @@ export default class Footer extends React.Component {
 
 
   state = {
-      menuPages: [],
-      contactDetails: {},
-      logo: {},
-      socialMedia: {},
-      isLoading: true
+    menuPages: [],
+    contactDetails: {},
+    logo: {},
+    socialMedia: {},
+    isLoading: true
   }
 
   async componentDidMount() {
@@ -43,12 +43,12 @@ export default class Footer extends React.Component {
             <>
               <div className="pz-footer__col-1">
                 {this.state.contactDetails &&
-                  <ContactDetails {...this.state.contactDetails} />
+                <ContactDetails {...this.state.contactDetails} />
                 }
               </div>
               <div className="pz-footer__col-2">
                 {this.state.logo &&
-                  <Brand {...this.state.logo}/>
+                <Brand {...this.state.logo}/>
                 }
                 <div className="pz-footer-meta">
                   <span>
@@ -59,23 +59,23 @@ export default class Footer extends React.Component {
                   </span>
                 </div>
                 {this.state.socialMedia &&
-                  <SocialList socialMedia={this.state.socialMedia} />
+                <SocialList socialMedia={this.state.socialMedia} />
                 }
               </div>
               <div className="pz-footer__col-3">
                 <div className="pz-footer__legal">
                   {this.state.menuPages &&
-                    this.state.menuPages.map(entry => (
-                      <span key={entry.id} className="pz-footer__legal-item">
-                        <Link to={entry.slug}>{entry.title}</Link>
-                      </span>
-                    ))
+                      this.state.menuPages.map(entry => (
+                        <span key={entry.id} className="pz-footer__legal-item">
+                          <Link to={entry.slug}>{entry.title}</Link>
+                        </span>
+                      ))
                   }
                 </div>
               </div>
             </>
           ):(
-            <h3>loading...</h3>
+            <h3 className="pz-spinner">loading<span className="dot-flashing"></span></h3>
           )}
 
         </footer>

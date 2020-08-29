@@ -1,0 +1,64 @@
+.pz-spinner
+  display: flex
+  align-items: baseline
+  margin: 0 auto
+
+.dot-flashing
+  position: relative
+  width: 5px
+  height: 5px
+  border-radius: 10px
+  background-color: black
+  color: black
+  -webkit-animation: dot-flashing 1s infinite linear alternate
+  animation: dot-flashing 1s infinite linear alternate
+  -webkit-animation-delay: .5s
+  animation-delay: .5s
+  margin-left: 35px
+
+  &::before, &::after
+    content: ''
+    display: inline-block
+    position: absolute
+    top: 0
+
+  &::before
+    left: -18px
+    width: 5px
+    height: 5px
+    border-radius: 10px
+    background-color: black
+    color: black
+    -webkit-animation: dot-flashing 1s infinite alternate
+    animation: dot-flashing 1s infinite alternate
+    -webkit-animation-delay: 0s
+    animation-delay: 0s
+
+  &::after
+    left: 18px
+    width: 5px
+    height: 5px
+    border-radius: 10px
+    background-color: black
+    color: black
+    -webkit-animation: dot-flashing 1s infinite alternate
+    animation: dot-flashing 1s infinite alternate
+    -webkit-animation-delay: 1s
+    animation-delay: 1s
+
+@-webkit-keyframes dot-flashing
+  0%
+    background-color: black
+
+  50%,
+  100%
+    background-color: #ebe6ff
+
+@keyframes dot-flashing
+  0%
+    background-color: black
+
+  50%,
+  100%
+    background-color: #ebe6ff
+
