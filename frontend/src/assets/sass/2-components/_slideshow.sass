@@ -60,7 +60,8 @@
 .slideshow 
   position: relative
   color: #ffffff
-  background-color: #1e1e22
+  background: transparent;
+  background-size: cover;
   overflow: hidden
   height: 100vh
   min-height: 400px
@@ -163,12 +164,12 @@
 
 
 .slideshow__slide.is-prev .slideshow__slide-background, .slideshow__slide.is-next .slideshow__slide-background 
-  transform: scale(0.5)
+  transform: scale(0.9)
   transition-delay: 0s
 
 
 .slideshow__slide.is-prev-section .slideshow__slide-background, .slideshow__slide.is-next-section .slideshow__slide-background 
-  transform: scale(0.5)
+  transform: scale(0.9)
   transition-delay: 0s
   transition: none
 
@@ -539,7 +540,6 @@ button, .c-header-filters_button,
 button:hover, .c-header-filters_button:hover,
 .o-button:hover 
   text-decoration: none
-
 
 
 @media (min-width: 1200px) 
