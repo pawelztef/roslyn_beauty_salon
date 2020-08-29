@@ -25,13 +25,13 @@
 
 
 
-.container 
+.pz-container.js-parallax 
   position: relative
   margin: 0 auto
 
   @media (max-width: 699px) 
-    padding-right: 40px
-    padding-left: 40px
+    padding-right: 30px
+    padding-left: 30px
 
 
   @media (min-width: 700px) and (max-width: 1599px) 
@@ -63,7 +63,7 @@
   background: transparent;
   background-size: cover;
   overflow: hidden
-  height: 100vh
+  height: 75vh
   min-height: 400px
 
   &__slide 
@@ -230,7 +230,9 @@
 .slideshow__slide-caption-text 
   position: relative
   height: 100%
-  padding-top: 33vh
+  display: flex
+  flex-shrink: 1
+  align-items: center
   transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s
   transform: translate3d(0, 0, 0)
 

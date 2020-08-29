@@ -60,7 +60,7 @@ const Slider = (props) =>  {
     if(heroEntries) {
       let newList = heroEntries.map((entry, i) => { 
         return (
-          <div className="slideshow__slide js-slider-home-slide" data-slide={i+1}>
+          <div key={i} className="slideshow__slide js-slider-home-slide" data-slide={i+1}>
             <div className="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-3" data-position="top" data-target="#js-header">
               <div className="slideshow__slide-background-load-wrap background-absolute">
                 <div className="slideshow__slide-background-load background-absolute">
@@ -76,12 +76,10 @@ const Slider = (props) =>  {
             </div>
             <div className="slideshow__slide-caption">
               <div className="slideshow__slide-caption-text">
-                <div className="container js-parallax" data-speed="17" data-position="top" data-target="#js-header">
-                  <h3 className="slideshow__slide-caption-title">{entry.title}</h3>
-                  <h1 className="slideshow__slide-caption-title">{entry.subtitle}</h1>
-                  <a className="slideshow__slide-caption-subtitle -load o-hsub -link" href={entry.call_to_action.url}>
-                    <span className="">{entry.call_to_action.phrase}</span>
-                  </a>
+                <div className="pz-container js-parallax" data-speed="17" data-position="top" data-target="#js-header">
+                  <div className="pz-animated-banner__item-title pz-script-font">{entry.title}</div>
+                  <div className="pz-animated-banner__item-subtitle ">{entry.subtitle}</div>
+                  <a className="pz-btn" href={entry.call_to_action.url}>{entry.call_to_action.phrase}</a>
                 </div>
               </div>
             </div>

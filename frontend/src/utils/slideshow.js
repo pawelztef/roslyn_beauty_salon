@@ -6,7 +6,7 @@ export default class Slideshow {
       $el: $('.slideshow'),
       showArrows: false,
       showPagination: true,
-      duration: 9000,
+      duration: 60000,
       autoplay: true
     }
 
