@@ -36,50 +36,52 @@ export default class Footer extends React.Component {
   render() {
 
     return(
-      <div className="pz-container-wrapper">
-        <footer className="pz-footer">
-
-          {!this.state.isLoading ? (
-            <>
-              <div className="pz-footer__col-1">
-                {this.state.contactDetails &&
-                <ContactDetails {...this.state.contactDetails} />
-                }
-              </div>
-              <div className="pz-footer__col-2">
-                {this.state.logo &&
-                <Brand {...this.state.logo}/>
-                }
-                <div className="pz-footer-meta">
-                  <span>
-                    <a href="https://pawelztef.me">Pawelztef</a>© 2020
-                  </span>
-                  <span>
-                    All rights reserved
-                  </span>
-                </div>
-                {this.state.socialMedia &&
-                <SocialList socialMedia={this.state.socialMedia} />
-                }
-              </div>
-              <div className="pz-footer__col-3">
-                <div className="pz-footer__legal">
-                  {this.state.menuPages &&
-                      this.state.menuPages.map(entry => (
-                        <span key={entry.id} className="pz-footer__legal-item">
-                          <Link to={entry.slug}>{entry.title}</Link>
-                        </span>
-                      ))
+      <>
+        <div className="pz-deco-stripe"></div>
+        <div className="pz-container-wrapper">
+          <footer className="pz-footer">
+            {!this.state.isLoading ? (
+              <>
+                <div className="pz-footer__col-1">
+                  {this.state.contactDetails &&
+                  <ContactDetails {...this.state.contactDetails} />
                   }
                 </div>
-              </div>
-            </>
-          ):(
-            <h3 className="pz-spinner">loading<span className="dot-flashing"></span></h3>
-          )}
+                <div className="pz-footer__col-2">
+                  {this.state.logo &&
+                  <Brand {...this.state.logo}/>
+                  }
+                  <div className="pz-footer-meta">
+                    <span>
+                      <a href="https://pawelztef.me">Pawelztef</a>© 2020
+                    </span>
+                    <span>
+                      All rights reserved
+                    </span>
+                  </div>
+                  {this.state.socialMedia &&
+                  <SocialList socialMedia={this.state.socialMedia} />
+                  }
+                </div>
+                <div className="pz-footer__col-3">
+                  <div className="pz-footer__legal">
+                    {this.state.menuPages &&
+                        this.state.menuPages.map(entry => (
+                          <span key={entry.id} className="pz-footer__legal-item">
+                            <Link to={entry.slug}>{entry.title}</Link>
+                          </span>
+                        ))
+                    }
+                  </div>
+                </div>
+              </>
+            ):(
+              <h3 className="pz-spinner">loading<span className="dot-flashing"></span></h3>
+            )}
 
-        </footer>
-      </div>
+          </footer>
+        </div>
+      </>
     )
   }
 }
