@@ -31,7 +31,6 @@ class Testimony extends React.Component {
     const {id, title, quote } = this.props
     return(
       <div className="pz-testimony__wrapper">
-        <EmptySpace />
         <div className="pz-container-wrapper">
           <div className="pz-testimony__container">
             <h2 className="pz-section__header">{ title }</h2>
