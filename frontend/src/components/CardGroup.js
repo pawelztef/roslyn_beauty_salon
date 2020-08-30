@@ -36,8 +36,8 @@ export default function CardGroup(props) {
             {cards}
           </div>
         </div>
-        <EmptySpace />
       </div>
+      <EmptySpace />
     </div>
   )
 }
