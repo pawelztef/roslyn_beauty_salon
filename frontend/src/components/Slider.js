@@ -61,7 +61,7 @@ const Slider = (props) =>  {
       let newList = heroEntries.map((entry, i) => { 
         return (
           <div key={i} className="slideshow__slide js-slider-home-slide" data-slide={i+1}>
-            <div className="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-3" data-position="top" data-target="#js-header">
+            <div className="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-1" data-position="top" data-target="#js-header">
               <div className="slideshow__slide-background-load-wrap background-absolute">
                 <div className="slideshow__slide-background-load background-absolute">
                   <div className="slideshow__slide-background-wrap background-absolute">
@@ -76,7 +76,7 @@ const Slider = (props) =>  {
             </div>
             <div className="slideshow__slide-caption">
               <div className="slideshow__slide-caption-text">
-                <div className="pz-container js-parallax" data-speed="17" data-position="top" data-target="#js-header">
+                <div className="pz-container js-parallax" data-speed="3" data-position="top" data-target="#js-header">
                   <div className="pz-animated-banner__item-title pz-script-font">{entry.title}</div>
                   <div className="pz-animated-banner__item-subtitle ">{entry.subtitle}</div>
                   <a className="pz-btn" href={entry.call_to_action.url}>{entry.call_to_action.phrase}</a>

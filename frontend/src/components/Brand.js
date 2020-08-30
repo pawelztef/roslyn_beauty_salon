@@ -29,7 +29,7 @@ export default function Brand(props) {
       {props.image &&
         <BrandHref className="pz-nav__brand"
           href={process.env.REACT_APP_DOMAIN + props.url}>
-          <BrandImage className="pz-nav__brand-img" 
+          <BrandImage id="logo-top" className="pz-nav__brand-img" 
             src={process.env.REACT_APP_DOMAIN + props.image.url}
             alt={props.alt} 
           />
