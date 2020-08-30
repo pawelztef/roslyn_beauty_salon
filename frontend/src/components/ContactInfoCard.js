@@ -19,8 +19,8 @@ const ContactInfoCard = (props) => {
   `
 
   return(
-    <div key={props.id} className="pz-container-wrapper">
-      <ContactInfo className="contact-info">
+    <div key={props.id} className="pz-container-wrapper contact-info">
+      <ContactInfo>
         <div className='contact-info__content'>
           <h4>Contact Info</h4>
           <ContactDetails {...contact_details}/>
