@@ -29,7 +29,7 @@ export default function CardGroup(props) {
 
 
   return(
-    <div className="pz-container-wrapper">
+    <div className="pz-container-wrapper pz-services-wrapper">
       <div className="pz-row">
         <div className="pz-container"> 
           <div className="card__wrapper">
