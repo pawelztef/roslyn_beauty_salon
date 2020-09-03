@@ -63,106 +63,107 @@ class ContactForm extends React.Component {
 
   render() {
     return(
-      <div className="pz-appointment__wrapper">
-        <EmptySpace />
-        <div className="pz-container-wrapper">
-          <div className="pz-appointment__container">
-            <h2 className="pz-section__header">{this.props.title}</h2>
-            <div className="pz-appointment__form-wrapper">
-              <form id="contactFrom" className="pz-appointment__form" onSubmit={this.handleSubmit} >
+      <>
+        <div className="pz-appointment__wrapper pz-contact-form">
+          <div className="pz-container-wrapper">
+            <div className="pz-appointment__container">
+              <h2 className="pz-section__header">{this.props.title}</h2>
+              <div className="pz-appointment__form-wrapper">
+                <form id="contactFrom" className="pz-appointment__form" onSubmit={this.handleSubmit} >
 
-                {/* Row 1 Start */}
-                <div className="pz-appointment__form-row pz-appointment__row-1">
+                  {/* Row 1 Start */}
+                  <div className="pz-appointment__form-row pz-appointment__row-1">
 
-                  {/* Section 1 Start */}
-                  <div className="pz-appointment__form-section">
+                    {/* Section 1 Start */}
+                    <div className="pz-appointment__form-section">
 
-                    <div className="pz-appointment__form-row ">
-                      <div className="pz-appointment__form-input">
-                        <input type="text" 
-                          id="appointment-frist-name" 
-                          name="firstName" 
-                          placeholder="First Name"
-                          onChange={this.handleChange}
-                        />
-                        {this.validator.message('firstName', this.state.firstName, 'required|alpha')}
+                      <div className="pz-appointment__form-row ">
+                        <div className="pz-appointment__form-input">
+                          <input type="text" 
+                            id="appointment-frist-name" 
+                            name="firstName" 
+                            placeholder="First Name"
+                            onChange={this.handleChange}
+                          />
+                          {this.validator.message('firstName', this.state.firstName, 'required|alpha')}
+                        </div>
+                        <div className="pz-appointment__form-input">
+                          <input type="text" 
+                            id="appointment-second-name" 
+                            name="secondName"
+                            placeholder="Second Name"
+                            onChange={this.handleChange}
+                          />
+                          {this.validator.message('secondName', this.state.secondName, 'required|alpha')}
+                        </div>
                       </div>
+
+                      <div className="pz-appointment__form-row">
+                        <div className="pz-appointment__form-input">
+                          <input type="text" 
+                            id="appointment-phone" 
+                            name="email"
+                            placeholder="Your Email"
+                            autoComplete="off"
+                            onChange={this.handleChange}
+                          />
+                          {this.validator.message('email', this.state.email, 'required|email')}
+                        </div>
+                      </div>
+
+
+
+                    </div>
+                    {/* Section 1 End*/}
+
+                    {/* Section 2 Start */}
+                    <div className="pz-appointment__form-section">
                       <div className="pz-appointment__form-input">
-                        <input type="text" 
-                          id="appointment-second-name" 
-                          name="secondName"
-                          placeholder="Second Name"
+                        <textarea id="appointment-message" 
+                          name="message" 
+                          placeholder="Your Message"
                           onChange={this.handleChange}
-                        />
-                        {this.validator.message('secondName', this.state.secondName, 'required|alpha')}
+                        >
+                        </textarea>
+                        {this.validator.message('message', this.state.message, 'required|min:20|max:920')}
                       </div>
                     </div>
+                    {/* Section 2 End */}
 
-                    <div className="pz-appointment__form-row">
-                      <div className="pz-appointment__form-input">
-                        <input type="text" 
-                          id="appointment-phone" 
-                          name="email"
-                          placeholder="Your Email"
-                          autoComplete="off"
-                          onChange={this.handleChange}
+                  </div>
+                  {/* Row 1 End */}
+
+                  {/* Row 2 Start */}
+                  <div className="pz-appointment__form-row pz-appointment__row-2">
+                    <div className="pz-appointment__form-section">
+                      <label htmlFor="pz-appointment-agrement">
+                        <input 
+                          id="pz-appointment-agrement" 
+                          type="checkbox" 
+                          name="agree"
+                          onChange={this.handleAgrement}
                         />
-                        {this.validator.message('email', this.state.email, 'required|email')}
-                      </div>
+                        {this.props.agreement_phrase} See our <a href={this.props.policy_link.url}>{this.props.policy_link.phrase}</a>.
+                      </label>
+                      {this.validator.message('agree', this.state.agree, 'accepted')}
                     </div>
-
-
-
-                  </div>
-                  {/* Section 1 End*/}
-
-                  {/* Section 2 Start */}
-                  <div className="pz-appointment__form-section">
-                    <div className="pz-appointment__form-input">
-                      <textarea id="appointment-message" 
-                        name="message" 
-                        placeholder="Your Message"
-                        onChange={this.handleChange}
-                      >
-                      </textarea>
-                      {this.validator.message('message', this.state.message, 'required|min:20|max:920')}
+                    <div className="pz-appointment__form-section">
+                      <button className="pz-btn">{this.props.button_text}</button>
                     </div>
                   </div>
-                  {/* Section 2 End */}
+                  {/* Row 2 End */}
 
-                </div>
-                {/* Row 1 End */}
-
-                {/* Row 2 Start */}
-                <div className="pz-appointment__form-row pz-appointment__row-2">
-                  <div className="pz-appointment__form-section">
-                    <label htmlFor="pz-appointment-agrement">
-                      <input 
-                        id="pz-appointment-agrement" 
-                        type="checkbox" 
-                        name="agree"
-                        onChange={this.handleAgrement}
-                      />
-                      {this.props.agreement_phrase} See our <a href={this.props.policy_link.url}>{this.props.policy_link.phrase}</a>.
-                    </label>
-                    {this.validator.message('agree', this.state.agree, 'accepted')}
-                  </div>
-                  <div className="pz-appointment__form-section">
-                    <button className="pz-btn">{this.props.button_text}</button>
-                  </div>
-                </div>
-                {/* Row 2 End */}
-
-              </form>
-              <FeedbackMessage open={this.state.open} message={this.state.message} closeHandler={this.handleClose} />
+                </form>
+                <FeedbackMessage open={this.state.open} message={this.state.message} closeHandler={this.handleClose} />
+              </div>
             </div>
           </div>
         </div>
         <EmptySpace />
-      </div>
+      </>
 
     )
   }
 }
 
-  export default ContactForm
+export default ContactForm

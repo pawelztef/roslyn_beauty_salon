@@ -26,41 +26,41 @@ class Services extends React.Component {
     }
 
     return(
-      <div className="pz-services__wrapper">
-        <EmptySpace />
-        <div className="pz-container-wrapper">
-          <div className="pz-services__container">
-            <h2 className="pz-section__header">{title}</h2>
+      <>
+        <div className="pz-services__wrapper">
+          <div className="pz-container-wrapper">
+            <div className="pz-services__container">
+              <h2 className="pz-section__header">{title}</h2>
+            </div>
+            <div className="pz-services">
+              {!this.state.isLoading &&
+                  treatments_categories.map( (category) => {
+                    return(
+                      <div key={category.id} className="pz-services__list">
+                        <h4 className="pz-services-header">{category.name}
+                          <span><TiHeart /></span>
+                        </h4>
+                        <ul className="pz-services-prices">
+                          {
+                            category.treatments.map((treatment) => {
+                              return(
+                                <li key={treatment.id}><a href="/services">{treatment.name}</a><br/><span>{treatment.price}€</span></li>
+                              )
+                            })
+                          }
+                        </ul>
+                      </div>
+                    )
+                  })
+              }
+            </div>
+            <div className="pz-section__content">
+              <a href={call_to_action.url} className="pz-btn">{call_to_action.phrase}</a>
+            </div>
           </div>
-          <div className="pz-services">
-            {!this.state.isLoading &&
-              treatments_categories.map( (category) => {
-                return(
-                  <div key={category.id} className="pz-services__list">
-                    <h4 className="pz-services-header">{category.name}
-                      <span><TiHeart /></span>
-                    </h4>
-                    <ul className="pz-services-prices">
-                      {
-                        category.treatments.map((treatment) => {
-                          return(
-                            <li key={treatment.id}><a href="/services">{treatment.name}</a><br/><span>{treatment.price}€</span></li>
-                          )
-                        })
-                      }
-                    </ul>
-                  </div>
-                )
-              })
-            }
-          </div>
-          <EmptySpace />
-          <div className="pz-section__content">
-            <a href={call_to_action.url} className="pz-btn">{call_to_action.phrase}</a>
-          </div>
-          <EmptySpace />
         </div>
-      </div>
+        <EmptySpace />
+      </>
     )
   }
 }

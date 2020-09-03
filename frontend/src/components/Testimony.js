@@ -30,30 +30,32 @@ class Testimony extends React.Component {
     }
     const {id, title, quote } = this.props
     return(
-      <div className="pz-testimony__wrapper">
-        <div className="pz-container-wrapper">
-          <div className="pz-testimony__container">
-            <h2 className="pz-section__header">{ title }</h2>
-            <div className="pz-testimony__content">
-              <Slider {...settings}>
-                {
-                  quote.map((item) => {
-                    return (
-                      <div key={id} className="pz-testimony__slider-item">
-                        <p>“{item.body}“</p>
-                        <span><TiHeart /></span>
-                        <h4>{item.author}</h4>
-                      </div>
+      <>
+        <div className="pz-testimony__wrapper pz-hr-pd">
+          <div className="pz-container-wrapper">
+            <div className="pz-testimony__container">
+              <h2 className="pz-section__header">{ title }</h2>
+              <div className="pz-testimony__content">
+                <Slider {...settings}>
+                  {
+                    quote.map((item) => {
+                      return (
+                        <div key={id} className="pz-testimony__slider-item">
+                          <p>“{item.body}“</p>
+                          <span><TiHeart /></span>
+                          <h4>{item.author}</h4>
+                        </div>
 
-                    )
-                  })
-                }
-              </Slider>
+                      )
+                    })
+                  }
+                </Slider>
+              </div>
             </div>
           </div>
         </div>
         <EmptySpace />
-      </div>
+      </>
     )
   }
 

@@ -22,7 +22,7 @@ export default class RespGallery extends Component {
   renderGallery() {
     let {images}  = this.props;
     if (!images) return;
- 
+
     const gallery = images.map(({id, caption, thumbnail, large}) => {
       return (
         <div key={id} className={`grid-item`}>
@@ -51,15 +51,16 @@ export default class RespGallery extends Component {
 
   render() {
     return (
-      <div className="container">
-        <EmptySpace />
-        <div className={`content `}>
-          <SRLWrapper>
-            {this.renderGallery()}
-          </SRLWrapper>
+      <>
+        <div className="container">
+          <div className={`content `}>
+            <SRLWrapper>
+              {this.renderGallery()}
+            </SRLWrapper>
+          </div>
         </div>
         <EmptySpace />
-      </div>
+      </>
     );
   }
 

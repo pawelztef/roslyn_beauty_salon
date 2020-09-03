@@ -1,4 +1,5 @@
 import React from 'react'
+import EmptySpace from './EmptySpace'
 
 
 const hero = (props) =>  {
@@ -8,6 +9,7 @@ const hero = (props) =>  {
         <img className="pz-header__background" src={process.env.REACT_APP_DOMAIN+props.background.url}/>
         <h1 className="pz-header__title">{props.title}</h1>
       </div>
+      <EmptySpace />
     </div>
   )
 }

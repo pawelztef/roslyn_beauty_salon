@@ -7,11 +7,12 @@ import EmptySpace from './EmptySpace'
 export default class PlainContactDetails extends React.Component {
   render() {
     return(
-      <div className="pz-contact-page">
+      <>
+        <div className="pz-contact-page pz-contact-details">
+          <ContactDetails {...this.props} />
+        </div>
         <EmptySpace />
-        <ContactDetails {...this.props} />
-        <EmptySpace />
-      </div>
+      </>
     )
   }
 
