@@ -77,7 +77,7 @@ class AppointmentForm extends React.Component {
 
   render() {
     return(
-      <div className="pz-appointment__form-wrapper">
+      <div className="pz-appointment__form-wrapper pz-hr-pd">
         <form id="appointmentForm" className="pz-appointment__form" onSubmit={this.handleSubmit} >
 
           {/* Row 1 Start */}
