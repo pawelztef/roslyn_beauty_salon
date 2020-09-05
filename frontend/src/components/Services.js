@@ -27,7 +27,7 @@ class Services extends React.Component {
 
     return(
       <>
-        <div className="pz-services__wrapper">
+        <div className="pz-services__wrapper pz-hr-pd">
           <div className="pz-container-wrapper">
             <div className="pz-services__container">
               <h2 className="pz-section__header">{title}</h2>
