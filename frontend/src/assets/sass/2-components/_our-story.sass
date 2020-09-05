@@ -1,12 +1,20 @@
 .pz-our-story__wrapper
   background-image: url(/images/our-story-grad.png)
   background-repeat: no-repeat
-  background-position-x: -160px
+  background-size: cover
+  background-position-x: -24vw
   .slick-dots
     position: initial
   .pz-our-story__container
     .pz-section__header
       margin-bottom: 2rem
+  @include media-desktop
+  @include media-desktop-s
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+    background-position-x: 0
+  @include media-phone
+  @include media-phone-s
     
 .pz-our-story__slider
   div
@@ -20,6 +28,7 @@
       font-weight: bold
       font-size: 1.1rem
       text-align: center
+
 
   
 

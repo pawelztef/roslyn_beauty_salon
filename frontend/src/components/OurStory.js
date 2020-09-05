@@ -29,57 +29,58 @@ class OurStory extends React.Component {
     }
 
     return(
-      <div className="pz-our-story__wrapper">
-        <EmptySpace />
-        <div className="pz-container-wrapper">
-          <div className="pz-our-story__container">
-            <h2 className="pz-section__header">Our Story</h2>
+      <>
+        <div className="pz-our-story__wrapper pz-hr-pd">
+          <div className="pz-container-wrapper">
+            <div className="pz-our-story__container">
+              <h2 className="pz-section__header">Our Story</h2>
 
-            <div className="pz-our-story__content">
-              <Slider {...settings}>
-                <div className="pz-our-story__slider-item">
-                  <h4>2015</h4>
-                  <p>
-                    Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
-                    nesciunt accusantium. Exmolestias dolor esse saepe amet! Consectetur molestiae veritatis
-                    voluptates aut fuga. Quaerat nam iste reiciendis maxime.
-                  </p>
-                </div>
-                <div className="pz-our-story__slider-item">
-                  <h4>2016</h4>
-                  <p>
-                    Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
-                    nesciunt accusantium. Ex molestias dolor esse saepe amet! Consectetur molestiae veritatis
-                    voluptates aut fuga. Quaerat nam iste reiciendis maxime.
-                  </p>
-                </div>
-                <div className="pz-our-story__slider-item">
-                  <h4>2017</h4>
-                  <p>
-                    Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
-                  </p>
-                </div>
-                <div className="pz-our-story__slider-item">
-                  <h4>2018</h4>
-                  <p>
-                    Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
-                    nesciunt accusantium. Ex molestias dolor esse saepe amet! Consectetur molestiae veritatis
-                    voluptates aut fuga. Quaerat nam iste reiciendis maxime.
-                  </p>
-                </div>
-                <div className="pz-our-story__slider-item">
-                  <h4>2019</h4>
-                  <p>
-                    Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
-                    voluptates aut fuga. Quaerat nam iste reiciendis maxime.
-                  </p>
-                </div>
-              </Slider>
+              <div className="pz-our-story__content">
+                <Slider {...settings}>
+                  <div className="pz-our-story__slider-item">
+                    <h4>2015</h4>
+                    <p>
+                      Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
+                      nesciunt accusantium. Exmolestias dolor esse saepe amet! Consectetur molestiae veritatis
+                      voluptates aut fuga. Quaerat nam iste reiciendis maxime.
+                    </p>
+                  </div>
+                  <div className="pz-our-story__slider-item">
+                    <h4>2016</h4>
+                    <p>
+                      Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
+                      nesciunt accusantium. Ex molestias dolor esse saepe amet! Consectetur molestiae veritatis
+                      voluptates aut fuga. Quaerat nam iste reiciendis maxime.
+                    </p>
+                  </div>
+                  <div className="pz-our-story__slider-item">
+                    <h4>2017</h4>
+                    <p>
+                      Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
+                    </p>
+                  </div>
+                  <div className="pz-our-story__slider-item">
+                    <h4>2018</h4>
+                    <p>
+                      Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
+                      nesciunt accusantium. Ex molestias dolor esse saepe amet! Consectetur molestiae veritatis
+                      voluptates aut fuga. Quaerat nam iste reiciendis maxime.
+                    </p>
+                  </div>
+                  <div className="pz-our-story__slider-item">
+                    <h4>2019</h4>
+                    <p>
+                      Elit vitae minima doloribus officiis excepturi temporibus? Consequatur id modi tenetur
+                      voluptates aut fuga. Quaerat nam iste reiciendis maxime.
+                    </p>
+                  </div>
+                </Slider>
+              </div>
             </div>
           </div>
         </div>
         <EmptySpace />
-      </div>
+      </>
     )
   }
 
