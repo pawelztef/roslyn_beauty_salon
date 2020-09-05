@@ -38,15 +38,15 @@ class BottomNav extends React.Component {
         nav.classList.add('pz-nav__fixed')
         document.body.style.paddingTop = (nav.offsetHeight - 8) + "px"
         document.getElementById('logo-top').style.width = "120px"
-        document.getElementById('nav-btn').style.padding = "20px 28px"
-        document.getElementById('nav-btn').style.fontSize = "0.65rem"
+        document.getElementById('nav-btn').style.padding = "20px 33px"
+        document.getElementById('nav-btn').style.fontSize = "0.66rem"
         let menuItems = document.getElementsByClassName('pz-menu__item')
         Array.prototype.map.call( menuItems, item => item.style.fontSize = "0.7rem" )
       } else {
         nav.classList.remove('pz-nav__fixed')
         document.body.style.paddingTop = 0
         document.getElementById('logo-top').style.width = "147px"
-        document.getElementById('nav-btn').style.padding = "28px 36px"
+        document.getElementById('nav-btn').style.padding = "21px 34px"
         document.getElementById('nav-btn').style.fontSize = "0.7rem"
         let menuItems = document.getElementsByClassName('pz-menu__item')
         Array.prototype.map.call( menuItems, item => item.style.fontSize = "0.75rem" )
