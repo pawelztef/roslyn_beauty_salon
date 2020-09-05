@@ -38,7 +38,7 @@ export default class Footer extends React.Component {
     return(
       <>
         <div className="pz-deco-stripe"></div>
-        <div className="pz-container-wrapper">
+        <div className="pz-container-wrapper pz-footer-wrapper">
           <footer className="pz-footer">
             {!this.state.isLoading ? (
               <>
