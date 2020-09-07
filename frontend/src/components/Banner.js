@@ -13,16 +13,16 @@ const Banner = (props) => {
               style={{ 
                 backgroundImage: `url(${process.env.REACT_APP_DOMAIN+image.url})`
               }}>
-                <div className="banner__item-top-layer-mask">
-                  <div className="banner__item-top-layer">
-                    <div className="banner__item-title">{title}</div>
-                    <div className="banner__item-subtitle">
-                      <span className="pz-script-font">{subtitleParts[0]}</span>
-                      <span>{subtitleParts[1]}</span>
-                    </div>
-                    <a href={call_to_action.url} className="pz-btn">{call_to_action.phrase}</a>
+                <div className="banner__item-top-layer">
+                  <div className="banner__item-title">{title}</div>
+                  <div className="banner__item-subtitle">
+                    <span className="pz-script-font">{subtitle}</span>
                   </div>
+                  <a href={call_to_action.url} className="pz-btn">{call_to_action.phrase}</a>
                 </div>
+                <div className="banner__item-top-layer-mask">
+                </div>
+
               </div>
             </div>
           </div>

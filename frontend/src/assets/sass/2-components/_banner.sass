@@ -1,5 +1,5 @@
 .banner__item
-  height: 480px
+  height: 500px
   overflow: hidden
   position: relative
   background-position: center
@@ -19,6 +19,16 @@
   left: 10%
   transform: translateY(80%)
   position: relative
+  z-index: 2
+
+.banner__item-top-layer:hover + .banner__item-top-layer-mask
+  opacity: 1 
+
+.banner__item-top-layer:hover + .banner__item-top-layer-mask:before
+  -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, -130%, 0);
+  -ms-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, -130%, 0);
+  transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, -130%, 0);
+
 
 .banner__item-top-layer-mask
   position: absolute
@@ -58,11 +68,9 @@
 .banner__item-title
 .banner__item-subtitle
   span
-   &:first-of-type
-     font-size: 4.4rem
-     font-weight: 400
-     margin-right: 15px
-   &:last-of-type
+    font-size: 2.4rem
+    font-weight: 400
+    margin-right: 15px
 
 @include media-desktop
   .banner__item
