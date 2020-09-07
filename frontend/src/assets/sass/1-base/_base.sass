@@ -361,19 +361,20 @@ iframe, video, embed
 
 .pz-section__header
   @extend %script-font
-  font-size: 3.1rem
+  font-size: 3.5rem
   text-align: center
   line-height: 1.2em
-  margin-bottom: 60px
+  margin-bottom: 30px
 
   @include media-desktop
-    font-size: 4.5rem
+    font-size: 4rem
+  @include media-desktop-s
+    font-size: 5rem
   @include media-tablet-landscape
+    font-size: 7rem
   @include media-tablet-portrait
-    font-size: 7.5rem
   @include media-phone
-    font-size: 9rem
-    margin-bottom: 40px
+    font-size: 10rem
 
 .pz-section__content
   font-size: 1.2rem

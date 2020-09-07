@@ -7,7 +7,7 @@ const Welcome = (props) => {
 
   return (
     <div>
-	<div className="pz-row welcome__wrapper">
+	<div className="pz-row welcome__wrapper pz-hr-pd">
 	    <div className="pz-container-wrapper">
 		<h2 className="pz-section__header">{title}</h2>
 		<div className="pz-section__content">{description}</div>

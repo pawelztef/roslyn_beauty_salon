@@ -8,12 +8,16 @@ const ContactInfoCard = (props) => {
 
   const ContactInfo = styled.div`
     display: flex;
-    flex-direction: "row";
+    flex-direction: row;
+    @media (max-width: 768px) {
+      margin: 0;
+      flex-direction: column-reverse;
+    }
   `
 
   const Image = styled.img`
     @media (max-width: 768px) {
-      margin: 0;
+      margin-bottom: 10px;
     }
     margin-left: 30px;
   `

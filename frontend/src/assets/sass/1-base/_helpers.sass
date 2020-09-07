@@ -10,6 +10,13 @@
 .pz-horizontal-padding,
 .pz-hr-pd
   padding: 4rem 0
+  @include media-desktop
+  @include media-desktop-s
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+    padding: 10rem 0
+  @include media-phone
+  @include media-phone-s
 
 .responsivnes-indicator
   @extend %responsivnes-indicator
