@@ -1,30 +1,51 @@
 .pz-testimony__wrapper
   .pz-container-wrapper
     width: 69%
-.pz-testimony__slider
-  display: flex
-  .pz-testimony__slider-item
-    padding: 20px 35px
-    border-right: 1px solid $bl
-    height: 350px
-    display: flex !important
-    flex-direction: column
-    justify-content: space-between
+    @include media-desktop
+    @include media-desktop-s
+    @include media-tablet-landscape
+    @include media-tablet-portrait
+    @include media-phone
+      width: 95%
+    @include media-phone-s
 
-    p
-     font-weight: bold
-     font-size: 1.1rem
-     line-height: 1.5rem
-    span
-      font-size: 0.8rem
-      text-align: center
-      display: block
-      svg
-        margin: 0 10px
-    h4
-      font-size: 1rem
-      text-align: center
-      margin-top: 20px
+.pz-testimony__slider
+  display: flex !important
+  flex-direction: column
+  justify-content: space-between
+
+
+.pz-testimony__slider-item
+  padding: 20px 35px
+  border-right: 1px solid $bl
+  height: 350px
+  @include media-desktop
+    height: 300px
+  @include media-desktop-s
+  @include media-tablet-landscape
+    height: 250px
+  @include media-tablet-portrait
+    height: 150px
+  @include media-phone
+    height: 100px
+  @include media-phone-s
+    height: 100px
+
+  p
+   font-weight: bold
+   font-size: 1.1rem
+   line-height: 1.5rem
+  span
+    font-size: 0.8rem
+    text-align: center
+    display: block
+    svg
+      margin: 0 10px
+  h4
+    font-size: 1rem
+    text-align: center
+    margin-top: 20px
+
 
 .slick-track
   margin-bottom: 70px !important
@@ -49,28 +70,26 @@ li.slick-active
 @include media-desktop
   .pz-testimony__slider
     .pz-testimony__slider-item
-      height: 350px
       p
         font-size: 1.2rem
         line-height: 1.8rem
 @include media-tablet-landscape
+@include media-tablet-portrait
   .pz-testimony__slider
     .pz-testimony__slider-item
-      max-height: 150px
       border: none
       p
         font-size: 2.5rem
         line-height: 3rem
         padding-bottom: 20px
+        text-align: center
       svg
         font-size: 1.5rem
       h4
         font-size: 2.2rem
-@include media-tablet-portrait
 @include media-phone
   .pz-testimony__slider
     .pz-testimony__slider-item
-      max-height: 150px
       border: none
       p
         font-size: 4.2rem
