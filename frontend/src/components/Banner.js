@@ -1,5 +1,6 @@
 import React from 'react'
 import EmptySpace from './EmptySpace'
+import { TiHeartFullOutline } from "react-icons/ti"
 
 const Banner = (props) => {
   const {title, subtitle, call_to_action, image} = props
