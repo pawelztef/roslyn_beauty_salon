@@ -73,8 +73,60 @@
   transform: translateY(-300%)
   transition: transform .5s ease-out
   overflow: scroll 
+  .pz-nav__brand
+    margin-top: 20px
+    img#logo-top
+      width: 130px
+
+  .pz-menu__item
+    &:hover
+      color: $mn !important
+    @include media-desktop
+    @include media-desktop-s
+    @include media-tablet-landscape
+    @include media-tablet-portrait
+      font-size: 2rem !important
+      line-height: 8rem
+    @include media-phone
+      font-size: 4rem !important
+      line-height: 12rem
+    @include media-phone-s
+      font-size: 5rem !important
+
+  .pz-menu__item.pz-menu__item-active
+    color: $mn !important
+
   .pz-social-list
-    margin-bottom: 100px
+    margin: 60px auto
+    display: flex
+    flex-direction: row
+    width: 70%
+    @include media-desktop
+    @include media-desktop-s
+    @include media-tablet-landscape
+    @include media-tablet-portrait
+      justify-content: space-evenly
+    @include media-phone
+      justify-content: space-between
+    @include media-phone-s
+
+    &__item
+      padding: 0 !important
+      a
+        color: $wt
+        &:hover
+          color: $mn
+      @include media-desktop
+      @include media-desktop-s
+      @include media-tablet-landscape
+        font-size: 3rem
+        justify-content: space-evenly
+      @include media-tablet-portrait
+        font-size: 3rem
+      @include media-phone
+        font-size: 5rem
+      @include media-phone-s
+        font-size: 6rem
 
 
 .pz-nav__mobile-nav.open
@@ -87,6 +139,8 @@
   color: white
   text-align: right
   margin: 20px 30px
+  &:hover
+    color: $mn
 
 #nav-btn
   transition: 0.4s

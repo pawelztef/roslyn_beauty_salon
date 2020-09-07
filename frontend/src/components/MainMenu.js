@@ -14,6 +14,7 @@ export default function MainMenu(props) {
                     className="pz-menu__item" 
                     activeClassName="pz-menu__item-active" 
                     to={page.slug}
+                    onClick={props.click}
                   >
                   {page.title} 
                   </NavLink>

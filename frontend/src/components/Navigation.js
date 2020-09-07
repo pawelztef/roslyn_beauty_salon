@@ -13,7 +13,7 @@ class Navigation extends React.Component {
       contactDetails: {},
       socialMedia: {},
       isLoading: true
-    }
+    },
   }
 
   async componentDidMount() {
@@ -29,7 +29,7 @@ class Navigation extends React.Component {
           contactDetails: contact_details,
           socialMedia: social_media,
           isLoading: false
-        }
+        },
       })
     } catch (err) {
       console.log(err.message)

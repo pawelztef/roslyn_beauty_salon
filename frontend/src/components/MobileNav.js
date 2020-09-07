@@ -12,16 +12,14 @@ export default function MobileNav(props) {
     mobileNavClasses = 'pz-nav__mobile-nav open'
   }
 
-
-
   return(
     <div className={mobileNavClasses}>
       <span className="pz-nav__mobile-nav-close" onClick={props.click}><RiCloseLine /></span>
       {props.navbar.logo && props.navbar.logo.image &&
-      <Brand  {...props.navbar.logo}/>
+      <Brand mobile {...props.navbar.logo}/>
       }
       {props.navbar.menu &&
-      <MainMenu {...props.navbar.menu}/>
+      <MainMenu click={props.click} {...props.navbar.menu}/>
       }
       {props.navbar.socialMedia && props.navbar.socialMedia[0] &&
         <SocialList socialMedia={props.navbar.socialMedia} />

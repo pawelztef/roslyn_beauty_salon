@@ -24,13 +24,14 @@ const BrandImage = styled.img`
 `
 
 export default function Brand(props) {
+  console.log('mobile ', props.mobile)
   return(
     <>
       {props.image &&
         <BrandHref className="pz-nav__brand"
           href={process.env.REACT_APP_DOMAIN + props.url}>
           <BrandImage id="logo-top" className="pz-nav__brand-img" 
-            src={process.env.REACT_APP_DOMAIN + props.image.url}
+            src={props.mobile ? "/images/logo-reverse.svg" : process.env.REACT_APP_DOMAIN + props.image.url}
             alt={props.alt} 
           />
         </BrandHref>
