@@ -13,8 +13,8 @@ const Nav = styled.nav`
     padding-top: 1em;
   }
   @media (max-width: 768px) {
-    padding-bottom: 1.2em;
-    padding-top: 1.2em;
+    padding-bottom: 1.3em;
+    padding-top: 1.3em;
   }
 `
 

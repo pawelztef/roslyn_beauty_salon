@@ -29,6 +29,7 @@
   position: relative
   margin: 0 auto
 
+
   @media (max-width: 699px) 
     padding-right: 30px
     padding-left: 30px
@@ -44,6 +45,10 @@
     padding-right: 9.5625rem
     padding-left: 9.5625rem
     max-width: 144.125rem
+  @include media-phone
+    padding-right: 40px
+    padding-left: 40px
+
 
 
 
@@ -162,14 +167,14 @@
   transform: scale(1)
   overflow: hidden
 
-
+//shrink width
 .slideshow__slide.is-prev .slideshow__slide-background, .slideshow__slide.is-next .slideshow__slide-background 
-  transform: scale(0.95)
+  transform: scale(0.945)
   transition-delay: 0s
 
 
 .slideshow__slide.is-prev-section .slideshow__slide-background, .slideshow__slide.is-next-section .slideshow__slide-background 
-  transform: scale(0.95)
+  transform: scale(0.945)
   transition-delay: 0s
   transition: none
 

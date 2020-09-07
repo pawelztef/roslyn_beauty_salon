@@ -17,20 +17,23 @@ class Navigation extends React.Component {
   }
 
   async componentDidMount() {
-    const navbarRes = await Axios.get(process.env.REACT_APP_DOMAIN + '/navbar')
-    const data = navbarRes.data[0]
-    const { logo, call_to_action, contact_details, menu, social_media } = data
-
-    this.setState({
-      navbar: {
-        menu,
-        logo: logo,
-        callToAction: call_to_action,
-        contactDetails: contact_details,
-        socialMedia: social_media,
-        isLoading: false
-      }
-    })
+    try {
+      const navbarRes = await Axios.get(process.env.REACT_APP_DOMAIN + '/navbar')
+      const data = navbarRes.data[0]
+      const { logo, call_to_action, contact_details, menu, social_media } = data
+      this.setState({
+        navbar: {
+          menu,
+          logo: logo,
+          callToAction: call_to_action,
+          contactDetails: contact_details,
+          socialMedia: social_media,
+          isLoading: false
+        }
+      })
+    } catch (err) {
+      console.log(err.message)
+    }
   }
 
   mobileMenuToggleHandler = () => {
@@ -45,16 +48,16 @@ class Navigation extends React.Component {
     return (
       <>
         {!navbar.isLoading &&
-          <>
-              <NavigationBar 
-                mobileMenuToggleHandler={this.mobileMenuToggleHandler} 
-              />
-              <MobileNav 
-                show={this.state.mobileMenuOpen}
-                click={this.mobileMenuToggleHandler} 
-                navbar={navbar}
-              />
-          </>
+        <>
+          <NavigationBar 
+            mobileMenuToggleHandler={this.mobileMenuToggleHandler} 
+          />
+          <MobileNav 
+            show={this.state.mobileMenuOpen}
+            click={this.mobileMenuToggleHandler} 
+            navbar={navbar}
+          />
+      </>
         }
       </>
     )

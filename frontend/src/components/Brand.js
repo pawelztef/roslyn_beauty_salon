@@ -16,10 +16,10 @@ const BrandImage = styled.img`
     width: 100px;
   }
   @media (max-width: 576px) {
-    width: 95px;
+    width: 100px;
   }
   @media (max-width: 321px) {
-    width: 95px;
+    width: 100px;
   }
 `
 

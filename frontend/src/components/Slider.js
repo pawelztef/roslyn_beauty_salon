@@ -1,17 +1,8 @@
 import React from 'react'
 import EmptySpace from './EmptySpace'
 import Slideshow from '../utils/slideshow'
+import { TiHeartFullOutline } from "react-icons/ti"
 import $ from "jquery";
-import g1 from '../assets/images/gallery/g1.jpg'
-import tg1 from '../assets/images/gallery/thumb-g1-320-421.jpg'
-import g2 from '../assets/images/gallery/g2.jpg'
-import tg2 from '../assets/images/gallery/thumb-g2-320-196.jpg'
-import g3 from '../assets/images/gallery/g3.jpg'
-import tg3 from '../assets/images/gallery/thumb-g3-271-357.jpg'
-import g4 from '../assets/images/gallery/g4.jpg'
-import tg4 from '../assets/images/gallery/thumb-g4-320-196.jpg'
-import g5 from '../assets/images/gallery/g5.jpg'
-import tg5 from '../assets/images/gallery/thumb-g5-320-196.jpg'
 
 const Slider = (props) =>  {
   const heroEntries = props.hero_item
@@ -53,8 +44,6 @@ const Slider = (props) =>  {
 
   addLoadClass();
 
-  console.log('slider props ', heroEntries)
-
 
   const renderSlides = () => {
     if(heroEntries) {
@@ -77,7 +66,7 @@ const Slider = (props) =>  {
             <div className="slideshow__slide-caption">
               <div className="slideshow__slide-caption-text">
                 <div className="pz-container js-parallax" data-speed="3" data-position="top" data-target="#js-header">
-                  <div className="pz-animated-banner__item-title pz-script-font">{entry.title}</div>
+                  <div className="pz-animated-banner__item-title pz-script-font">{entry.title} <TiHeartFullOutline /> </div>
                   <div className="pz-animated-banner__item-subtitle ">{entry.subtitle}</div>
                   <a className="pz-btn" href={entry.call_to_action.url}>{entry.call_to_action.phrase}</a>
                 </div>
