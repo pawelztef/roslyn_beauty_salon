@@ -3,7 +3,7 @@
   flex-direction: row
 
 .card__simple-offer 
-  padding: 0px 10px
+  padding: 20px 10px
   text-align: center
   width: 100%
   color: $bl
@@ -17,6 +17,20 @@
   background-size: contain
 
 .card__simple-offer 
+  .price-item
+    background-position: center top
+    background-size: 85%
+    height: 100%
+    position: relative
+    @include media-desktop
+    @include media-desktop-s
+    @include media-tablet-landscape
+      background-size: 50%
+    @include media-tablet-portrait
+    @include media-phone
+      background-size: 65%
+    @include media-phone-s
+   
   &:nth-of-type(1)
     .price-item
       background-image: url(/images/s1-nocopy.png)
@@ -26,6 +40,29 @@
   &:nth-of-type(3)
     .price-item
       background-image: url(/images/s3-nocopy.png)
+
+.card__simple-offer
+  .price-item
+    .price-item-price
+      bottom: 80px 
+      left: 10px
+      @include media-desktop
+        bottom: 10px 
+        left: 10px
+      @include media-desktop-s
+        bottom: 60px 
+        left: 10px
+      @include media-tablet-landscape
+        bottom: 50px 
+        left: 10px
+      @include media-tablet-portrait
+        bottom: 25px 
+        left: 20px
+      @include media-phone
+        bottom: 25px 
+        left: 10px
+      @include media-phone-s
+
 
 .price-item-link,
 .price-item-link:hover,
@@ -68,17 +105,24 @@
   color: $bl
 
 .price-item-price-after
-  font-size: 1.35rem 
+  font-size: 21px
   -webkit-border-radius: 50%
   -ms-border-radius: 50%
   border-radius: 50%
-  width: 60px
-  height: 60px
-  line-height: 60px
+  width: 50px
+  height: 50px
+  line-height: 50px
   display: inline-block
   background-color: $pt1 
   color: $bl
   margin-left: 10px
+
+  @include media-desktop
+  @include media-desktop-s
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+  @include media-phone
+  @include media-phone-s
 
 .pz-services-wrapper
 
@@ -95,7 +139,7 @@
     flex-direction: column
 
   .card__simple-offer
-    padding: 50px 0 
+    padding: 30px 0 
     border: none
     border-top: 1px solid $bl
     &:nth-of-type(1)
@@ -129,7 +173,7 @@
   .price-item-title 
     font-size: 7.5rem !important
     line-height: 12rem
-    padding: 0rem 0 0rem 0
+    padding-top: 15px
     span
       max-width: 90%
       display: block
