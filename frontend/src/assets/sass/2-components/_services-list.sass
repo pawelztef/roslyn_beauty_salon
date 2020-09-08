@@ -5,7 +5,7 @@
 
   .pz-services__list
     text-align: center
-    padding: 0 25px 40px
+    padding: 10px 35px
     border-right: 1px $bl solid
     &:last-of-type
       border-right: none
@@ -26,6 +26,8 @@
         margin-bottom: 20px
         font-weight: 500
         a
+          padding: 3px 0
+          color: $bl
           border-bottom: 1px transparent solid
           -webkit-transition: all 0.3s
           -o-transition: all 0.3s
@@ -34,11 +36,23 @@
             color: $bl
             border-bottom: 1px $bl solid
         span
-          margin-top: 7px
+          display: block
+          margin-top: 5px
           color: $mn
           font-weight: bold
 
-
+.pz-services__wrapper
+  .pz-section__content
+    margin-top: 2.7rem
+    @include media-desktop
+    @include media-desktop-s
+      margin-top: 3.7rem
+    @include media-tablet-landscape
+    @include media-tablet-portrait
+      margin-top: 2.7rem
+    @include media-phone
+      margin-top: 0
+    @include media-phone-s
 
 @include media-desktop
 @include media-tablet-landscape
