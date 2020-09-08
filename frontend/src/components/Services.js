@@ -38,7 +38,7 @@ class Services extends React.Component {
                     return(
                       <div key={category.id} className="pz-services__list">
                         <h4 className="pz-services-header">{category.name}
-                          <span><TiHeart /></span>
+                          <span><TiHeart className='pz-deco-heart' /></span>
                         </h4>
                         <ul className="pz-services-prices">
                           {

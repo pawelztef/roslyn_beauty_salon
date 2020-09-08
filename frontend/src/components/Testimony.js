@@ -42,7 +42,7 @@ class Testimony extends React.Component {
                       return (
                         <div key={id} className="pz-testimony__slider-item">
                           <p>“{item.body}“</p>
-                          <span><TiHeart /></span>
+                          <span><TiHeart className="pz-deco-heart" /></span>
                           <h4>{item.author}</h4>
                         </div>
 
