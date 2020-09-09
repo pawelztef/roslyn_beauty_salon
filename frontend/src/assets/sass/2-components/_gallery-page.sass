@@ -39,6 +39,8 @@ div#ReactGridGallery
 .grid-item
   background: white
   margin-bottom: 20px
+  position: relative
+
   &__overlay
     position: absolute
     top: 0
@@ -48,11 +50,43 @@ div#ReactGridGallery
     background: black
     opacity: 0
     z-index: 3
-    transition: opacity .5s ease-out
-    &:hover
-      opacity: 0.5
+    transition: opacity .3s ease-out
+
   &__lightbox-btn
     z-index: 4
+    display: block
+
+  &__icon
+    position: absolute
+    display: flex 
+    width: 100%
+    height: 100%
+
+
+    svg
+      display: block
+      margin: auto
+      color: $bl
+      background: $pt2
+      border-radius: 50px
+      font-size: 2rem
+      padding: 10px
+      z-index: 9
+      transform: translate(0, -50%)
+      opacity: 0
+      transition: all .3s ease-out
+      &:hover
+        opacity: 1
+        transform: translate(0, 0)
+
+
   img
     display: block
     width: 300px
+
+.grid-item:hover .grid-item__overlay
+  opacity: 0.5
+
+.grid-item:hover svg
+  opacity: 1
+  transform: translate(0, 0)
