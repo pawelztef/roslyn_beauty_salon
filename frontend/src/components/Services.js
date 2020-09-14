@@ -54,13 +54,15 @@ class Services extends React.Component {
                   })
               }
             </div>
-            <div className="pz-section__content">
-              <a href={call_to_action.url} className="pz-btn">{call_to_action.phrase}</a>
-            </div>
-          </div>
-        </div>
-        <EmptySpace />
-      </>
+      {call_to_action &&
+      <div className="pz-section__content">
+        <a href={call_to_action.url} className="pz-btn">{call_to_action.phrase}</a>
+      </div>
+      }
+    </div>
+  </div>
+  <EmptySpace />
+</>
     )
   }
 }
