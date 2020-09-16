@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import Masonry from 'react-masonry-component';
 import EmptySpace from './EmptySpace'
 import { SRLWrapper } from "simple-react-lightbox";
-import { TiHeart } from "react-icons/ti"
+import { RiEyeLine } from "react-icons/ri"
 
 
 
@@ -30,13 +30,15 @@ export default class RespGallery extends Component {
             href={process.env.REACT_APP_DOMAIN+large} 
             data-attribute="SRL"
           >
-            <TiHeart />
-          <img 
-            src={process.env.REACT_APP_DOMAIN+thumbnail} 
-            className={`gallery-img`}
-            alt={caption}
-          />
-          <div className="grid-item__overlay"></div>
+            <div className="grid-item__overlay"></div>
+            <div className="grid-item__icon">
+              <RiEyeLine />
+            </div>
+            <img 
+              src={process.env.REACT_APP_DOMAIN+thumbnail} 
+              className={`gallery-img`}
+              alt={caption}
+            />
           </a>
         </div>
       );
