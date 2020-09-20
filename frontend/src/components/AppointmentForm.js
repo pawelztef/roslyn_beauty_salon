@@ -77,7 +77,7 @@ class AppointmentForm extends React.Component {
 
   render() {
     return(
-      <div className="pz-appointment__form-wrapper pz-hr-pd">
+      <div className="pz-appointment__form-wrapper ">
         <form id="appointmentForm" className="pz-appointment__form" onSubmit={this.handleSubmit} >
 
           {/* Row 1 Start */}
@@ -180,7 +180,7 @@ class AppointmentForm extends React.Component {
               {this.validator.message('agree', this.state.agree, 'accepted')}
             </div>
             <div className="pz-appointment__form-section">
-              <button className="pz-btn">{this.props.button_text}</button>
+              <button id="appointment-button" className="pz-btn">{this.props.button_text}</button>
             </div>
           </div>
           {/* Row 2 End */}
