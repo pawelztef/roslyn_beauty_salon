@@ -7,6 +7,6 @@ export default styled.div`
     height:  ${ props => props.small ? "4rem" : "3rem" } !important;
   }
   @media (max-width: 576px) {
-    height:  ${ props => props.small ? "2rem" : "4rem" } !important;
+    height:  ${ props => props.small ? "6rem" : "4rem" } !important;
   }
 `
