@@ -4,6 +4,7 @@ import ContactDetails from './ContactDetails'
 import Brand from './Brand'
 import SocialList from './SocialList'
 import {Link} from 'react-router-dom'
+import EmptySpace from './EmptySpace'
 
 
 export default class Footer extends React.Component {
@@ -39,6 +40,7 @@ export default class Footer extends React.Component {
       <>
         <div className="pz-deco-stripe"></div>
         <div className="pz-container-wrapper pz-footer-wrapper">
+          <EmptySpace />
           <footer className="pz-footer">
             {!this.state.isLoading ? (
               <>
@@ -65,6 +67,7 @@ export default class Footer extends React.Component {
                 </div>
                 <div className="pz-footer__col-3">
                   <div className="pz-footer__legal">
+                    <h6>Site links</h6>
                     {this.state.menuPages &&
                         this.state.menuPages.map(entry => (
                           <span key={entry.id} className="pz-footer__legal-item">
@@ -80,6 +83,7 @@ export default class Footer extends React.Component {
             )}
 
           </footer>
+          <EmptySpace />
         </div>
       </>
     )

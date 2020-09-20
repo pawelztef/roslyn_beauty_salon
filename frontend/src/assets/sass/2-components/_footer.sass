@@ -3,8 +3,6 @@
 .pz-footer
   display: flex
   justify-content: space-between
-  margin-top: 120px
-  margin-bottom: 100px
 
   &__col-1
 
@@ -62,10 +60,27 @@
 
 @include media-desktop
 @include media-tablet-landscape
+  .pz-footer
+    padding-top: 30px
+    &__col-1
+      .pz-contact-details
+        >*
+          margin-bottom: 20px
+        h6
+          font-size: 1.5rem
+        span
+          font-size: 2.0rem
+    &__legal
+      h6
+        margin-bottom: 10px
+        font-size: 1.5rem
+    &__legal-item
+      font-size: 2rem
+      &:last-of-type
+        margin-bottom: 0
 @include media-phone
   .pz-footer
-    >*
-      margin-bottom: 30px
+    padding-top: 30px
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -73,25 +88,25 @@
     &__col-1
       .pz-contact-details
         >*
-          margin-bottom: 30px
+          margin-bottom: 20px
         h6
-          font-size: 2.2rem
+          font-size: 3.0rem
         span
-          font-size: 2.5rem
+          font-size: 3.0rem
       text-align: center
 
     &__col-2
       order: 1
       flex-grow: 0
       >*
-        margin: 35px
+        margin: 20px
 
       .pz-footer-meta
         text-align: center
         order: 3
         margin-bottom: 30px
         span
-          font-size: 2.2rem
+          font-size: 3.0rem
           a
             padding-right: 5px
     
@@ -102,8 +117,13 @@
 
     &__col-3
       >*
-        margin: 15px
+        margin: 20px
       text-align: center
       font-size: 3rem
+    &__legal
+      h6
+        margin-bottom: 10px
     &__legal-item
-      font-size: 2.8rem
+      font-size: 3rem
+      &:last-of-type
+        margin-bottom: 0
