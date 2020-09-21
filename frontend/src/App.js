@@ -1,5 +1,7 @@
 import React from 'react'
 import './assets/sass/main.sass'
+import { CSSTransition, TransitionGroup, } from 'react-transition-group'
+
 
 import { 
   BrowserRouter as Router,
@@ -23,21 +25,31 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="pz-body-wrapper">
-          <div className="pz-page-wrapper">
-            <ScrollToTop >
-              <Navigation />
-              <Switch>
-                <Route exact path="/" component={Page} />
-                <Route path='/:slug' component={Page} />
-                <Route component={NotFound} />
-              </Switch>
+        <Route render={({location}) => (
+          <TransitionGroup>
+            <CSSTransition
+              key={location.key}
+              timeout={{enter: 300, exit: 300}}
+              classNames="fade"
+            >
+              <ScrollToTop >
+                <div className="pz-body-wrapper">
+                  <div className="pz-page-wrapper">
+                    <Navigation />
+                    <Switch>
+                      <Route exact path="/" component={Page} />
+                      <Route path='/:slug' component={Page} />
+                      <Route component={NotFound} />
+                    </Switch>
 
-              <Footer />
-            </ScrollToTop >
-          </div>
-        </div>
-      </Router>
+                    <Footer />
+                  </div>
+                </div>
+              </ScrollToTop >
+            </CSSTransition>
+          </TransitionGroup>
+        )} />
+    </Router>
     )
   }
 }
