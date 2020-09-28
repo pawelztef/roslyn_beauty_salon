@@ -8,9 +8,8 @@ import { SRLWrapper } from "simple-react-lightbox";
 const masonryOptions = {
   transitionDuration: 0,
   gutter: 20,
-  percentPosition: true,
-  columnWidth: 300,
-  fitWidth: true
+  fitWidth: true,
+  itemSelector: '.grid-item'
 };
 
 export default class RespGallery extends Component {
@@ -50,9 +49,11 @@ export default class RespGallery extends Component {
   }
 
   render() {
+    let masonryGrid = document.getElementsByClassName('.grid')
+    console.log('masonryGrid ', masonryGrid[0])
     return (
       <>
-        <div className="container">
+        <div className="pz-container-gallery">
           <div className={`content `}>
             <SRLWrapper>
               {this.renderGallery()}

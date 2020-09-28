@@ -25,7 +25,18 @@ div#ReactGridGallery
     display: block
     width: 300px
 
-.container
-  max-width: 80%
+.pz-container-gallery
+  width: 70%
+  position: relative
+  margin: 0 auto
+  @include media-desktop
+  @include media-desktop-s
+    width: 90%
+  @include media-tablet-landscape
+  @include media-tablet-portrait
+  @include media-phone
+    width: 100%
+  @include media-phone-s
+
 .grid
   margin: 0 auto
