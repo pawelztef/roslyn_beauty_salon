@@ -50,6 +50,7 @@ export default class contactDetails extends React.Component {
             }
           </address>
         </div>
+        <EmptySpace />
       </>
     )
   }
