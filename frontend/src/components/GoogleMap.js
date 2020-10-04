@@ -20,6 +20,8 @@ class SimpleMap extends Component {
               lat: this.props.latitude,
               lng: this.props.longitude
             }}
+            mapTypeControl={false}
+            fullscreenControl={false}
           />
         </div>
         }
