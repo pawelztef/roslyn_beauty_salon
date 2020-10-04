@@ -8,10 +8,12 @@ class SimpleMap extends Component {
   render() {
     const elem = document.getElementsByClassName("contact-info__map")
     const height =  (elem.length > 0) ? elem[0].offsetHeight : 420
+    const newClass = (elem.length > 0) ? "" : "contact-page__map"
+
     return (
       <>
         {height && 
-        <div className="pz-map__wrapper">
+        <div className={"pz-map__wrapper " + newClass }>
           <Map
             google={this.props.google}
             zoom={this.props.zoom}
