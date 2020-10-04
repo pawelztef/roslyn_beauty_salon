@@ -148,7 +148,7 @@ class ContactForm extends React.Component {
                       {this.validator.message('agree', this.state.agree, 'accepted')}
                     </div>
                     <div className="pz-appointment__form-section">
-                      <button className="pz-btn">{this.props.button_text}</button>
+                      <button id="pz-contact-button" className="pz-btn">{this.props.button_text}</button>
                     </div>
                   </div>
                   {/* Row 2 End */}
