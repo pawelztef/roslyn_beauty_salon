@@ -6,22 +6,23 @@ import EmptySpace from './EmptySpace'
 
 class SimpleMap extends Component {
   render() {
+    const elem = document.getElementsByClassName("contact-info__map")
+    const height =  (elem.length > 0) ? elem[0].offsetHeight : 420
     return (
       <>
-        <div className="pz-container-wrapper">
-          <div className="pz-map__wrapper">
-            <Map
-              google={this.props.google}
-              zoom={this.props.zoom}
-              containerStyle={{ position: 'relative', width: '100%', height: '420px' }}
-              initialCenter={{
-                lat: this.props.latitude,
-                lng: this.props.longitude
-              }}
-            />
-          </div>
+        {height && 
+        <div className="pz-map__wrapper">
+          <Map
+            google={this.props.google}
+            zoom={this.props.zoom}
+            containerStyle={{ position: 'relative', width: '100%', height: `${height}px` }}
+            initialCenter={{
+              lat: this.props.latitude,
+              lng: this.props.longitude
+            }}
+          />
         </div>
-        <EmptySpace />
+        }
       </>
     )
   }

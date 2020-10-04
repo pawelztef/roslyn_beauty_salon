@@ -8,7 +8,6 @@ export default class contactDetails extends React.Component {
     const { company_name, address, mobile_phone, office_phone, email } = this.props
     return(
       <>
-        <EmptySpace />
         <div className="pz-container-wrapper">
           <address className='pz-contact-details'>
             <div className="pz-contact-details__address">
