@@ -79,7 +79,7 @@ export default class Footer extends React.Component {
                 </div>
               </>
             ):(
-              <h3 className="pz-spinner">loading<span className="dot-flashing"></span></h3>
+              <></>
             )}
 
           </footer>
