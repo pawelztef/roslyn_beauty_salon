@@ -26,28 +26,30 @@ class App extends React.Component {
     return (
       <Router>
         <Route render={({location}) => (
-          <TransitionGroup>
-            <CSSTransition
-              key={location.key}
-              timeout={{enter: 300, exit: 300}}
-              classNames="fade"
-            >
-              <ScrollToTop >
-                <div className="pz-body-wrapper">
-                  <div className="pz-page-wrapper">
-                    <Navigation />
-                    <Switch>
-                      <Route exact path="/" component={Page} />
-                      <Route path='/:slug' component={Page} />
-                      <Route component={NotFound} />
-                    </Switch>
+          <>
+            <Navigation />
+            <TransitionGroup>
+              <CSSTransition
+                key={location.key}
+                timeout={{enter: 300, exit: 300}}
+                classNames="fade"
+              >
+                <ScrollToTop >
+                  <div className="pz-body-wrapper">
+                    <div className="pz-page-wrapper">
+                      <Switch>
+                        <Route exact path="/" component={Page} />
+                        <Route path='/:slug' component={Page} />
+                        <Route component={NotFound} />
+                      </Switch>
 
-                    <Footer />
+                    </div>
                   </div>
-                </div>
-              </ScrollToTop >
-            </CSSTransition>
-          </TransitionGroup>
+                </ScrollToTop >
+              </CSSTransition>
+            </TransitionGroup>
+            <Footer />
+          </>
         )} />
     </Router>
     )
