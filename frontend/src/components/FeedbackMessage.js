@@ -10,7 +10,7 @@ export default ({open, message, closeHandler}) => {
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
         open={open}
-        autoHideDuration={5000}
+        autoHideDuration={115000}
         onClose={closeHandler}
       >
         <MuiAlert elevation={10} variant="standard" onClose={closeHandler} severity="success">
