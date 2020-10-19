@@ -8,6 +8,7 @@ import {
   useLocation
 } from 'react-router-dom'
 
+import ScrollToTop from './components/ScrollToTop'
 import Footer from './components/Footer'
 import Navigation from './components/Navigation'
 import HomePage from './components/HomePage'
@@ -24,17 +25,16 @@ class App extends React.Component {
       <Router>
         <div className="pz-body-wrapper">
           <div className="pz-page-wrapper">
+            <ScrollToTop >
+              <Navigation />
+              <Switch>
+                <Route exact path="/" component={Page} />
+                <Route path='/:slug' component={Page} />
+                <Route component={NotFound} />
+              </Switch>
 
-            <Navigation />
-
-            <Switch>
-              <Route exact path="/" component={Page} />
-              <Route path='/:slug' component={Page} />
-              <Route component={NotFound} />
-            </Switch>
-
-            <Footer />
-
+              <Footer />
+            </ScrollToTop >
           </div>
         </div>
       </Router>
