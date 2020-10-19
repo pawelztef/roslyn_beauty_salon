@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import Masonry from 'react-masonry-component';
 import EmptySpace from './EmptySpace'
 import { SRLWrapper } from "simple-react-lightbox";
+import { TiHeart } from "react-icons/ti"
 
 
 
@@ -25,14 +26,18 @@ export default class RespGallery extends Component {
     const gallery = images.map(({id, caption, thumbnail, large}) => {
       return (
         <div key={id} className={`grid-item`}>
-            <a href={process.env.REACT_APP_DOMAIN+large} data-attribute="SRL">
-              <img 
-                src={process.env.REACT_APP_DOMAIN+thumbnail} 
-                className={`gallery-img`}
-                alt={caption}
-              />
-            </a>
+          <a className="grid-item__lightbox-btn" 
+            href={process.env.REACT_APP_DOMAIN+large} 
+            data-attribute="SRL"
+          >
+            <TiHeart />
+          <img 
+            src={process.env.REACT_APP_DOMAIN+thumbnail} 
+            className={`gallery-img`}
+            alt={caption}
+          />
           <div className="grid-item__overlay"></div>
+          </a>
         </div>
       );
     });
