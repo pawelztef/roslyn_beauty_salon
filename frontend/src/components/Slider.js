@@ -68,7 +68,9 @@ const Slider = (props) =>  {
                 <div className="pz-container js-parallax" data-speed="3" data-position="top" data-target="#js-header">
                   <div className="pz-animated-banner__item-title pz-script-font">{entry.title} <TiHeartFullOutline /> </div>
                   <div className="pz-animated-banner__item-subtitle ">{entry.subtitle}</div>
-                  <a className="pz-btn" href={entry.call_to_action.url}>{entry.call_to_action.phrase}</a>
+                  {entry.call_to_action &&
+                    <a className="pz-btn" href={entry.call_to_action.url}>{entry.call_to_action.phrase}</a>
+                  }
                 </div>
               </div>
             </div>
