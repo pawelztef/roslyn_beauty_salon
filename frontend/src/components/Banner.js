@@ -19,7 +19,9 @@ const Banner = (props) => {
                   <div className="banner__item-subtitle">
                     <span className="pz-script-font">{subtitle}</span>
                   </div>
-                  <a href={call_to_action.url} className="pz-btn">{call_to_action.phrase}</a>
+                  {call_to_action &&
+                    <a href={call_to_action.url} className="pz-btn">{call_to_action.phrase}</a>
+                  }
                 </div>
                 <div className="banner__item-top-layer-mask">
                 </div>
