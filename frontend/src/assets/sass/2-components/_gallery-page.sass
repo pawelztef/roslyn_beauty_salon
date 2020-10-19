@@ -19,11 +19,6 @@ div#ReactGridGallery
     max-width: initial
 
 .grid-item
-  background: white
-  img
-    margin-bottom: 20px
-    display: block
-    width: 300px
 
 .pz-container-gallery
   width: 70%
@@ -40,3 +35,23 @@ div#ReactGridGallery
 
 .grid
   margin: 0 auto
+
+.grid-item
+  background: white
+  margin-bottom: 20px
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: black
+    opacity: 0
+    cursor: pointer
+    z-index: 3
+    transition: opacity .5s ease-out
+    &:hover
+      opacity: 0.5
+  img
+    display: block
+    width: 300px

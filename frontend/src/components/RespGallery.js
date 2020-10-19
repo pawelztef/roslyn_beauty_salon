@@ -25,13 +25,14 @@ export default class RespGallery extends Component {
     const gallery = images.map(({id, caption, thumbnail, large}) => {
       return (
         <div key={id} className={`grid-item`}>
-          <a href={process.env.REACT_APP_DOMAIN+large} data-attribute="SRL">
-            <img 
-              src={process.env.REACT_APP_DOMAIN+thumbnail} 
-              className={`gallery-img`}
-              alt={caption}
-            />
-          </a>
+            <a href={process.env.REACT_APP_DOMAIN+large} data-attribute="SRL">
+              <img 
+                src={process.env.REACT_APP_DOMAIN+thumbnail} 
+                className={`gallery-img`}
+                alt={caption}
+              />
+            </a>
+          <div className="grid-item__overlay"></div>
         </div>
       );
     });
