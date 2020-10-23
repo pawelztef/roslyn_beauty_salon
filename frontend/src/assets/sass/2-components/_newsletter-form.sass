@@ -1,3 +1,9 @@
+.srv-validation-message
+  font-size: 1rem
+  margin-bottom: 25px
+  color: black
+  &:before
+    content: "* "
 .pz-newsletter-form
   display: flex
   flex-direction: column
@@ -63,8 +69,11 @@
 
 
   .pz-newsletter-form-row-2
-    #pz-newsletter-agrement
-      margin-right: 10px
+    margin-bottom: 20px
+    display: flex
+    align-items: baseline
+    #newsletterAgrement
+      margin-right: 5px
     [for="pz-newsletter-agrement"]
       a
         margin-left: 5px
@@ -87,6 +96,7 @@
           font-size: 15px
           bottom: 2px
 
+
 @include media-tablet-landscape
   .pz-newsletter-form
     .pz-newsletter-form-row-1
@@ -100,6 +110,8 @@
         svg
           font-size: 15px
           bottom: 2px
+  .srv-validation-message
+    font-size: 1.5rem
 
 @include media-tablet-portrait
   .pz-newsletter__container
@@ -162,6 +174,7 @@
 @include media-phone
   .pz-newsletter-form
     .pz-newsletter-form-row-1
+      margin-bottom: 20px
       .pz-newsletter-button-wrapper
         height: 51px
         padding: 0 2.7rem
@@ -172,3 +185,11 @@
         svg
           font-size: 16px
           bottom: 1px
+    .pz-newsletter-form-row-2
+      margin-bottom: 10px
+  .srv-validation-message
+    font-size: 3rem
+    margin-bottom: 15px
+    color: black
+    &:before
+      content: "* "
