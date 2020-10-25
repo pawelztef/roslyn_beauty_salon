@@ -1,3 +1,4 @@
+
 .pz-animated-banner
   position: relative
   width: 100%
@@ -19,11 +20,13 @@
 .pz-animated-banner__item-title,
 .pz-animated-banner__item-subtitle
   color: white
+  text-shadow: 1px 1px 0px rgba(0,0,0,.9)
 
 .pz-animated-banner__item-title
   margin-bottom: 20px
   line-height: 3.5rem
   font-size: 3.5rem
+  text-shadow: 1px 1px 0px rgba(0,0,0,.9)
   svg
     width: 1rem
     margin-left: 20px
@@ -42,7 +45,10 @@
       width: 3rem
   @include media-phone-s
 
-
+.slideshow__slide-caption-text
+ .pz-container
+   .pz-btn
+     box-shadow: 0 0 1px rgba(0,0,0,.6)
 
 .pz-animated-banner__item-subtitle
   font-weight: 900
